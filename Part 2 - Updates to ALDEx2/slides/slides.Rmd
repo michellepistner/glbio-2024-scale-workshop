@@ -15,62 +15,125 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Overview
 
 - These slides are by no means polished.
-- Idea: Use a simulation and Vandputte to introduce SRI + SSRVs + modifications to ALDEx2
+- Idea: Use a simulation, selex, and Vandputte to introduce SRI + SSRVs + modifications to ALDEx2
+- My goals:
+- Part 1: Introduce notation (W, Y, theta), apply this notation to the ALDEx2 model, show the source of unacknowledged bias in ALDEx2, connect to SRI/SSRVs
+- Part 2: Discuss ALDEx2 as an SSRV and the modifications that we made to ALDEx2.
+- Part 3: Real data examples
 
-## Recap: Sequencing Depth is Unrelated to Scale
+## Recap: Sequencing depth can confound conclusions.
 
-- Example: Either picture with two conditions highlighting scale and system of each or a table.
+\begin{table}[h!]
+\centering
+\begin{tabular}{|r|c c c| c|}
+\hline
+\textcolor{gray}{Observed data (Y)} & Sample 1 & Sample 2 & Sample 3  & \textcolor{gray}{Conclusion}\\
+\hline
+Condition & Health & Health & Disease & \\
+\hline
+Entity 1 & 5 & 10 & 100 & \textcolor{gray}{Increase}\\
+Entity 2 & 10 & 25 & 3 & \textcolor{gray}{Decrease}\\
+Entity 3 & 0 & 1 & 8 & \textcolor{gray}{Increase}\\
+Entity 4 & 0 & 0 & 19 &\textcolor{gray}{Increase}\\
+\hline
+\textcolor{gray}{Sampling Depth} & \textcolor{gray}{15} & \textcolor{gray}{36} & \textcolor{gray}{130} &\\
+\hline
+\end{tabular}
+\end{table}
 
 
 ## Recap: This can mislead analyses.
 
-- Highlight the differences in LFC estimation on the observed data and the true system.
+\begin{table}[h!]
+\centering
+\begin{tabular}{|r|c c c| c|}
+\hline
+\textcolor{gray}{System data (W)} & Sample 1 & Sample 2 & Sample 3  & \textcolor{gray}{Conclusion}\\
+\hline
+Condition & Health & Health & Disease & \\
+\hline
+Entity 1 & 227 & 351 & 154 & \textcolor{gray}{Decrease}\\
+Entity 2 & 684 & 891 & 3 & \textcolor{gray}{Decrease}\\
+Entity 3 & 48 & 32 & 15 & \textcolor{gray}{Decrease}\\
+Entity 4 & 43 & 39  & 27 &\textcolor{gray}{Decrease}\\
+\hline
+\textcolor{gray}{Scale ($W^\perp$)} & \textcolor{gray}{1,002} & \textcolor{gray}{1,313} & \textcolor{gray}{200} &\\
+\hline
+\end{tabular}
+\end{table}
 
 ## Recap: ... and lead to unacknowledged bias.
 
-- Plot of FDR versus sample sizes from one of our examples.
+\begin{figure}
+  \centering
+  \includegraphics[width=4.5in]{figures/unacknowledged_bias.pdf}
+\end{figure}
 
-## Motivating Example: Antibiotic Study
+# Problem Set-Up
 
-Consider a simple study of the microbiome pre/post antibiotic administration.
+## Observed Data as a Sample from the System
 
-  - Research question: Which taxa change in absolute abundance after taking an antibiotic?
-  - How do we analyze this data to answer the question?
-  
-## Motivating Example: Antibiotic Study
+## Differential Abundance/Expression Analysis
 
-- Simulation details + code
+## The Original ALDEx2 Model
+
+## Implied Assumptions about Scale
+
+## Unacknowledged bias in ALDEx2
 
 # Scale Reliant Inference (Informal)
 
 ## Scale Reliant Inference: The Basics
 
-A middle ground approach:
-
 - $Y$ is a measurement of the underlying system $W$.
 
-- Desired quantity depends on $W$ (i.e., $\theta = f(W)$). However, $W$ depends on both the composition and system scale:
+- Desired quantity depends on $W$ (i.e., $\theta = f(W)$). However, $W$ depends on both the composition ($W_{dn}^\parallel$) and system scale ($W_n^\perp$):
 
 $$W_{dn} = W_{dn}^\parallel W_n^\perp$$
 $$W_n^\perp = \sum_{d=1}^D W_{dn}$$
+
+## Scale Reliant Inference: The Basics
+
+- What happens if $\theta$ depends on $W^\perp$?
+
+- Consider LFCs: how are taxa changing between two conditions?
+
+\begin{align*}
+\theta_d &= \text{mean}_{\text{case}}(\log(W_{dn})) - \text{mean}_{\text{control}}(\log(W_{dn}))\\
+&= \text{mean}_{\text{case}}(\log(W_{dn}^\parallel W_n^\perp)) - \text{mean}_{\text{control}}(\log(W_{dn}^\parallel W_n^\perp))\\
+&= (\text{mean}_{\text{case}}(\log(W_{dn}^\parallel)) - \text{mean}_{\text{control}}(\log(W_{dn}^\parallel)))\\
+&- (\text{mean}_{\text{case}}(\log(W_{n}^\perp)) - \text{mean}_{\text{control}}(\log(W_{n}^\perp)))\\
+&= \theta^\parallel + \theta^\perp
+\end{align*}
+
+<span style="color: lightgrey;">What if we have outside information on $W^\perp$?</span>
 
 ## Scale Simulation Random Variables
 
 **Goal:** Estimate $\theta = f(W^\parallel, W^\perp)$.
 
+\vspace{.5in}
+
 1. Draw samples of $W^{\parallel}$ from a measurement model (can depend on $Y$).
 2. Draw samples of $W^{\perp}$ from a scale model (can depend on $W^{\parallel}$).
 3. Estimate samples of $\theta = f(W^\parallel, W^\perp)$.
 
-# Scale Reliant Inference (Formal)
+## Scale Reliant Inference: Theory Intro
+Consider the case of LFCs:
 
-## Scale Reliant Inference: Formal Definition
+\begin{align*}
+\theta_d &= \text{mean}_{\text{case}}(\log(W_{dn})) - \text{mean}_{\text{control}}(\log(W_{dn}))\\
+&= \theta^\parallel + \theta^\perp
+\end{align*}
+
+- What can we say about $\theta$ from $\theta^\parallel$ alone?
+- E.g. If $\theta^\parallel = 20$, what does that say about $\theta$?
+- If there are no restrictions, nothing!
+- Statistical perspective: $\theta$ is not identifiable without $\theta^\perp$.
+- Practical issues: unbiased estimators, calibrated confidence sets, and type-I error control NOT possible!
+
 
 # The Updated ALDEx2 Software
-
-## The Original ALDEx2 model
-
-## Unacknowledged bias in ALDEx2
 
 ## Moving Past Normalizations to Scale
 
@@ -83,6 +146,8 @@ $$W_n^\perp = \sum_{d=1}^D W_{dn}$$
 ## Option 1: Default Scale Model
 
 ## Option 2: More Complex Scale Models
+
+## Sensitivity Analyses
 
 # Real Data Examples
 
