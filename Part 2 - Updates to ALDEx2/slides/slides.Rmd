@@ -3,6 +3,8 @@ title: "Scale Uncertainty in ALDEx2"
 author: "Michelle Nixon"
 date: "May 13, 2024"
 output: beamer_presentation
+header-includes:
+  \usepackage{dcolumn}
 ---
 
 ```{r setup, include=FALSE}
@@ -17,16 +19,73 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Recap: Sequencing Depth is Unrelated to Scale
 
+- Example: Either picture with two conditions highlighting scale and system of each or a table.
+
+
 ## Recap: This can mislead analyses.
+
+- Highlight the differences in LFC estimation on the observed data and the true system.
 
 ## Recap: ... and lead to unacknowledged bias.
 
+- Plot of FDR versus sample sizes from one of our examples.
+
 ## Motivating Example: Antibiotic Study
+
+Consider a simple study of the microbiome pre/post antibiotic administration.
+
+  - Research question: Which taxa change in absolute abundance after taking an antibiotic?
+  - How do we analyze this data to answer the question?
+  
+## Motivating Example: Antibiotic Study
+
+- Simulation details + code
+
+# Scale Reliant Inference (Informal)
 
 ## Scale Reliant Inference: The Basics
 
+A middle ground approach:
+
+- $Y$ is a measurement of the underlying system $W$.
+
+- Desired quantity depends on $W$ (i.e., $\theta = f(W)$). However, $W$ depends on both the composition and system scale:
+
+$$W_{dn} = W_{dn}^\parallel W_n^\perp$$
+$$W_n^\perp = \sum_{d=1}^D W_{dn}$$
+
+## Scale Simulation Random Variables
+
+**Goal:** Estimate $\theta = f(W^\parallel, W^\perp)$.
+
+1. Draw samples of $W^{\parallel}$ from a measurement model (can depend on $Y$).
+2. Draw samples of $W^{\perp}$ from a scale model (can depend on $W^{\parallel}$).
+3. Estimate samples of $\theta = f(W^\parallel, W^\perp)$.
+
+# Scale Reliant Inference (Formal)
+
 ## Scale Reliant Inference: Formal Definition
 
-## The Updated ALDEx2 Software
+# The Updated ALDEx2 Software
+
+## The Original ALDEx2 model
+
+## Unacknowledged bias in ALDEx2
+
+## Moving Past Normalizations to Scale
+
+## ALDEx2 as an SSRV
+
+# Coding Changes to ALDEx2
+
+## Including scale
+
+## Option 1: Default Scale Model
+
+## Option 2: More Complex Scale Models
+
+# Real Data Examples
+
+## Real Example: SELEX
 
 ## Real Example: Vandputte
