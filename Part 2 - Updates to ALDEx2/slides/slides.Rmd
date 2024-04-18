@@ -1,0 +1,32 @@
+---
+title: "Scale Uncertainty in ALDEx2"
+author: "Michelle Nixon"
+date: "May 13, 2024"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Overview
+
+- These slides are by no means polished.
+- Idea: Use a simulation and Vandputte to introduce SRI + SSRVs + modifications to ALDEx2
+
+## Recap: Sequencing Depth is Unrelated to Scale
+
+## Recap: This can mislead analyses.
+
+## Recap: ... and lead to unacknowledged bias.
+
+## Motivating Example: Antibiotic Study
+
+## Scale Reliant Inference: The Basics
+
+## Scale Reliant Inference: Formal Definition
+
+## The Updated ALDEx2 Software
+
+## Real Example: Vandputte
