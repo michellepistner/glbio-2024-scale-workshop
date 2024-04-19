@@ -12,14 +12,6 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
-## Overview
-
-- These slides are by no means polished.
-- Idea: Use a simulation, selex, and Vandputte to introduce SRI + SSRVs + modifications to ALDEx2
-- My goals:
-- Part 1: Introduce notation (W, Y, theta), apply this notation to the ALDEx2 model, show the source of unacknowledged bias in ALDEx2, connect to SRI/SSRVs
-- Part 2: Discuss ALDEx2 as an SSRV and the modifications that we made to ALDEx2.
-- Part 3: Real data examples
 
 ## Recap: Sequencing depth can confound conclusions.
 
@@ -27,9 +19,9 @@ knitr::opts_chunk$set(echo = FALSE)
 \centering
 \begin{tabular}{|r|c c c| c|}
 \hline
-\textcolor{gray}{Observed data (Y)} & Sample 1 & Sample 2 & Sample 3  & \textcolor{gray}{Conclusion}\\
+\textcolor{gray}{Observed data (Y)} & Sample 1 & Sample 2 & Sample 3  &\\
 \hline
-Condition & Health & Health & Disease & \\
+Condition & Health & Health & Disease & \textcolor{gray}{Conclusion}\\
 \hline
 Entity 1 & 5 & 10 & 100 & \textcolor{gray}{Increase}\\
 Entity 2 & 10 & 25 & 3 & \textcolor{gray}{Decrease}\\
@@ -42,15 +34,15 @@ Entity 4 & 0 & 0 & 19 &\textcolor{gray}{Increase}\\
 \end{table}
 
 
-## Recap: This can mislead analyses.
+## This can mislead analyses.
 
 \begin{table}[h!]
 \centering
 \begin{tabular}{|r|c c c| c|}
 \hline
-\textcolor{gray}{System data (W)} & Sample 1 & Sample 2 & Sample 3  & \textcolor{gray}{Conclusion}\\
+\textcolor{gray}{System data (W)} & Sample 1 & Sample 2 & Sample 3  & \\
 \hline
-Condition & Health & Health & Disease & \\
+Condition & Health & Health & Disease & \textcolor{gray}{Conclusion}\\
 \hline
 Entity 1 & 227 & 351 & 154 & \textcolor{gray}{Decrease}\\
 Entity 2 & 684 & 891 & 3 & \textcolor{gray}{Decrease}\\
@@ -62,7 +54,7 @@ Entity 4 & 43 & 39  & 27 &\textcolor{gray}{Decrease}\\
 \end{tabular}
 \end{table}
 
-## Recap: ... and lead to unacknowledged bias.
+## ... and lead to unacknowledged bias.
 
 \begin{figure}
   \centering
@@ -73,24 +65,71 @@ Entity 4 & 43 & 39  & 27 &\textcolor{gray}{Decrease}\\
 
 ## Observed Data as a Sample from the System
 
+## Notation
+
+- $Y$ is a measurement of the underlying system $W$.
+
+- $W$ depends on both the composition ($W_{dn}^\parallel$) and system scale ($W_n^\perp$):
+
+$$W_{dn} = W_{dn}^\parallel W_n^\perp$$
+$$W_n^\perp = \sum_{d=1}^D W_{dn}$$
+
+- $\theta$ is what we want to estimate. 
+
 ## Differential Abundance/Expression Analysis
+
+- Question: How do entities (e.g., taxa or genes) change between conditions?
+
+- In this case, $\theta$ is the log-fold change (LFC):
+
+\begin{equation*}
+\theta_d = \text{mean}_{\text{case}}(\log W_{dn}) - \text{mean}_{\text{control}}(\log W_{dn})
+\end{equation*}
 
 ## The Original ALDEx2 Model
 
+\textbf{Step 1: Model Sampling Uncertainty}
+\begin{align*}
+Y_{\cdot n} &\sim \text{Multinomial}(W_{\cdot n}^\parallel)\\
+W_{\cdot n}^\parallel &\sim \text{Dirichlet}(\alpha)
+\end{align*}
+
+\textbf{Step 2: Centered Log-Ratio Transformation}
+\begin{equation*}
+\log W_{\cdot n} = \left[\log W_{1n}^\parallel - \text{mean}(\log W_{\cdot n}^\parallel), ..., \log W_{Dn}^\parallel - \text{mean}(\log W_{\cdot n}^\parallel) \right]
+\end{equation*}
+
+\textbf{Step 3: Calculate LFCs and Test if Different from Zero.}
+\begin{equation*}
+\theta_d = \text{mean}_{\text{case}}(\log W_{dn}) - \text{mean}_{\text{control}}(\log W_{dn})
+\end{equation*}
+
 ## Implied Assumptions about Scale
 
-## Unacknowledged bias in ALDEx2
+\textcolor{gray}{\textbf{Step 1: Model Sampling Uncertainty}}
+\textcolor{gray}{\begin{align*}
+Y_{\cdot n} &\sim \text{Multinomial}(W_{\cdot n}^\parallel)\\
+W_{\cdot n}^\parallel &\sim \text{Dirichlet}(\alpha)
+\end{align*}}
+
+\textbf{Step 2: Centered Log-Ratio Transformation}
+\begin{equation*}
+\log W_{\cdot n} = \left[\log W_{1n}^\parallel - \text{mean}(\log W_{\cdot n}^\parallel), ..., \log W_{Dn}^\parallel - \text{mean}(\log W_{\cdot n}^\parallel) \right]
+\end{equation*}
+
+\textcolor{gray}{\textbf{Step 3: Calculate LFCs and Test if Different from Zero.}}
+\textcolor{gray}{\begin{equation*}
+\theta_d = \text{mean}_{\text{case}}(\log W_{dn}) - \text{mean}_{\text{control}}(\log W_{dn})
+  \end{equation*}}
+  
+## Implied Assumptions about Scale, cont.
+
+
+## Adding Uncertainty in Scale can Help.
 
 # Scale Reliant Inference (Informal)
 
 ## Scale Reliant Inference: The Basics
-
-- $Y$ is a measurement of the underlying system $W$.
-
-- Desired quantity depends on $W$ (i.e., $\theta = f(W)$). However, $W$ depends on both the composition ($W_{dn}^\parallel$) and system scale ($W_n^\perp$):
-
-$$W_{dn} = W_{dn}^\parallel W_n^\perp$$
-$$W_n^\perp = \sum_{d=1}^D W_{dn}$$
 
 ## Scale Reliant Inference: The Basics
 
@@ -99,45 +138,48 @@ $$W_n^\perp = \sum_{d=1}^D W_{dn}$$
 - Consider LFCs: how are taxa changing between two conditions?
 
 \begin{align*}
-\theta_d &= \text{mean}_{\text{case}}(\log(W_{dn})) - \text{mean}_{\text{control}}(\log(W_{dn}))\\
-&= \text{mean}_{\text{case}}(\log(W_{dn}^\parallel W_n^\perp)) - \text{mean}_{\text{control}}(\log(W_{dn}^\parallel W_n^\perp))\\
-&= (\text{mean}_{\text{case}}(\log(W_{dn}^\parallel)) - \text{mean}_{\text{control}}(\log(W_{dn}^\parallel)))\\
-&- (\text{mean}_{\text{case}}(\log(W_{n}^\perp)) - \text{mean}_{\text{control}}(\log(W_{n}^\perp)))\\
+\theta_d &= \text{mean}_{\text{case}}(\log W_{dn}) - \text{mean}_{\text{control}}(\log W_{dn})\\
+&= ... \\
+&= (\text{mean}_{\text{case}}(\log W_{dn}^\parallel) - \text{mean}_{\text{control}}(\log W_{dn}^\parallel))\\
+&- (\text{mean}_{\text{case}}(\log W_{n}^\perp) - \text{mean}_{\text{control}}(\log W_{n}^\perp))\\
 &= \theta^\parallel + \theta^\perp
 \end{align*}
 
-<span style="color: lightgrey;">What if we have outside information on $W^\perp$?</span>
+\textcolor{gray}{Don't we need $\theta^\perp$?}
+
+## Scale Reliant Inference: Theory Intro
+Recall for LFCs:
+\begin{align*}
+\theta_d &= \text{mean}_{\text{case}}(\log W_{dn} ) - \text{mean}_{\text{control}}(\log W_{dn} )\\
+&= \theta^\parallel + \theta^\perp
+\end{align*}
+
+- What can we say about $\theta$ from $\theta^\parallel$ alone?
+
+- E.g. If $\theta^\parallel = 20$, what does that say about $\theta$? \textcolor{gray}{If there are no restrictions, nothing!}
+
+- Statistical perspective: $\theta$ is not identifiable without $\theta^\perp$.
+
+- Practical issues: unbiased estimators, calibrated confidence sets, and type-I error control *NOT* possible!
 
 ## Scale Simulation Random Variables
 
 **Goal:** Estimate $\theta = f(W^\parallel, W^\perp)$.
 
-\vspace{.5in}
+\vspace{.25in}
 
 1. Draw samples of $W^{\parallel}$ from a measurement model (can depend on $Y$).
+
 2. Draw samples of $W^{\perp}$ from a scale model (can depend on $W^{\parallel}$).
+
 3. Estimate samples of $\theta = f(W^\parallel, W^\perp)$.
-
-## Scale Reliant Inference: Theory Intro
-Consider the case of LFCs:
-
-\begin{align*}
-\theta_d &= \text{mean}_{\text{case}}(\log(W_{dn})) - \text{mean}_{\text{control}}(\log(W_{dn}))\\
-&= \theta^\parallel + \theta^\perp
-\end{align*}
-
-- What can we say about $\theta$ from $\theta^\parallel$ alone?
-- E.g. If $\theta^\parallel = 20$, what does that say about $\theta$?
-- If there are no restrictions, nothing!
-- Statistical perspective: $\theta$ is not identifiable without $\theta^\perp$.
-- Practical issues: unbiased estimators, calibrated confidence sets, and type-I error control NOT possible!
 
 
 # The Updated ALDEx2 Software
 
-## Moving Past Normalizations to Scale
-
 ## ALDEx2 as an SSRV
+
+## Benefits of Moving Past Normalizations to Scale
 
 # Coding Changes to ALDEx2
 
