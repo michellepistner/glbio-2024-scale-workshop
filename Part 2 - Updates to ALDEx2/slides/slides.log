@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.7.26)  19 APR 2024 11:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.7.26)  19 APR 2024 15:25
 entering extended mode
 **./slides.tex
 (slides.tex
@@ -1161,33 +1161,67 @@ Overfull \hbox (17.92513pt too wide) in paragraph at lines 151--151
 
  <./figures/unacknowledged_bias.pdf>] [5
 
-] [6
+]
+<figures/intro.pdf, id=53, 2737.59506pt x 1013.99991pt>
+File: figures/intro.pdf Graphic file (type pdf)
+<use figures/intro.pdf>
+Package pdftex.def Info: figures/intro.pdf  used on input line 162.
+(pdftex.def)             Requested size: 325.215pt x 120.45242pt.
 
-] [7
+Overfull \hbox (17.92513pt too wide) in paragraph at lines 162--162
+ [] 
+ []
+
+[6
+
+ <./figures/intro.pdf>] [7
 
 ] [8
 
 ]
-Overfull \hbox (0.177pt too wide) detected at line 210
+Overfull \hbox (0.177pt too wide) detected at line 214
 [] \T1/lmss/m/sl/10.95 W[] \OT1/lmss/m/n/10.95 = []
  []
 
 [9
 
 ]
-Overfull \hbox (0.177pt too wide) detected at line 228
+Overfull \hbox (0.177pt too wide) detected at line 232
 [] \T1/lmss/m/sl/10.95 W[] \OT1/lmss/m/n/10.95 = []
  []
 
 [10
 
-] [11
+]
+Overfull \hbox (0.177pt too wide) detected at line 246
+[]
+ []
 
-] [12
+[11
 
-] [13
+]
+File: figures/unacknowledged_bias.pdf Graphic file (type pdf)
+<use figures/unacknowledged_bias.pdf>
+Package pdftex.def Info: figures/unacknowledged_bias.pdf  used on input line 25
+4.
+(pdftex.def)             Requested size: 325.215pt x 162.61371pt.
 
-] [14
+Overfull \hbox (17.92513pt too wide) in paragraph at lines 254--254
+ [] 
+ []
+
+[12
+
+]
+<figures/sim-res-by-method.pdf, id=265, 505.89pt x 505.89pt>
+File: figures/sim-res-by-method.pdf Graphic file (type pdf)
+<use figures/sim-res-by-method.pdf>
+Package pdftex.def Info: figures/sim-res-by-method.pdf  used on input line 262.
+
+(pdftex.def)             Requested size: 234.87749pt x 234.88132pt.
+[13
+
+ <./figures/sim-res-by-method.pdf>] [14
 
 ] [15
 
@@ -1217,6 +1251,10 @@ Overfull \hbox (0.177pt too wide) detected at line 228
 
 ] [28
 
+] [29
+
+] [30
+
 ]
 \tf@nav=\write5
 \openout5 = `slides.nav'.
@@ -1229,11 +1267,11 @@ Overfull \hbox (0.177pt too wide) detected at line 228
 
 (slides.aux) ) 
 Here is how much of TeX's memory you used:
- 23416 strings out of 478864
- 439584 string characters out of 2847712
+ 23442 strings out of 478864
+ 440149 string characters out of 2847712
  755428 words of memory out of 3000000
- 40678 multiletter control sequences out of 15000+600000
- 444337 words of font info for 81 fonts, out of 8000000 for 9000
+ 40694 multiletter control sequences out of 15000+600000
+ 444438 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,13n,124p,1005b,376s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
@@ -1253,9 +1291,9 @@ nts/type1/public/lm/lmsso10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX
 eX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/map5672/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/map5672/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on slides.pdf (28 pages, 200253 bytes).
+Output written on slides.pdf (30 pages, 282929 bytes).
 PDF statistics:
- 298 PDF objects out of 1000 (max. 8388607)
- 84 named destinations out of 1000 (max. 500000)
- 24664 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 477 PDF objects out of 1000 (max. 8388607)
+ 90 named destinations out of 1000 (max. 500000)
+ 24674 words of extra memory for PDF output out of 24883 (max. 10000000)
 

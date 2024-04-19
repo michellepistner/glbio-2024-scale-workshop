@@ -65,6 +65,11 @@ Entity 4 & 43 & 39  & 27 &\textcolor{gray}{Decrease}\\
 
 ## Observed Data as a Sample from the System
 
+\begin{figure}
+  \centering
+  \includegraphics[width=4.5in]{figures/intro.pdf}
+\end{figure}
+
 ## Notation
 
 - $Y$ is a measurement of the underlying system $W$.
@@ -123,13 +128,59 @@ W_{\cdot n}^\parallel &\sim \text{Dirichlet}(\alpha)
   \end{equation*}}
   
 ## Implied Assumptions about Scale, cont.
+Using the relationship $W_{dn} = W_{dn}^\parallel W_n^\perp$ and some math, the CLR normalization:
+\begin{align*}
+\log W_{\cdot n} = \left[\log W_{1n}^\parallel - \text{mean}(\log W_{\cdot n}^\parallel), ..., \log W_{Dn}^\parallel - \text{mean}(\log W_{\cdot n}^\parallel) \right]
+\end{align*}
+implies:
 
+\begin{align*}
+\log W_n^\perp = \text{mean}(\log W_{\cdot n}^\parallel).
+\end{align*}
+
+\textcolor{gray}{What does this mean? What does this imply for analyses?}
+
+
+## Unacknowledged bias!
+
+\begin{figure}
+  \centering
+  \includegraphics[width=4.5in]{figures/unacknowledged_bias.pdf}
+\end{figure}
 
 ## Adding Uncertainty in Scale can Help.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=3.25in]{figures/sim-res-by-method.pdf}
+\end{figure}
+
 
 # Scale Reliant Inference (Informal)
 
 ## Scale Reliant Inference: The Basics
+
+- **The CoDA perspective:** Research questions that depend on scale are not possible.
+
+- **The Normalization perspective:** Research questions that depend on scale can be answered after normalization.
+
+- Who is right?
+
+\textcolor{white}{CoDA perspective: Technically yes, but limiting.}
+
+\textcolor{white}{The Normalization perspective: Technically no, but attempting to answer relevant questions.}
+
+## Scale Reliant Inference: The Basics
+
+- **The CoDA perspective:** Research questions that depend on scale are not possible.
+
+- **The Normalization perspective:** Research questions that depend on scale can be answered after normalization.
+
+- Who is right?
+
+- **The CoDA perspective:** Technically yes, but limiting.
+
+- **The Normalization perspective:** Technically no, but attempting to answer relevant questions.
 
 ## Scale Reliant Inference: The Basics
 
