@@ -2,7 +2,9 @@
 title: "Scale Uncertainty in ALDEx2"
 author: "Michelle Nixon"
 date: "May 13, 2024"
-output: beamer_presentation
+output:
+  beamer_presentation:
+    theme: "Madrid"
 header-includes:
   \usepackage{dcolumn}
 ---
@@ -268,9 +270,13 @@ There are no restrictions on $Q$, although there are some helpful options:
 
 **The new ALDEx2 model removes normalizations in lieu of scale models.**
 
+\vspace{.1in}
+
 Major updates:
 
-1. A new argument `gamma` which inc
+1. A new argument `gamma` which makes it easy to incorporate scale uncertainty.
+
+2. A new function `aldex.senAnalysis` to see how analysis results change as a function of scale uncertainty.
 
 ## The gamma argument
 
@@ -299,6 +305,18 @@ $$\Lambda^\perp  \sim \ N(0, \gamma^2).$$
 
 ## Interpreting the Default Scale Model
 
+\textcolor{gray}{$$\log \hat{W}_{n}^{\perp(s)} = - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) + \Lambda^\perp x_{n}$$}
+
+$$\Lambda^\perp  \sim \ N(0, \gamma^2).$$
+
+**Empirical Rule:** 95\% of samples of $\Lambda^\perp$ fall within a factor of $\pm 2 \gamma$.
+
+## Interpreting the Default Scale Model, cont.
+
+$$\textcolor{gray}{\log \hat{W}_{n}^{\perp(s)} = - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) +} \Lambda^\perp x_{n}$$}
+
+$$\Lambda^\perp  \sim \ N(0, \gamma^2).$$
+
 ## Option 2: More Complex Scale Models
 
 Alternatively, can pass a matrix of scale samples to `gamma` so long as:
@@ -315,6 +333,8 @@ Reasons to do this:
 ## Sensitivity Analyses
 
 # Real Data Examples
+
+## Simulation Study
 
 ## Real Example: SELEX
 
