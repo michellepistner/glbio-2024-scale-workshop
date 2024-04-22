@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.7.26)  19 APR 2024 15:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.7.26)  22 APR 2024 11:57
 entering extended mode
 **./slides.tex
 (slides.tex
@@ -1192,36 +1192,30 @@ Overfull \hbox (0.177pt too wide) detected at line 232
 
 [10
 
-]
-Overfull \hbox (0.177pt too wide) detected at line 246
-[]
- []
-
-[11
+] [11
 
 ]
 File: figures/unacknowledged_bias.pdf Graphic file (type pdf)
 <use figures/unacknowledged_bias.pdf>
 Package pdftex.def Info: figures/unacknowledged_bias.pdf  used on input line 25
-4.
+2.
 (pdftex.def)             Requested size: 325.215pt x 162.61371pt.
 
-Overfull \hbox (17.92513pt too wide) in paragraph at lines 254--254
+Overfull \hbox (17.92513pt too wide) in paragraph at lines 252--252
  [] 
  []
 
 [12
 
 ]
-<figures/sim-res-by-method.pdf, id=265, 505.89pt x 505.89pt>
-File: figures/sim-res-by-method.pdf Graphic file (type pdf)
-<use figures/sim-res-by-method.pdf>
-Package pdftex.def Info: figures/sim-res-by-method.pdf  used on input line 262.
-
-(pdftex.def)             Requested size: 234.87749pt x 234.88132pt.
+<figures/sim-res.pdf, id=265, 545.092pt x 532.30724pt>
+File: figures/sim-res.pdf Graphic file (type pdf)
+<use figures/sim-res.pdf>
+Package pdftex.def Info: figures/sim-res.pdf  used on input line 260.
+(pdftex.def)             Requested size: 234.87749pt x 229.36685pt.
 [13
 
- <./figures/sim-res-by-method.pdf>] [14
+ <./figures/sim-res.pdf>] [14
 
 ] [15
 
@@ -1237,23 +1231,73 @@ Package pdftex.def Info: figures/sim-res-by-method.pdf  used on input line 262.
 
 ] [21
 
-] [22
+]
+<figures/sim-res-samples.pdf, id=364, 535.22408pt x 522.87196pt>
+File: figures/sim-res-samples.pdf Graphic file (type pdf)
+<use figures/sim-res-samples.pdf>
+Package pdftex.def Info: figures/sim-res-samples.pdf  used on input line 392.
+(pdftex.def)             Requested size: 234.87749pt x 229.45801pt.
+[22
 
-] [23
+ <./figures/sim-res-samples.pdf>] [23
 
 ] [24
 
-] [25
+]
+\openout4 = `slides.vrb'.
 
-] [26
+(slides.vrb
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+1.
+(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)) [25
 
-] [27
+]
+\openout4 = `slides.vrb'.
+
+(slides.vrb
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 15.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 15.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 15.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 15.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 15.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 15.
+) [26
+
+]
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 45
+8.
+(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cf
+g
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+) [27
 
 ] [28
 
 ] [29
 
-] [30
+]
+\openout4 = `slides.vrb'.
+
+(slides.vrb) [30
+
+] [31
+
+] [32
+
+] [33
+
+] [34
 
 ]
 \tf@nav=\write5
@@ -1267,13 +1311,13 @@ Package pdftex.def Info: figures/sim-res-by-method.pdf  used on input line 262.
 
 (slides.aux) ) 
 Here is how much of TeX's memory you used:
- 23442 strings out of 478864
- 440149 string characters out of 2847712
+ 23775 strings out of 478864
+ 446836 string characters out of 2847712
  755428 words of memory out of 3000000
- 40694 multiletter control sequences out of 15000+600000
- 444438 words of font info for 82 fonts, out of 8000000 for 9000
+ 40940 multiletter control sequences out of 15000+600000
+ 484235 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,13n,124p,1005b,376s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 128i,13n,124p,1005b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
 m/lm-ec.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/
 lm-mathsy.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
@@ -1282,18 +1326,20 @@ m/lm-mathit.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
 m/lm-mathex.enc}<C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/lm/lmex10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/lm/lmmi10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/lm/lmss10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/lm/lmss12.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmss8.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/lm/lmssbx10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/lm/lmsso10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/lm/lmsso8.pfb><C:/Users/map5672/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/map5672/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/map5672/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on slides.pdf (30 pages, 282929 bytes).
+/public/lm/lmr10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/lm/lmss10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/lm/lmss12.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/lm/lmss8.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/lm/lmssbx10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/lm/lmsso10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/lm/lmsso8.pfb><C:/Users/map5672/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/map5672/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/map5672/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/map5672/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on slides.pdf (34 pages, 414815 bytes).
 PDF statistics:
- 477 PDF objects out of 1000 (max. 8388607)
- 90 named destinations out of 1000 (max. 500000)
- 24674 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 581 PDF objects out of 1000 (max. 8388607)
+ 102 named destinations out of 1000 (max. 500000)
+ 49255 words of extra memory for PDF output out of 51595 (max. 10000000)
 

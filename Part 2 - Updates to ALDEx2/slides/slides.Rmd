@@ -128,11 +128,7 @@ W_{\cdot n}^\parallel &\sim \text{Dirichlet}(\alpha)
   \end{equation*}}
   
 ## Implied Assumptions about Scale, cont.
-Using the relationship $W_{dn} = W_{dn}^\parallel W_n^\perp$ and some math, the CLR normalization:
-\begin{align*}
-\log W_{\cdot n} = \left[\log W_{1n}^\parallel - \text{mean}(\log W_{\cdot n}^\parallel), ..., \log W_{Dn}^\parallel - \text{mean}(\log W_{\cdot n}^\parallel) \right]
-\end{align*}
-implies:
+Using the relationship $W_{dn} = W_{dn}^\parallel W_n^\perp$ and some math, the CLR normalization implies:
 
 \begin{align*}
 \log W_n^\perp = \text{mean}(\log W_{\cdot n}^\parallel).
@@ -152,7 +148,7 @@ implies:
 
 \begin{figure}
   \centering
-  \includegraphics[width=3.25in]{figures/sim-res-by-method.pdf}
+  \includegraphics[width=3.25in]{figures/sim-res.pdf}
 \end{figure}
 
 
@@ -230,15 +226,91 @@ Recall for LFCs:
 
 ## ALDEx2 as an SSRV
 
+\textcolor{gray}{\textbf{Step 1: Model Sampling Uncertainty}}
+\textcolor{gray}{\begin{align*}
+Y_{\cdot n} &\sim \text{Multinomial}(W_{\cdot n}^\parallel)\\
+W_{\cdot n}^\parallel &\sim \text{Dirichlet}(\alpha)
+\end{align*}}
+
+\textbf{Step 2: Draw Samples from a Scale Model}
+\begin{align*}
+\log W_{n}^\perp &\sim Q\\
+\log W_{\cdot n} &= \log W_{\cdot n}^\parallel + \log W_{n}^\perp
+\end{align*}
+
+\textcolor{gray}{\textbf{Step 3: Calculate LFCs and Test if Different from Zero.}}
+\textcolor{gray}{\begin{equation*}
+\theta_d = \text{mean}_{\text{case}}(\log W_{dn}) - \text{mean}_{\text{control}}(\log W_{dn})
+  \end{equation*}}
+
 ## Benefits of Moving Past Normalizations to Scale
+
+\begin{figure}
+  \centering
+  \includegraphics[width=3.25in]{figures/sim-res-samples.pdf}
+\end{figure}
+
+## Intro to Scale Models
+
+Normalizations are replaced by a scale model:
+
+$$\log W_n^\perp \sim Q$$
+
+There are no restrictions on $Q$, although there are some helpful options:
+
+1. Based on normalizations.
+2. Based on biological knowledge.
+3. Based on outside measurements.
 
 # Coding Changes to ALDEx2
 
 ## Including scale
 
+**The new ALDEx2 model removes normalizations in lieu of scale models.**
+
+Major updates:
+
+1. A new argument `gamma` which inc
+
+## The gamma argument
+
+- Added as argument to the `aldex` and `aldex.clr` function.
+
+- `gamma` can either be a single numeric or a matrix.
+    1. Single numeric: controls the noise on the default scale model.
+    2. Matrix: A $N \times S$ matrix of samples of $W$.
+    
+- `gamma = NULL` returns the default behavior of ALDEx2.
+
 ## Option 1: Default Scale Model
 
+The default scale model is based on errors in the CLR normalization.
+
+$$\log \hat{W}_{n}^{\perp(s)} = - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) + \Lambda^\perp x_{n}$$
+$$\Lambda^\perp  \sim \ N(0, \gamma^2).$$
+
+## Advantages of the Default Scale Model
+
+1. It is built off the status quo for ALDEx2.
+
+2. Any value of $\gamma > 0$ will reduce false positives compared to the CLR normalization.
+
+3. It has a concrete interpretation to contextualize scale assumptions.
+
+## Interpreting the Default Scale Model
+
 ## Option 2: More Complex Scale Models
+
+Alternatively, can pass a matrix of scale samples to `gamma` so long as:
+
+1. The dimension is $N \times S$.
+2. They are samples of $W^\perp$ not $\log W^\perp$.
+
+Reasons to do this:
+
+1. **Biological beliefs:** Scale is guided by the biological system or the researcher's prior beliefs.
+
+2. **Outside Measurements:** These can be used in building a scale model *if* they are informative on the scale of interest (e.g., qPCR, flow cytometry).
 
 ## Sensitivity Analyses
 
