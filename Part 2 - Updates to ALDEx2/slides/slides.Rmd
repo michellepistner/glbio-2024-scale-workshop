@@ -4,7 +4,7 @@ author: "Michelle Nixon"
 date: "May 13, 2024"
 output:
   beamer_presentation:
-    theme: "Madrid"
+    theme: "Frankfurt"
 header-includes:
   \usepackage{dcolumn}
 ---
@@ -69,19 +69,26 @@ Entity 4 & 43 & 39  & 27 &\textcolor{gray}{Decrease}\\
 
 \begin{figure}
   \centering
-  \includegraphics[width=4.5in]{figures/intro.pdf}
+  \includegraphics[width=4.5in]{figures/intro-fig-first.png}
+\end{figure}
+
+## Observed Data as a Sample from the System
+
+\begin{figure}
+  \centering
+  \includegraphics[width=4.5in]{figures/intro-fig-full.png}
 \end{figure}
 
 ## Notation
 
-- $Y$ is a measurement of the underlying system $W$.
+- $\mathbf{Y}$: a measurement of the underlying system $W$.
 
-- $W$ depends on both the composition ($W_{dn}^\parallel$) and system scale ($W_n^\perp$):
+- $\mathbf{W}$: depends on both the composition ($W_{dn}^\parallel$) and system scale ($W_n^\perp$):
 
-$$W_{dn} = W_{dn}^\parallel W_n^\perp$$
-$$W_n^\perp = \sum_{d=1}^D W_{dn}$$
+$$\mathbf{W}_{dn} = \mathbf{W}_{dn}^\parallel W_n^\perp$$
+$$W_n^\perp = \sum_{d=1}^D \mathbf{W}_{dn}$$
 
-- $\theta$ is what we want to estimate. 
+- $\boldsymbol{\theta}$: what we want to estimate. 
 
 ## Differential Abundance/Expression Analysis
 
@@ -90,50 +97,52 @@ $$W_n^\perp = \sum_{d=1}^D W_{dn}$$
 - In this case, $\theta$ is the log-fold change (LFC):
 
 \begin{equation*}
-\theta_d = \text{mean}_{\text{case}}(\log W_{dn}) - \text{mean}_{\text{control}}(\log W_{dn})
+\theta_d = \text{mean}_{\text{case}}(\log \mathbf{W}_{dn}) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn})
 \end{equation*}
 
 ## The Original ALDEx2 Model
 
 \textbf{Step 1: Model Sampling Uncertainty}
 \begin{align*}
-Y_{\cdot n} &\sim \text{Multinomial}(W_{\cdot n}^\parallel)\\
-W_{\cdot n}^\parallel &\sim \text{Dirichlet}(\alpha)
+\mathbf{Y}_{\cdot n} &\sim \text{Multinomial}(\mathbf{W}_{\cdot n}^\parallel)\\
+\mathbf{W}_{\cdot n}^\parallel &\sim \text{Dirichlet}(\alpha)
 \end{align*}
 
 \textbf{Step 2: Centered Log-Ratio Transformation}
 \begin{equation*}
-\log W_{\cdot n} = \left[\log W_{1n}^\parallel - \text{mean}(\log W_{\cdot n}^\parallel), ..., \log W_{Dn}^\parallel - \text{mean}(\log W_{\cdot n}^\parallel) \right]
+\log \mathbf{W}_{\cdot n} = \left[\log \mathbf{W}_{1n}^\parallel - \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel), ..., \log \mathbf{W}_{Dn}^\parallel - \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel) \right]
 \end{equation*}
 
 \textbf{Step 3: Calculate LFCs and Test if Different from Zero.}
 \begin{equation*}
-\theta_d = \text{mean}_{\text{case}}(\log W_{dn}) - \text{mean}_{\text{control}}(\log W_{dn})
+\theta_d = \text{mean}_{\text{case}}(\log \mathbf{W}_{dn}) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn})
 \end{equation*}
 
 ## Implied Assumptions about Scale
 
 \textcolor{gray}{\textbf{Step 1: Model Sampling Uncertainty}}
-\textcolor{gray}{\begin{align*}
-Y_{\cdot n} &\sim \text{Multinomial}(W_{\cdot n}^\parallel)\\
-W_{\cdot n}^\parallel &\sim \text{Dirichlet}(\alpha)
-\end{align*}}
+\begin{align*}
+\textcolor{gray}{\mathbf{Y}_{\cdot n}} &\textcolor{gray}{\sim \text{Multinomial}(\mathbf{W}_{\cdot n}^\parallel)}\\
+\textcolor{gray}{\mathbf{W}_{\cdot n}^\parallel} &\textcolor{gray}{\sim \text{Dirichlet}(\alpha)}
+\end{align*}
+
 
 \textbf{Step 2: Centered Log-Ratio Transformation}
 \begin{equation*}
-\log W_{\cdot n} = \left[\log W_{1n}^\parallel - \text{mean}(\log W_{\cdot n}^\parallel), ..., \log W_{Dn}^\parallel - \text{mean}(\log W_{\cdot n}^\parallel) \right]
+\log \mathbf{W}_{\cdot n} = \left[\log \mathbf{W}_{1n}^\parallel - \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel), ..., \log \mathbf{W}_{Dn}^\parallel - \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel) \right]
 \end{equation*}
 
-\textcolor{gray}{\textbf{Step 3: Calculate LFCs and Test if Different from Zero.}}
-\textcolor{gray}{\begin{equation*}
-\theta_d = \text{mean}_{\text{case}}(\log W_{dn}) - \text{mean}_{\text{control}}(\log W_{dn})
-  \end{equation*}}
+\textcolor{gray}{\textbf{Step 3: Calculate LFCs and Test if Different from Zero.}
+\begin{equation*}
+\theta_d = \text{mean}_{\text{case}}(\log \mathbf{W}_{dn}) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn})
+\end{equation*}}
+
   
 ## Implied Assumptions about Scale, cont.
-Using the relationship $W_{dn} = W_{dn}^\parallel W_n^\perp$ and some math, the CLR normalization implies:
+Using the relationship $\mathbf{W}_{dn} = \mathbf{W}_{dn}^\parallel W_n^\perp$ and some math, the CLR normalization implies:
 
 \begin{align*}
-\log W_n^\perp = \text{mean}(\log W_{\cdot n}^\parallel).
+\log W_n^\perp = \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel).
 \end{align*}
 
 \textcolor{gray}{What does this mean? What does this imply for analyses?}
@@ -187,9 +196,9 @@ Using the relationship $W_{dn} = W_{dn}^\parallel W_n^\perp$ and some math, the 
 - Consider LFCs: how are taxa changing between two conditions?
 
 \begin{align*}
-\theta_d &= \text{mean}_{\text{case}}(\log W_{dn}) - \text{mean}_{\text{control}}(\log W_{dn})\\
+\theta_d &= \text{mean}_{\text{case}}(\log \mathbf{W}_{dn}) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn})\\
 &= ... \\
-&= (\text{mean}_{\text{case}}(\log W_{dn}^\parallel) - \text{mean}_{\text{control}}(\log W_{dn}^\parallel))\\
+&= (\text{mean}_{\text{case}}(\log \mathbf{W}_{dn}^\parallel) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn}^\parallel))\\
 &- (\text{mean}_{\text{case}}(\log W_{n}^\perp) - \text{mean}_{\text{control}}(\log W_{n}^\perp))\\
 &= \theta^\parallel + \theta^\perp
 \end{align*}
@@ -199,7 +208,7 @@ Using the relationship $W_{dn} = W_{dn}^\parallel W_n^\perp$ and some math, the 
 ## Scale Reliant Inference: Theory Intro
 Recall for LFCs:
 \begin{align*}
-\theta_d &= \text{mean}_{\text{case}}(\log W_{dn} ) - \text{mean}_{\text{control}}(\log W_{dn} )\\
+\theta_d &= \text{mean}_{\text{case}}(\log \mathbf{W}_{dn} ) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn} )\\
 &= \theta^\parallel + \theta^\perp
 \end{align*}
 
@@ -209,19 +218,19 @@ Recall for LFCs:
 
 - Statistical perspective: $\theta$ is not identifiable without $\theta^\perp$.
 
-- Practical issues: unbiased estimators, calibrated confidence sets, and type-I error control *NOT* possible!
+- Practical issues: unbiased estimators, calibrated confidence sets, and type-I error control **NOT** possible!
 
 ## Scale Simulation Random Variables
 
-**Goal:** Estimate $\theta = f(W^\parallel, W^\perp)$.
+**Goal:** Estimate $\theta = f(\mathbf{W}^\parallel, W^\perp)$.
 
 \vspace{.25in}
 
-1. Draw samples of $W^{\parallel}$ from a measurement model (can depend on $Y$).
+1. Draw samples of $\mathbf{W}^{\parallel}$ from a measurement model (can depend on $\mathbf{Y}$).
 
-2. Draw samples of $W^{\perp}$ from a scale model (can depend on $W^{\parallel}$).
+2. Draw samples of $W^{\perp}$ from a scale model (can depend on $\mathbf{W}^{\parallel}$).
 
-3. Estimate samples of $\theta = f(W^\parallel, W^\perp)$.
+3. Estimate samples of $\theta = f(\mathbf{W}^\parallel, W^\perp)$.
 
 
 # The Updated ALDEx2 Software
@@ -230,19 +239,19 @@ Recall for LFCs:
 
 \textcolor{gray}{\textbf{Step 1: Model Sampling Uncertainty}}
 \textcolor{gray}{\begin{align*}
-Y_{\cdot n} &\sim \text{Multinomial}(W_{\cdot n}^\parallel)\\
-W_{\cdot n}^\parallel &\sim \text{Dirichlet}(\alpha)
+\mathbf{Y}_{\cdot n} &\sim \text{Multinomial}(\mathbf{W}_{\cdot n}^\parallel)\\
+\mathbf{W}_{\cdot n}^\parallel &\sim \text{Dirichlet}(\alpha)
 \end{align*}}
 
 \textbf{Step 2: Draw Samples from a Scale Model}
 \begin{align*}
 \log W_{n}^\perp &\sim Q\\
-\log W_{\cdot n} &= \log W_{\cdot n}^\parallel + \log W_{n}^\perp
+\log \mathbf{W}_{\cdot n} &= \log \mathbf{W}_{\cdot n}^\parallel + \log W_{n}^\perp
 \end{align*}
 
 \textcolor{gray}{\textbf{Step 3: Calculate LFCs and Test if Different from Zero.}}
 \textcolor{gray}{\begin{equation*}
-\theta_d = \text{mean}_{\text{case}}(\log W_{dn}) - \text{mean}_{\text{control}}(\log W_{dn})
+\theta_d = \text{mean}_{\text{case}}(\log \mathbf{W}_{dn}) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn})
   \end{equation*}}
 
 ## Benefits of Moving Past Normalizations to Scale
@@ -306,16 +315,42 @@ $$\Lambda^\perp  \sim \ N(0, \gamma^2).$$
 ## Interpreting the Default Scale Model
 
 \textcolor{gray}{$$\log \hat{W}_{n}^{\perp(s)} = - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) + \Lambda^\perp x_{n}$$}
-
 $$\Lambda^\perp  \sim \ N(0, \gamma^2).$$
+\vspace{.1in}
 
 **Empirical Rule:** 95\% of samples of $\Lambda^\perp$ fall within a factor of $\pm 2 \gamma$.
 
 ## Interpreting the Default Scale Model, cont.
 
-$$\textcolor{gray}{\log \hat{W}_{n}^{\perp(s)} = - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) +} \Lambda^\perp x_{n}$$}
+$$\log \hat{W}_{n}^{\perp(s)} = - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) + \Lambda^\perp x_{n}$$
+\textcolor{gray}{$$\Lambda^\perp  \sim \ N(0, \gamma^2).$$}
 
-$$\Lambda^\perp  \sim \ N(0, \gamma^2).$$
+\vspace{.1in}
+**For case/control experiments:** 
+
+  1. If $x_n = 1$: 95\% of samples of $\log \hat{W}_{n}^{\perp(s)}$ fall within a factor of $\pm 2 \gamma$ of the negative geometric mean.
+  
+  2. If $x_n = 0$: $\log \hat{W}_{n}^{\perp(s)}$ is equal to the negative geometric mean.
+  
+## Interpreting the Default Scale Model, cont.
+Recall that with the CLR normalization:
+\begin{align*}
+\log W_n^\perp = \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel) = \text{mean} (\text{GM}( \mathbf{W}_{\cdot n}^\parallel)).
+\end{align*}
+
+Thus, when using the CLR normalization:
+
+$$\theta^\perp = \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) $$
+
+\textcolor{gray}{This is same mean that the default scale model is centered on.}
+
+## Interpreting the Default Scale Model, cont.
+
+Taken together, the default scale model implies that:
+
+1. The value of $\theta^\perp$ is within $\pm 2 \gamma$ of the value of $\theta^\perp$ implied by the CLR.
+
+2. The true difference in scales falls within the the range $2^{\theta^\perp \pm 2 \gamma}$ with 95% certainty.
 
 ## Option 2: More Complex Scale Models
 
@@ -331,6 +366,34 @@ Reasons to do this:
 2. **Outside Measurements:** These can be used in building a scale model *if* they are informative on the scale of interest (e.g., qPCR, flow cytometry).
 
 ## Sensitivity Analyses
+
+- Recall that the default scale model has a parameter $\gamma$ controlling the amount of noise added.
+
+- Instead of picking $\gamma$, why not test over a range instead?
+
+- Enter sensitivity analyses.
+
+## Sensitivity Analyses
+
+\textcolor{gray}{\textbf{Step 1: Model Sampling Uncertainty}}
+\textcolor{gray}{\begin{align*}
+\mathbf{Y}_{\cdot n} &\sim \text{Multinomial}(\mathbf{W}_{\cdot n}^\parallel)\\
+\mathbf{W}_{\cdot n}^\parallel &\sim \text{Dirichlet}(\alpha)
+\end{align*}}
+
+\textbf{Step 2: Draw Samples from a Scale Model}
+
+For a given $\gamma$:
+\begin{align*}
+\log W_{n}^{\perp, \gamma} &= - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) + \Lambda^\perp x_{n}\\
+\Lambda^\perp  &\sim \ N(0, \gamma^2)\\
+\log \mathbf{W^\gamma}_{\cdot n} &= \log \mathbf{W}_{\cdot n}^\parallel + \log W_{n}^{\perp, \gamma}
+\end{align*}
+
+\textcolor{gray}{\textbf{Step 3: Calculate LFCs and Test if Different from Zero.}}
+  
+\textbf{Step 4: Repeat for all desired values of $\gamma$.}
+
 
 # Real Data Examples
 
