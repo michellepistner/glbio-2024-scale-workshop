@@ -30,8 +30,8 @@ mod.clr <- aldex(Y, conds, gamma = 1e-3)
 mod.clr %>% filter(we.eBH < 0.05)
 
 ## Looking at the implied scale
-clr.clr <- aldex.clr(Y, conds, gamma = 1e-3)
-clr.dat <- data.frame("group" = conds, "scale" = clr.clr@scaleSamps[,1])
+clr <- aldex.clr(Y, conds, gamma = 1e-3)
+clr.dat <- data.frame("group" = conds, "scale" = clr@scaleSamps[,1])
 ggplot(clr.dat, aes(x=group, y=scale)) + 
   geom_boxplot() +
   xlab("Condition") +
