@@ -1,0 +1,839 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\usetheme[]{Frankfurt}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{dcolumn}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Scale Uncertainty in ALDEx2},
+  pdfauthor={Michelle Nixon},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Scale Uncertainty in ALDEx2}
+\author{Michelle Nixon}
+\date{May 13, 2024}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}{Recap: Sequencing depth can confound conclusions.}
+\protect\hypertarget{recap-sequencing-depth-can-confound-conclusions.}{}
+\begin{table}[h!]
+\centering
+\begin{tabular}{|r|c c c| c|}
+\hline
+\textcolor{gray}{Observed data (Y)} & Sample 1 & Sample 2 & Sample 3  &\\
+\hline
+Condition & Health & Health & Disease & \textcolor{gray}{Conclusion}\\
+\hline
+Entity 1 & 5 & 10 & 100 & \textcolor{gray}{Increase}\\
+Entity 2 & 10 & 25 & 3 & \textcolor{gray}{Decrease}\\
+Entity 3 & 0 & 1 & 8 & \textcolor{gray}{Increase}\\
+Entity 4 & 0 & 0 & 19 &\textcolor{gray}{Increase}\\
+\hline
+\textcolor{gray}{Sampling Depth} & \textcolor{gray}{15} & \textcolor{gray}{36} & \textcolor{gray}{130} &\\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{This can mislead analyses.}
+\protect\hypertarget{this-can-mislead-analyses.}{}
+\begin{table}[h!]
+\centering
+\begin{tabular}{|r|c c c| c|}
+\hline
+\textcolor{gray}{System data (W)} & Sample 1 & Sample 2 & Sample 3  & \\
+\hline
+Condition & Health & Health & Disease & \textcolor{gray}{Conclusion}\\
+\hline
+Entity 1 & 227 & 351 & 154 & \textcolor{gray}{Decrease}\\
+Entity 2 & 684 & 891 & 3 & \textcolor{gray}{Decrease}\\
+Entity 3 & 48 & 32 & 15 & \textcolor{gray}{Decrease}\\
+Entity 4 & 43 & 39  & 27 &\textcolor{gray}{Decrease}\\
+\hline
+\textcolor{gray}{Scale ($W^\perp$)} & \textcolor{gray}{1,002} & \textcolor{gray}{1,313} & \textcolor{gray}{200} &\\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{\ldots{} and lead to unacknowledged bias.}
+\protect\hypertarget{and-lead-to-unacknowledged-bias.}{}
+\begin{figure}
+  \centering
+  \includegraphics[width=4.5in]{figures/unacknowledged_bias.pdf}
+\end{figure}
+\end{frame}
+
+\hypertarget{problem-set-up}{%
+\section{Problem Set-Up}\label{problem-set-up}}
+
+\begin{frame}{Observed Data as a Sample from the System}
+\protect\hypertarget{observed-data-as-a-sample-from-the-system}{}
+\begin{figure}
+  \centering
+  \includegraphics[width=4.5in]{figures/intro-fig-first.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Observed Data as a Sample from the System}
+\protect\hypertarget{observed-data-as-a-sample-from-the-system-1}{}
+\begin{figure}
+  \centering
+  \includegraphics[width=4.5in]{figures/intro-fig-full.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Notation}
+\protect\hypertarget{notation}{}
+\begin{itemize}
+\tightlist
+\item
+  \(\mathbf{Y}\): a measurement of the underlying system \(W\).
+\end{itemize}
+
+\[\mathbf{W}_{dn} = \underbrace{\mathbf{W}_{dn}^\parallel}_{\text{composition}} \times  \underbrace{W_n^\perp}_{\text{scale}}\]
+
+\textcolor{white}{- **Compostion:** $\mathbf{W}_{dn}^\parallel = \frac{\mathbf{W}_{dn}}{\sum_{d=1}^D \mathbf{W}_{dn}}$}
+
+\textcolor{white}{- **Scale:** $W_n^\perp = \sum_{d=1}^D \mathbf{W}_{dn}$}
+
+\textcolor{white}{- $\boldsymbol{\theta}$: what we want to estimate.}
+\end{frame}
+
+\begin{frame}{Notation}
+\protect\hypertarget{notation-1}{}
+\begin{itemize}
+\tightlist
+\item
+  \(\mathbf{Y}\): a measurement of the underlying system \(W\).
+\end{itemize}
+
+\[\mathbf{W}_{dn} = \underbrace{\mathbf{W}_{dn}^\parallel}_{\text{composition}} \times  \underbrace{W_n^\perp}_{\text{scale}}\]
+
+\begin{itemize}
+\item
+  \textbf{Compostion:}
+  \(\mathbf{W}_{dn}^\parallel = \frac{\mathbf{W}_{dn}}{\sum_{d=1}^D \mathbf{W}_{dn}}\)
+\item
+  \textbf{Scale:} \(W_n^\perp = \sum_{d=1}^D \mathbf{W}_{dn}\)
+\end{itemize}
+
+\textcolor{white}{- $\boldsymbol{\theta}$: what we want to estimate.}
+\end{frame}
+
+\begin{frame}{Notation}
+\protect\hypertarget{notation-2}{}
+\begin{itemize}
+\tightlist
+\item
+  \(\mathbf{Y}\): a measurement of the underlying system \(W\).
+\end{itemize}
+
+\[\mathbf{W}_{dn} = \underbrace{\mathbf{W}_{dn}^\parallel}_{\text{composition}} \times  \underbrace{W_n^\perp}_{\text{scale}}\]
+
+\begin{itemize}
+\item
+  \textbf{Compostion:}
+  \(\mathbf{W}_{dn}^\parallel = \frac{\mathbf{W}_{dn}}{\sum_{d=1}^D \mathbf{W}_{dn}}\)
+\item
+  \textbf{Scale:} \(W_n^\perp = \sum_{d=1}^D \mathbf{W}_{dn}\)
+\item
+  \(\boldsymbol{\theta}\): what we want to estimate.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Example: Notation}
+\protect\hypertarget{example-notation}{}
+\begin{table}[h!]
+\centering
+\begin{tabular}{|r|c c c| }
+\hline
+\textcolor{gray}{System data ($W^\parallel$)} & Sample 1 & Sample 2 & Sample 3\\
+\hline
+Condition & Health & Health & Disease\\
+\hline
+Entity 1 & 0.27 & 0.27 & 0.77 \\
+Entity 2 & 0.68 & 0.68 & 0.02 \\
+Entity 3 & 0.05 & 0.02 & 0.08 \\
+Entity 4 & 0.04 & 0.03  & 0.13 \\
+\hline
+\textcolor{gray}{Scale ($W^\perp$)} & \textcolor{gray}{1,002} & \textcolor{gray}{1,313} & \textcolor{gray}{200}\\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{Differential Abundance/Expression Analysis}
+\protect\hypertarget{differential-abundanceexpression-analysis}{}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Question:} How do entities (e.g., taxa or genes) change
+  between conditions?
+\end{itemize}
+
+\vspace{.25in}
+
+\begin{itemize}
+\tightlist
+\item
+  In this case, \(\theta\) is the log-fold change (LFC):
+\end{itemize}
+
+\begin{equation*}
+\theta_d = \text{mean}_{\text{case}}(\log \mathbf{W}_{dn}) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn})
+\end{equation*}
+\end{frame}
+
+\begin{frame}{The Original ALDEx2 Model}
+\protect\hypertarget{the-original-aldex2-model}{}
+\textbf{Step 1: Model Sampling Uncertainty} \begin{align*}
+\mathbf{Y}_{\cdot n} &\sim \text{Multinomial}(\mathbf{W}_{\cdot n}^\parallel)\\
+\mathbf{W}_{\cdot n}^\parallel &\sim \text{Dirichlet}(\alpha)
+\end{align*}
+
+\textbf{Step 2: Centered Log-Ratio Transformation} \begin{equation*}
+\log \mathbf{W}_{\cdot n} = \left[\log \mathbf{W}_{1n}^\parallel - \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel), ..., \log \mathbf{W}_{Dn}^\parallel - \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel) \right]
+\end{equation*}
+
+\textbf{Step 3: Calculate LFCs and Test if Different from Zero.}
+\begin{equation*}
+\theta_d = \text{mean}_{\text{case}}(\log \mathbf{W}_{dn}) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn})
+\end{equation*}
+\end{frame}
+
+\begin{frame}{Implied Assumptions about Scale}
+\protect\hypertarget{implied-assumptions-about-scale}{}
+\textcolor{gray}{\textbf{Step 1: Model Sampling Uncertainty}}
+\begin{align*}
+\textcolor{gray}{\mathbf{Y}_{\cdot n}} &\textcolor{gray}{\sim \text{Multinomial}(\mathbf{W}_{\cdot n}^\parallel)}\\
+\textcolor{gray}{\mathbf{W}_{\cdot n}^\parallel} &\textcolor{gray}{\sim \text{Dirichlet}(\alpha)}
+\end{align*}
+
+\textbf{Step 2: Centered Log-Ratio Transformation} \begin{equation*}
+\log \mathbf{W}_{\cdot n} = \left[\log \mathbf{W}_{1n}^\parallel - \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel), ..., \log \mathbf{W}_{Dn}^\parallel - \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel) \right]
+\end{equation*}
+
+\textcolor{gray}{\textbf{Step 3: Calculate LFCs and Test if Different from Zero.}
+\begin{equation*}
+\theta_d = \text{mean}_{\text{case}}(\log \mathbf{W}_{dn}) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn})
+\end{equation*}}
+\end{frame}
+
+\begin{frame}{Implied Assumptions about Scale, cont.}
+\protect\hypertarget{implied-assumptions-about-scale-cont.}{}
+Using the relationship
+\(\mathbf{W}_{dn} = \mathbf{W}_{dn}^\parallel W_n^\perp\) and some math,
+the CLR normalization implies:
+
+\begin{align*}
+\log W_n^\perp = -\text{mean}(\log \mathbf{W}_{\cdot n}^\parallel).
+\end{align*}
+
+\vspace{.25in}
+
+\textcolor{gray}{What does this mean?}
+\end{frame}
+
+\begin{frame}{Unacknowledged bias!}
+\protect\hypertarget{unacknowledged-bias}{}
+\begin{figure}
+  \centering
+  \includegraphics[width=4.5in]{figures/unacknowledged_bias.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Adding Uncertainty in Scale can Help.}
+\protect\hypertarget{adding-uncertainty-in-scale-can-help.}{}
+\begin{figure}
+  \centering
+  \includegraphics[width=3.25in]{figures/sim-res.pdf}
+\end{figure}
+\end{frame}
+
+\hypertarget{scale-reliant-inference}{%
+\section{Scale Reliant Inference}\label{scale-reliant-inference}}
+
+\begin{frame}{Scale Reliant Inference: The Basics}
+\protect\hypertarget{scale-reliant-inference-the-basics}{}
+\begin{itemize}
+\item
+  \textbf{The CoDA perspective:} Research questions that depend on
+  \(W^\perp\) (scale) are not possible.
+\item
+  \textbf{The Normalization perspective:} Research questions that depend
+  on \(W^\perp\) (scale) can be answered after normalization.
+\item
+  Who is right?
+\end{itemize}
+
+\textcolor{white}{- **The CoDA perspective:** Yes, but this is limiting in practice.}
+
+\textcolor{white}{- **The Normalization perspective:** Not correct, but attempting to answer relevant questions.}
+\end{frame}
+
+\begin{frame}{Scale Reliant Inference: The Basics}
+\protect\hypertarget{scale-reliant-inference-the-basics-1}{}
+\begin{itemize}
+\item
+  \textbf{The CoDA perspective:} Research questions that depend on
+  \(W^\perp\) (scale) are not possible.
+\item
+  \textbf{The Normalization perspective:} Research questions that depend
+  on \(W^\perp\) (scale) can be answered after normalization.
+\item
+  Who is right?
+\item
+  \textbf{The CoDA perspective:} Yes, but this is limiting in practice.
+\item
+  \textbf{The Normalization perspective:} Not correct, but attempting to
+  answer relevant questions.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Scale Reliant Inference: The Basics}
+\protect\hypertarget{scale-reliant-inference-the-basics-2}{}
+\begin{itemize}
+\item
+  What happens if \(\theta\) depends on \(W^\perp\)?
+\item
+  Consider LFCs: how are taxa changing between two conditions?
+\end{itemize}
+
+\begin{align*}
+\theta_d &= \text{mean}_{\text{case}}(\log \mathbf{W}_{dn}) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn})\\
+&= ... \\
+&= \underbrace{\text{mean}_{\text{case}}(\log \mathbf{W}_{dn}^\parallel) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn}^\parallel)}_{\theta^\parallel}\\
+& \, \, \, \, \, \, - \underbrace{\text{mean}_{\text{case}}(\log W_{n}^\perp) - \text{mean}_{\text{control}}(\log W_{n}^\perp)}_{\theta^\perp}\\
+\end{align*}
+
+\textcolor{gray}{Don't we need $\theta^\perp$?}
+\end{frame}
+
+\begin{frame}{Scale Reliant Inference: Theory Intro}
+\protect\hypertarget{scale-reliant-inference-theory-intro}{}
+Recall for LFCs: \begin{align*}
+\theta_d &= \text{mean}_{\text{case}}(\log \mathbf{W}_{dn} ) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn} )\\
+&= \theta^\parallel + \theta^\perp
+\end{align*}
+
+\begin{itemize}
+\tightlist
+\item
+  What can we say about \(\theta\) from \(\theta^\parallel\) alone?
+\end{itemize}
+
+\textcolor{white}{Statistical perspective: $\theta$ is not identifiable without $\theta^\perp$.}
+
+\textcolor{white}{Practical issues: unbiased estimators, calibrated confidence sets, and type-I error control **NOT** possible!}
+
+\textcolor{white}{See Nixon et al. (2023) for details.}
+\end{frame}
+
+\begin{frame}{Scale Reliant Inference: Theory Intro}
+\protect\hypertarget{scale-reliant-inference-theory-intro-1}{}
+Recall for LFCs: \begin{align*}
+\theta_d &= \text{mean}_{\text{case}}(\log \mathbf{W}_{dn} ) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn} )\\
+&= \theta^\parallel + \theta^\perp
+\end{align*}
+
+\begin{itemize}
+\item
+  What can we say about \(\theta\) from \(\theta^\parallel\) alone?
+\item
+  Statistical perspective: \(\theta\) is not identifiable without
+  \(\theta^\perp\).
+\item
+  Practical issues: unbiased estimators, calibrated confidence sets, and
+  type-I error control \textbf{NOT} possible!
+\item
+  See Nixon et al.~(2023) for details.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Scale Simulation Random Variables}
+\protect\hypertarget{scale-simulation-random-variables}{}
+\textbf{Goal:} Estimate \(\theta = f(\mathbf{W}^\parallel, W^\perp)\).
+
+\vspace{.25in}
+
+\begin{enumerate}
+\item
+  Draw samples of \(\mathbf{W}^{\parallel}\) from a measurement model
+  (can depend on \(\mathbf{Y}\)).
+\item
+  Draw samples of \(W^{\perp}\) from a scale model (can depend on
+  \(\mathbf{W}^{\parallel}\)).
+\item
+  Estimate samples of \(\theta = f(\mathbf{W}^\parallel, W^\perp)\).
+\end{enumerate}
+\end{frame}
+
+\hypertarget{the-updated-aldex2-software}{%
+\section{The Updated ALDEx2
+Software}\label{the-updated-aldex2-software}}
+
+\begin{frame}{ALDEx2 as an SSRV}
+\protect\hypertarget{aldex2-as-an-ssrv}{}
+\textcolor{gray}{\textbf{Step 1: Model Sampling Uncertainty}}
+\textcolor{gray}{\begin{align*}
+\mathbf{Y}_{\cdot n} &\sim \text{Multinomial}(\mathbf{W}_{\cdot n}^\parallel)\\
+\mathbf{W}_{\cdot n}^\parallel &\sim \text{Dirichlet}(\alpha)
+\end{align*}}
+
+\textbf{Step 2: Draw Samples from a Scale Model} \begin{align*}
+\log W_{n}^\perp &=- \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel) + \epsilon, \, \epsilon \sim N(0,\gamma^2)\\
+\log \mathbf{W}_{\cdot n} &= \log \mathbf{W}_{\cdot n}^\parallel + \log W_{n}^\perp
+\end{align*}
+
+\textcolor{gray}{\textbf{Step 3: Calculate LFCs and Test if Different from Zero.}}
+\textcolor{gray}{\begin{equation*}
+\theta_d = \text{mean}_{\text{case}}(\log \mathbf{W}_{dn}) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn})
+  \end{equation*}}
+\end{frame}
+
+\begin{frame}{Benefits of Moving Past Normalizations to Scale}
+\protect\hypertarget{benefits-of-moving-past-normalizations-to-scale}{}
+\begin{figure}
+  \centering
+  \includegraphics[width=3.25in]{figures/sim-res-samples.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Intro to Scale Models}
+\protect\hypertarget{intro-to-scale-models}{}
+Normalizations are replaced by a scale model:
+
+\begin{align*}
+  \log W_n^\perp &= - \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel) + \epsilon\\
+  \epsilon &\sim N(0,\gamma^2)
+\end{align*}
+
+\vspace{.25in}
+
+\textcolor{gray}{What about other options?}
+\end{frame}
+
+\begin{frame}{Intro to Scale Models, cont.}
+\protect\hypertarget{intro-to-scale-models-cont.}{}
+There are no restrictions on what scale models can be, although there
+are some helpful options:
+
+\begin{enumerate}
+\tightlist
+\item
+  Based on normalizations. \textcolor{gray}{(Stochastic normalizations)}
+\item
+  Based on biological knowledge.
+\item
+  Based on outside measurements.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Scale Models based on Biological Knowledge}
+\protect\hypertarget{scale-models-based-on-biological-knowledge}{}
+What do past studies or biological mechanisms tell about the scale of
+the system?
+
+\vspace{.1in}
+
+\textcolor{white}{1. You are confident that taking an antibiotic will kill at least some microbes in the gut.}
+
+\textcolor{white}{2. A past study showed that a certain disease (e.g., Crohn's disease) leads to lower microbial load in the gut.}
+
+\textcolor{white}{3. You believe the total microbial load in the mouth changes after brushing your teeth.}
+
+\textcolor{white}{This type of information can be used in scale model building.}
+\end{frame}
+
+\begin{frame}{Scale Models based on Biological Knowledge}
+\protect\hypertarget{scale-models-based-on-biological-knowledge-1}{}
+What do past studies or biological mechanisms tell about the scale of
+the system?
+
+\vspace{.1in}
+
+\begin{enumerate}
+\item
+  You are confident that taking an antibiotic will kill at least some
+  microbes in the gut.
+\item
+  A past study showed that a certain disease (e.g., Crohn's disease)
+  leads to lower microbial load in the gut.
+\item
+  You believe the total microbial load in the mouth changes after
+  brushing your teeth.
+\end{enumerate}
+
+\textcolor{gray}{This type of information can be used in scale model building.}
+\end{frame}
+
+\begin{frame}{Scale Models based on Outside Measurements}
+\protect\hypertarget{scale-models-based-on-outside-measurements}{}
+How can outside measurements be used to quantify scale?
+
+\vspace{.1in}
+
+\textcolor{white}{1. These measurements can be used *if* they relate to your scale of interest.}
+
+\textcolor{white}{2. Examples include flow cytometry, qPCR, etc.}
+
+\textcolor{white}{3. Scale models can incorporate measurement uncertainty.}
+\end{frame}
+
+\begin{frame}{Scale Models based on Outside Measurements}
+\protect\hypertarget{scale-models-based-on-outside-measurements-1}{}
+How can outside measurements be used to quantify scale?
+
+\vspace{.1in}
+
+\begin{enumerate}
+\item
+  These measurements can be used \emph{if} they relate to your scale of
+  interest.
+\item
+  Examples include flow cytometry, qPCR, etc.
+\item
+  Scale models can incorporate measurement uncertainty.
+\end{enumerate}
+\end{frame}
+
+\hypertarget{coding-changes-to-aldex2}{%
+\section{Coding Changes to ALDEx2}\label{coding-changes-to-aldex2}}
+
+\begin{frame}{Including scale}
+\protect\hypertarget{including-scale}{}
+\textbf{The new ALDEx2 model removes normalizations in lieu of scale
+models.}
+
+\vspace{.25in}
+
+\textcolor{white}{Major updates:}
+
+\textcolor{white}{1. A new argument `gamma` which makes it easy to incorporate scale uncertainty.}
+
+\textcolor{white}{2. A new function `aldex.senAnalysis` to see how analysis results change as a function of scale uncertainty.}
+\end{frame}
+
+\begin{frame}[fragile]{Including scale}
+\protect\hypertarget{including-scale-1}{}
+\textbf{The new ALDEx2 model removes normalizations in lieu of scale
+models.}
+
+\vspace{.25in}
+
+Major updates:
+
+\begin{enumerate}
+\item
+  A new argument \texttt{gamma} which makes it easy to incorporate scale
+  uncertainty.
+\item
+  A new function \texttt{aldex.senAnalysis} to see how analysis results
+  change as a function of scale uncertainty.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]{The gamma argument}
+\protect\hypertarget{the-gamma-argument}{}
+\begin{itemize}
+\item
+  Added as argument to the \texttt{aldex} and \texttt{aldex.clr}
+  function.
+\item
+  \texttt{gamma} can either be a single numeric or a matrix.
+
+  \begin{enumerate}
+  \tightlist
+  \item
+    Single numeric: controls the noise on the default scale model.
+  \item
+    Matrix: A \(N \times S\) matrix of samples of \(W^\perp\).
+  \end{enumerate}
+\item
+  \texttt{gamma\ =\ NULL} returns the default behavior of ALDEx2.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Option 1: Default Scale Model}
+\protect\hypertarget{option-1-default-scale-model}{}
+The default scale model is based on errors in the CLR normalization.
+
+\[\log \hat{W}_{n}^{\perp(s)} = - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) + \Lambda^\perp x_{n}\]
+\[\Lambda^\perp  \sim \ N(0, \gamma^2).\]
+\end{frame}
+
+\begin{frame}{Advantages of the Default Scale Model}
+\protect\hypertarget{advantages-of-the-default-scale-model}{}
+\begin{enumerate}
+\item
+  It is built off the status quo for ALDEx2.
+\item
+  Any value of \(\gamma > 0\) will reduce false positives compared to
+  the CLR normalization.
+\item
+  It has a concrete interpretation to contextualize scale assumptions.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Interpreting the Default Scale Model}
+\protect\hypertarget{interpreting-the-default-scale-model}{}
+\textcolor{gray}{$$\log \hat{W}_{n}^{\perp(s)} = - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) + \Lambda^\perp x_{n}$$}
+\[\Lambda^\perp  \sim \ N(0, \gamma^2).\] \vspace{.1in}
+
+\textbf{Empirical Rule:} 95\% of the samples of \(\Lambda^\perp\) fall
+within a factor of \(\pm 2 \gamma\) from zero.
+\end{frame}
+
+\begin{frame}{Interpreting the Default Scale Model, cont.}
+\protect\hypertarget{interpreting-the-default-scale-model-cont.}{}
+\[\log \hat{W}_{n}^{\perp(s)} = - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) + \Lambda^\perp x_{n}\]
+\textcolor{gray}{$$\Lambda^\perp  \sim \ N(0, \gamma^2).$$}
+
+\vspace{.1in}
+
+\textbf{For case/control experiments:}
+
+\begin{enumerate}
+\item
+  If \(x_n = 1\): 95\% of samples of \(\log \hat{W}_{n}^{\perp(s)}\)
+  fall within a factor of \(\pm 2 \gamma\) of the negative geometric
+  mean.
+\item
+  If \(x_n = 0\): \(\log \hat{W}_{n}^{\perp(s)}\) is equal to the
+  negative geometric mean.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Interpreting the Default Scale Model, cont.}
+\protect\hypertarget{interpreting-the-default-scale-model-cont.-1}{}
+Recall that with the CLR normalization: \begin{align*}
+\log W_n^\perp = -\text{mean}(\log \mathbf{W}_{\cdot n}^\parallel) = - \text{GM}( \mathbf{W}_{\cdot n}^\parallel).
+\end{align*}
+
+Thus, when using the CLR normalization:
+
+\[\theta^\perp = \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) \]
+
+\textcolor{gray}{This is same mean that the default scale model is centered on.}
+\end{frame}
+
+\begin{frame}{Interpreting the Default Scale Model, cont.}
+\protect\hypertarget{interpreting-the-default-scale-model-cont.-2}{}
+Taken together, the default scale model implies that:
+
+\begin{enumerate}
+\item
+  The value of \(\theta^\perp\) is within \(\pm 2 \gamma\) of the value
+  of \(\theta^\perp\) implied by the CLR normalization.
+\item
+  With 95\% certainty, the true difference in scales falls within the
+  the range \(2^{\theta^\perp \pm 2 \gamma}\).
+\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]{Option 2: More Complex Scale Models}
+\protect\hypertarget{option-2-more-complex-scale-models}{}
+Alternatively, can pass a matrix of scale samples to \texttt{gamma} so
+long as:
+
+\begin{enumerate}
+\tightlist
+\item
+  The dimension is \(N \times S\).
+\item
+  They are samples of \(W^\perp\) not \(\log W^\perp\).
+\end{enumerate}
+
+Reasons to do this:
+
+\begin{enumerate}
+\item
+  \textbf{Biological beliefs:} Scale is guided by the biological system
+  or the researcher's prior beliefs.
+\item
+  \textbf{Outside Measurements:} These can be used in building a scale
+  model \emph{if} they are informative on the scale of interest (e.g.,
+  qPCR, flow cytometry).
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Sensitivity Analyses}
+\protect\hypertarget{sensitivity-analyses}{}
+\begin{itemize}
+\item
+  Recall that the default scale model has a parameter \(\gamma\)
+  controlling the amount of noise added.
+\item
+  Instead of picking \(\gamma\), why not test over a range instead?
+\item
+  Enter sensitivity analyses.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Sensitivity Analyses}
+\protect\hypertarget{sensitivity-analyses-1}{}
+\textcolor{gray}{\textbf{Step 1: Model Sampling Uncertainty}}
+\textcolor{gray}{\begin{align*}
+\mathbf{Y}_{\cdot n} &\sim \text{Multinomial}(\mathbf{W}_{\cdot n}^\parallel)\\
+\mathbf{W}_{\cdot n}^\parallel &\sim \text{Dirichlet}(\alpha)
+\end{align*}}
+
+\textbf{Step 2: Draw Samples from a Scale Model} For a given \(\gamma\):
+\begin{align*}
+\log W_{n}^{\perp, \gamma} &= - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) + \Lambda^\perp x_{n}\\
+\Lambda^\perp  &\sim \ N(0, \gamma^2)\\
+\log \mathbf{W^\gamma}_{\cdot n} &= \log \mathbf{W}_{\cdot n}^\parallel + \log W_{n}^{\perp, \gamma}
+\end{align*}
+
+\textcolor{gray}{\textbf{Step 3: Calculate LFCs and Test if Different from Zero.}}
+
+\textbf{Step 4: Repeat for all desired values of $\gamma$.}
+\end{frame}
+
+\hypertarget{data-examples}{%
+\section{Data Examples}\label{data-examples}}
+
+\begin{frame}{Simulation Study}
+\protect\hypertarget{simulation-study}{}
+\end{frame}
+
+\begin{frame}{Real Example: SELEX}
+\protect\hypertarget{real-example-selex}{}
+\end{frame}
+
+\begin{frame}{Real Example: Vandputte}
+\protect\hypertarget{real-example-vandputte}{}
+\end{frame}
+
+\begin{frame}{References}
+\protect\hypertarget{references}{}
+\end{frame}
+
+\begin{frame}{References}
+\protect\hypertarget{references-1}{}
+\textbf{Scale Reliant Inference/Updates to ALDEx2:}
+
+\begin{itemize}
+\item
+  Nixon, et. al.~(2023) ``Scale Reliant Inference.'' \emph{ArXiv
+  Preprint 2201.03616}.
+\item
+  Gloor, Nixon, and Silverman. (2023) ``Scale is Not What You Think;
+  Explicit Scale Simulation in ALDEx2.'' \emph{BioRXiv Preprint
+  2023.10.21.563431}.
+\item
+  Nixon, Gloor, and Silverman. (2024) ``Beyond Normalizations:
+  Incorporating Scale Uncertainty in ALDEx2.'' \emph{BioRXiv Preprint
+  2024.04.01.587602}.
+\item
+  Fernandes et. al.~(2014). ``Unifying the analysis of high-throughput
+  sequencing datasets: characterizing RNA-seq, 16S rRNA gene sequencing
+  and selective growth experiments by compositional data analysis.''
+  \emph{Microbiome}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{References}
+\protect\hypertarget{references-2}{}
+\textbf{Data Sources:}
+
+\begin{itemize}
+\item
+  McMurrough et. al.~(2014).''Control of catalytic efficiency by a
+  coevolving network of catalytic and noncatalytic residues.''
+  \emph{PNAS}.
+\item
+  Vandputte et. al.~(2017). ``Quantitative microbiome profiling links
+  gut community variation to microbial load.'' \emph{Nature}.
+\end{itemize}
+\end{frame}
+
+\end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.7.26)  23 APR 2024 15:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.7.26)  26 APR 2024 12:19
 entering extended mode
 **./slides.tex
 (slides.tex
@@ -1087,32 +1087,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-(slides.nav)
-Overfull \hbox (18.53006pt too wide) detected at line 101
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-
-Overfull \hbox (18.53006pt too wide) detected at line 102
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[1{C:/Users/map5672/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
+(slides.nav) [1{C:/Users/map5672/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
 ]
-Overfull \hbox (18.53006pt too wide) detected at line 123
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
 123.
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
@@ -1170,40 +1147,17 @@ Overfull \hbox (15.80298pt too wide) in paragraph at lines 123--123
  [] 
  []
 
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
 [2
 
 ]
-Overfull \hbox (18.53006pt too wide) detected at line 144
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-
 Overfull \hbox (9.59705pt too wide) in paragraph at lines 144--144
  [] 
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
  []
 
 [3
 
 ]
-Overfull \hbox (18.53006pt too wide) detected at line 152
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-<figures/unacknowledged_bias.pdf, id=421, 433.62pt x 216.81pt>
+<figures/unacknowledged_bias.pdf, id=538, 433.62pt x 216.81pt>
 File: figures/unacknowledged_bias.pdf Graphic file (type pdf)
 <use figures/unacknowledged_bias.pdf>
 Package pdftex.def Info: figures/unacknowledged_bias.pdf  used on input line 15
@@ -1214,35 +1168,12 @@ Overfull \hbox (17.92513pt too wide) in paragraph at lines 152--152
  [] 
  []
 
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
 [4
 
- <./figures/unacknowledged_bias.pdf>]
-Overfull \hbox (18.53006pt too wide) detected at line 155
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[5
+ <./figures/unacknowledged_bias.pdf>] [5
 
 ]
-Overfull \hbox (18.53006pt too wide) detected at line 163
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-<figures/intro-fig-first.png, id=615, 511.9125pt x 227.4096pt>
+<figures/intro-fig-first.png, id=784, 511.9125pt x 227.4096pt>
 File: figures/intro-fig-first.png Graphic file (type png)
 <use figures/intro-fig-first.png>
 Package pdftex.def Info: figures/intro-fig-first.png  used on input line 163.
@@ -1252,21 +1183,10 @@ Overfull \hbox (17.92513pt too wide) in paragraph at lines 163--163
  [] 
  []
 
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
 [6
 
  <./figures/intro-fig-first.png>]
-Overfull \hbox (18.53006pt too wide) detected at line 171
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-<figures/intro-fig-full.png, id=705, 511.9125pt x 227.4096pt>
+<figures/intro-fig-full.png, id=900, 511.9125pt x 227.4096pt>
 File: figures/intro-fig-full.png Graphic file (type png)
 <use figures/intro-fig-full.png>
 Package pdftex.def Info: figures/intro-fig-full.png  used on input line 171.
@@ -1276,377 +1196,151 @@ Overfull \hbox (17.92513pt too wide) in paragraph at lines 171--171
  [] 
  []
 
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
 [7
 
  <./figures/intro-fig-full.png>]
-Overfull \hbox (18.53006pt too wide) detected at line 191
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 191.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 188.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <8> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 191.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 188.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <6> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 191.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 188.
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 191.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 188.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 191.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 188.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 191.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 188.
 
 LaTeX Font Info:    Font shape `T1/lmss/b/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 191.
+(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 188.
 
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 191.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 188.
 
 LaTeX Font Info:    Font shape `T1/lmss/b/it' in size <8> not available
-(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 191.
+(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 188.
 
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <8> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 191.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 188.
 
 LaTeX Font Info:    Font shape `T1/lmss/b/it' in size <6> not available
-(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 191.
+(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 188.
 
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <6> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 191.
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 188.
 
 [8
 
-]
-Overfull \hbox (18.53006pt too wide) detected at line 206
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
+] [9
 
+] [10
 
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
+] [11
 
-[9
+] [12
 
 ]
-Overfull \hbox (18.53006pt too wide) detected at line 223
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-
-Overfull \hbox (5.35088pt too wide) detected at line 223
+Overfull \hbox (5.35088pt too wide) detected at line 290
 [] \T1/lmss/bx/n/10.95 W[] \OT1/lmss/m/n/10.95 = []
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[10
-
-]
-Overfull \hbox (18.53006pt too wide) detected at line 241
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-
-Overfull \hbox (5.35088pt too wide) detected at line 241
-[] \T1/lmss/bx/n/10.95 W[] \OT1/lmss/m/n/10.95 = []
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[11
-
-]
-Overfull \hbox (18.53006pt too wide) detected at line 254
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[12
-
-]
-Overfull \hbox (18.53006pt too wide) detected at line 262
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-File: figures/unacknowledged_bias.pdf Graphic file (type pdf)
-<use figures/unacknowledged_bias.pdf>
-Package pdftex.def Info: figures/unacknowledged_bias.pdf  used on input line 26
-2.
-(pdftex.def)             Requested size: 325.215pt x 162.61371pt.
-
-Overfull \hbox (17.92513pt too wide) in paragraph at lines 262--262
- [] 
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
  []
 
 [13
 
 ]
-Overfull \hbox (18.53006pt too wide) detected at line 270
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-<figures/sim-res.pdf, id=1328, 545.092pt x 532.30724pt>
-File: figures/sim-res.pdf Graphic file (type pdf)
-<use figures/sim-res.pdf>
-Package pdftex.def Info: figures/sim-res.pdf  used on input line 270.
-(pdftex.def)             Requested size: 234.87749pt x 229.36685pt.
-
-Overfull \vbox (4.01053pt too high) detected at line 270
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
+Overfull \hbox (5.35088pt too wide) detected at line 308
+[] \T1/lmss/bx/n/10.95 W[] \OT1/lmss/m/n/10.95 = []
  []
 
 [14
 
- <./figures/sim-res.pdf>]
-Overfull \hbox (18.53006pt too wide) detected at line 274
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[15
+] [15
 
 ]
-Overfull \hbox (18.53006pt too wide) detected at line 292
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
+File: figures/unacknowledged_bias.pdf Graphic file (type pdf)
+<use figures/unacknowledged_bias.pdf>
+Package pdftex.def Info: figures/unacknowledged_bias.pdf  used on input line 33
+1.
+(pdftex.def)             Requested size: 325.215pt x 162.61371pt.
 
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
+Overfull \hbox (17.92513pt too wide) in paragraph at lines 331--331
+ [] 
  []
 
 [16
 
 ]
-Overfull \hbox (18.53006pt too wide) detected at line 311
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
+<figures/sim-res.pdf, id=2044, 545.092pt x 532.30724pt>
+File: figures/sim-res.pdf Graphic file (type pdf)
+<use figures/sim-res.pdf>
+Package pdftex.def Info: figures/sim-res.pdf  used on input line 339.
+(pdftex.def)             Requested size: 234.87749pt x 229.36685pt.
 
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
+Overfull \vbox (4.01053pt too high) detected at line 339
  []
 
 [17
 
-]
-Overfull \hbox (18.53006pt too wide) detected at line 331
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
+ <./figures/sim-res.pdf>] [18
 
+] [19
 
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
+] [20
 
-[18
+] [21
 
-]
-Overfull \hbox (18.53006pt too wide) detected at line 353
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
+] [22
 
+] [23
 
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
+] [24
 
-[19
+] [25
+
+] [26
 
 ]
-Overfull \hbox (18.53006pt too wide) detected at line 371
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[20
-
-]
-Overfull \hbox (18.53006pt too wide) detected at line 375
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[21
-
-]
-Overfull \hbox (18.53006pt too wide) detected at line 394
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[22
-
-]
-Overfull \hbox (18.53006pt too wide) detected at line 402
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-<figures/sim-res-samples.pdf, id=2176, 535.22408pt x 522.87196pt>
+<figures/sim-res-samples.pdf, id=3242, 535.22408pt x 522.87196pt>
 File: figures/sim-res-samples.pdf Graphic file (type pdf)
 <use figures/sim-res-samples.pdf>
-Package pdftex.def Info: figures/sim-res-samples.pdf  used on input line 402.
+Package pdftex.def Info: figures/sim-res-samples.pdf  used on input line 488.
 (pdftex.def)             Requested size: 234.87749pt x 229.45801pt.
 
-Overfull \vbox (4.10168pt too high) detected at line 402
+Overfull \vbox (4.10168pt too high) detected at line 488
  []
 
+[27
 
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
+ <./figures/sim-res-samples.pdf>] [28
 
-[23
+] [29
 
- <./figures/sim-res-samples.pdf>]
-Overfull \hbox (18.53006pt too wide) detected at line 422
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
+] [30
 
+] [31
 
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
+] [32
 
-[24
+] [33
+
+] [34
+
+] [35
 
 ]
-Overfull \hbox (18.53006pt too wide) detected at line 425
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[25
-
-]
-Overfull \hbox (18.53006pt too wide) detected at line 427
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
 \openout4 = `slides.vrb'.
-
-
-Overfull \hbox (18.53006pt too wide) detected at line 444
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
 
 (slides.vrb
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
 2.
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-))
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[26
+)) [36
 
 ]
-Overfull \hbox (18.53006pt too wide) detected at line 446
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
 \openout4 = `slides.vrb'.
-
-
-Overfull \hbox (18.53006pt too wide) detected at line 465
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
 
 (slides.vrb
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1667,211 +1361,51 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 15.
-)
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[27
+) [37
 
 ]
-Overfull \hbox (18.53006pt too wide) detected at line 473
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 47
-3.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 65
+1.
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cf
 g
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
-)
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
+) [38
 
-[28
+] [39
 
-]
-Overfull \hbox (18.53006pt too wide) detected at line 486
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
+] [40
 
+] [41
 
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
+] [42
 
-[29
+] [43
 
 ]
-Overfull \hbox (18.53006pt too wide) detected at line 495
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[30
-
-]
-Overfull \hbox (18.53006pt too wide) detected at line 515
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[31
-
-]
-Overfull \hbox (18.53006pt too wide) detected at line 528
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[32
-
-]
-Overfull \hbox (18.53006pt too wide) detected at line 542
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[33
-
-]
-Overfull \hbox (18.53006pt too wide) detected at line 544
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
 \openout4 = `slides.vrb'.
 
+(slides.vrb) [44
 
-Overfull \hbox (18.53006pt too wide) detected at line 568
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
+] [45
 
-(slides.vrb)
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
+] [46
 
-[34
+] [47
 
-]
-Overfull \hbox (18.53006pt too wide) detected at line 581
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
+] [48
 
+] [49
 
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
+] [50
 
-[35
+] [51
 
-]
-Overfull \hbox (18.53006pt too wide) detected at line 602
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
+] [52
 
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[36
-
-]
-Overfull \hbox (18.53006pt too wide) detected at line 605
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[37
-
-]
-Overfull \hbox (18.53006pt too wide) detected at line 609
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[38
-
-]
-Overfull \hbox (18.53006pt too wide) detected at line 613
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[39
-
-]
-Overfull \hbox (18.53006pt too wide) detected at line 617
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-
-Overfull \hbox (18.53006pt too wide) has occurred while \output is active
-  [] [][][][][][][][][][][] [][][][][][][] [][][][][] [][][][][][][][][][][][][
-] [][][][][]  
- []
-
-[40
+] [53
 
 ]
 \tf@nav=\write5
@@ -1885,17 +1419,17 @@ Overfull \hbox (18.53006pt too wide) has occurred while \output is active
 
 (slides.aux) ) 
 Here is how much of TeX's memory you used:
- 24226 strings out of 478864
- 459266 string characters out of 2847712
- 809501 words of memory out of 3000000
- 41304 multiletter control sequences out of 15000+600000
- 519085 words of font info for 170 fonts, out of 8000000 for 9000
+ 24315 strings out of 478864
+ 460361 string characters out of 2847712
+ 827514 words of memory out of 3000000
+ 41330 multiletter control sequences out of 15000+600000
+ 520437 words of font info for 182 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,20n,124p,1005b,783s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
-m/lm-mathsy.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
-/lm/lm-mathit.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvi
-ps/lm/lm-ec.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
+m/lm-ec.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/
+lm-mathsy.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
+m/lm-mathit.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
 /lm/lm-rm.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
 m/lm-mathex.enc}<C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/lm/lmex10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/type1/p
@@ -1911,11 +1445,12 @@ eX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/map5672/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/lm/lmsso8.pfb><C:/Users/map5672/AppData/Local/Programs
 /MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/map5672/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/map5672/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/map5672/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on slides.pdf (40 pages, 1201617 bytes).
+ams/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/map5672/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/map5672/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on slides.pdf (53 pages, 1499802 bytes).
 PDF statistics:
- 3998 PDF objects out of 4296 (max. 8388607)
- 120 named destinations out of 1000 (max. 500000)
+ 6587 PDF objects out of 7423 (max. 8388607)
+ 159 named destinations out of 1000 (max. 500000)
  72022 words of extra memory for PDF output out of 74296 (max. 10000000)
 

@@ -5,6 +5,7 @@ date: "May 13, 2024"
 output:
   beamer_presentation:
     theme: "Frankfurt"
+    keep_tex: true
 header-includes:
   \usepackage{dcolumn}
 ---
@@ -83,16 +84,66 @@ Entity 4 & 43 & 39  & 27 &\textcolor{gray}{Decrease}\\
 
 - $\mathbf{Y}$: a measurement of the underlying system $W$.
 
-- $\mathbf{W}$: depends on both the composition ($W_{dn}^\parallel$) and system scale ($W_n^\perp$):
 
-$$\mathbf{W}_{dn} = \mathbf{W}_{dn}^\parallel W_n^\perp$$
-$$W_n^\perp = \sum_{d=1}^D \mathbf{W}_{dn}$$
+$$\mathbf{W}_{dn} = \underbrace{\mathbf{W}_{dn}^\parallel}_{\text{composition}} \times  \underbrace{W_n^\perp}_{\text{scale}}$$
+
+\textcolor{white}{- **Compostion:** $\mathbf{W}_{dn}^\parallel = \frac{\mathbf{W}_{dn}}{\sum_{d=1}^D \mathbf{W}_{dn}}$}
+
+\textcolor{white}{- **Scale:** $W_n^\perp = \sum_{d=1}^D \mathbf{W}_{dn}$}
+
+\textcolor{white}{- $\boldsymbol{\theta}$: what we want to estimate.}
+
+## Notation
+
+- $\mathbf{Y}$: a measurement of the underlying system $W$.
+
+
+$$\mathbf{W}_{dn} = \underbrace{\mathbf{W}_{dn}^\parallel}_{\text{composition}} \times  \underbrace{W_n^\perp}_{\text{scale}}$$
+
+- **Compostion:** $\mathbf{W}_{dn}^\parallel = \frac{\mathbf{W}_{dn}}{\sum_{d=1}^D \mathbf{W}_{dn}}$
+
+- **Scale:** $W_n^\perp = \sum_{d=1}^D \mathbf{W}_{dn}$
+
+\textcolor{white}{- $\boldsymbol{\theta}$: what we want to estimate.}
+
+## Notation
+
+- $\mathbf{Y}$: a measurement of the underlying system $W$.
+
+
+$$\mathbf{W}_{dn} = \underbrace{\mathbf{W}_{dn}^\parallel}_{\text{composition}} \times  \underbrace{W_n^\perp}_{\text{scale}}$$
+
+- **Compostion:** $\mathbf{W}_{dn}^\parallel = \frac{\mathbf{W}_{dn}}{\sum_{d=1}^D \mathbf{W}_{dn}}$
+
+- **Scale:** $W_n^\perp = \sum_{d=1}^D \mathbf{W}_{dn}$
 
 - $\boldsymbol{\theta}$: what we want to estimate. 
 
+## Example: Notation
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|r|c c c| }
+\hline
+\textcolor{gray}{System data ($W^\parallel$)} & Sample 1 & Sample 2 & Sample 3\\
+\hline
+Condition & Health & Health & Disease\\
+\hline
+Entity 1 & 0.27 & 0.27 & 0.77 \\
+Entity 2 & 0.68 & 0.68 & 0.02 \\
+Entity 3 & 0.05 & 0.02 & 0.08 \\
+Entity 4 & 0.04 & 0.03  & 0.13 \\
+\hline
+\textcolor{gray}{Scale ($W^\perp$)} & \textcolor{gray}{1,002} & \textcolor{gray}{1,313} & \textcolor{gray}{200}\\
+\hline
+\end{tabular}
+\end{table}
+
 ## Differential Abundance/Expression Analysis
 
-- Question: How do entities (e.g., taxa or genes) change between conditions?
+- **Question:** How do entities (e.g., taxa or genes) change between conditions?
+
+\vspace{.25in}
 
 - In this case, $\theta$ is the log-fold change (LFC):
 
@@ -142,10 +193,11 @@ $$W_n^\perp = \sum_{d=1}^D \mathbf{W}_{dn}$$
 Using the relationship $\mathbf{W}_{dn} = \mathbf{W}_{dn}^\parallel W_n^\perp$ and some math, the CLR normalization implies:
 
 \begin{align*}
-\log W_n^\perp = \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel).
+\log W_n^\perp = -\text{mean}(\log \mathbf{W}_{\cdot n}^\parallel).
 \end{align*}
 
-\textcolor{gray}{What does this mean? What does this imply for analyses?}
+\vspace{.25in}
+\textcolor{gray}{What does this mean?}
 
 
 ## Unacknowledged bias!
@@ -163,31 +215,31 @@ Using the relationship $\mathbf{W}_{dn} = \mathbf{W}_{dn}^\parallel W_n^\perp$ a
 \end{figure}
 
 
-# Scale Reliant Inference (Informal)
+# Scale Reliant Inference
 
 ## Scale Reliant Inference: The Basics
 
-- **The CoDA perspective:** Research questions that depend on scale are not possible.
+- **The CoDA perspective:** Research questions that depend on $W^\perp$ (scale) are not possible.
 
-- **The Normalization perspective:** Research questions that depend on scale can be answered after normalization.
+- **The Normalization perspective:** Research questions that depend on $W^\perp$ (scale) can be answered after normalization.
 
 - Who is right?
 
-\textcolor{white}{CoDA perspective: Technically yes, but limiting.}
+\textcolor{white}{- **The CoDA perspective:** Yes, but this is limiting in practice.}
 
-\textcolor{white}{The Normalization perspective: Technically no, but attempting to answer relevant questions.}
+\textcolor{white}{- **The Normalization perspective:** Not correct, but attempting to answer relevant questions.}
 
 ## Scale Reliant Inference: The Basics
 
-- **The CoDA perspective:** Research questions that depend on scale are not possible.
+- **The CoDA perspective:** Research questions that depend on $W^\perp$ (scale) are not possible.
 
-- **The Normalization perspective:** Research questions that depend on scale can be answered after normalization.
+- **The Normalization perspective:** Research questions that depend on $W^\perp$ (scale) can be answered after normalization.
 
 - Who is right?
 
-- **The CoDA perspective:** Technically yes, but limiting.
+- **The CoDA perspective:** Yes, but this is limiting in practice.
 
-- **The Normalization perspective:** Technically no, but attempting to answer relevant questions.
+- **The Normalization perspective:** Not correct, but attempting to answer relevant questions.
 
 ## Scale Reliant Inference: The Basics
 
@@ -198,10 +250,10 @@ Using the relationship $\mathbf{W}_{dn} = \mathbf{W}_{dn}^\parallel W_n^\perp$ a
 \begin{align*}
 \theta_d &= \text{mean}_{\text{case}}(\log \mathbf{W}_{dn}) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn})\\
 &= ... \\
-&= (\text{mean}_{\text{case}}(\log \mathbf{W}_{dn}^\parallel) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn}^\parallel))\\
-&- (\text{mean}_{\text{case}}(\log W_{n}^\perp) - \text{mean}_{\text{control}}(\log W_{n}^\perp))\\
-&= \theta^\parallel + \theta^\perp
+&= \underbrace{\text{mean}_{\text{case}}(\log \mathbf{W}_{dn}^\parallel) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn}^\parallel)}_{\theta^\parallel}\\
+& \, \, \, \, \, \, - \underbrace{\text{mean}_{\text{case}}(\log W_{n}^\perp) - \text{mean}_{\text{control}}(\log W_{n}^\perp)}_{\theta^\perp}\\
 \end{align*}
+
 
 \textcolor{gray}{Don't we need $\theta^\perp$?}
 
@@ -214,11 +266,26 @@ Recall for LFCs:
 
 - What can we say about $\theta$ from $\theta^\parallel$ alone?
 
-- E.g. If $\theta^\parallel = 20$, what does that say about $\theta$? \textcolor{gray}{If there are no restrictions, nothing!}
+\textcolor{white}{Statistical perspective: $\theta$ is not identifiable without $\theta^\perp$.}
+
+\textcolor{white}{Practical issues: unbiased estimators, calibrated confidence sets, and type-I error control **NOT** possible!}
+
+  \textcolor{white}{See Nixon et al. (2023) for details.}
+
+## Scale Reliant Inference: Theory Intro
+Recall for LFCs:
+\begin{align*}
+\theta_d &= \text{mean}_{\text{case}}(\log \mathbf{W}_{dn} ) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn} )\\
+&= \theta^\parallel + \theta^\perp
+\end{align*}
+
+- What can we say about $\theta$ from $\theta^\parallel$ alone?
 
 - Statistical perspective: $\theta$ is not identifiable without $\theta^\perp$.
 
 - Practical issues: unbiased estimators, calibrated confidence sets, and type-I error control **NOT** possible!
+
+- See Nixon et al. (2023) for details.
 
 ## Scale Simulation Random Variables
 
@@ -245,7 +312,7 @@ Recall for LFCs:
 
 \textbf{Step 2: Draw Samples from a Scale Model}
 \begin{align*}
-\log W_{n}^\perp &\sim Q\\
+\log W_{n}^\perp &=- \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel) + \epsilon, \, \epsilon \sim N(0,\gamma^2)\\
 \log \mathbf{W}_{\cdot n} &= \log \mathbf{W}_{\cdot n}^\parallel + \log W_{n}^\perp
 \end{align*}
 
@@ -265,13 +332,73 @@ Recall for LFCs:
 
 Normalizations are replaced by a scale model:
 
-$$\log W_n^\perp \sim Q$$
+\begin{align*}
+  \log W_n^\perp &= - \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel) + \epsilon\\
+  \epsilon &\sim N(0,\gamma^2)
+\end{align*}
 
-There are no restrictions on $Q$, although there are some helpful options:
+\vspace{.25in}
+\textcolor{gray}{What about other options?}
 
-1. Based on normalizations.
+## Intro to Scale Models, cont.
+
+There are no restrictions on what scale models can be, although there are some helpful options:
+
+1. Based on normalizations. \textcolor{gray}{(Stochastic normalizations)}
 2. Based on biological knowledge.
 3. Based on outside measurements.
+
+## Scale Models based on Biological Knowledge
+
+What do past studies or biological mechanisms tell about the scale of the system?
+
+\vspace{.1in}
+
+\textcolor{white}{1. You are confident that taking an antibiotic will kill at least some microbes in the gut.}
+
+\textcolor{white}{2. A past study showed that a certain disease (e.g., Crohn's disease) leads to lower microbial load in the gut.}
+
+\textcolor{white}{3. You believe the total microbial load in the mouth changes after brushing your teeth.}
+
+\textcolor{white}{This type of information can be used in scale model building.}
+
+## Scale Models based on Biological Knowledge
+
+What do past studies or biological mechanisms tell about the scale of the system?
+
+\vspace{.1in}
+
+1. You are confident that taking an antibiotic will kill at least some microbes in the gut.
+
+2. A past study showed that a certain disease (e.g., Crohn's disease) leads to lower microbial load in the gut.
+
+3. You believe the total microbial load in the mouth changes after brushing your teeth.
+
+\textcolor{gray}{This type of information can be used in scale model building.}
+
+## Scale Models based on Outside Measurements
+
+How can outside measurements be used to quantify scale?
+
+\vspace{.1in}
+
+\textcolor{white}{1. These measurements can be used *if* they relate to your scale of interest.}
+
+\textcolor{white}{2. Examples include flow cytometry, qPCR, etc.}
+
+\textcolor{white}{3. Scale models can incorporate measurement uncertainty.}
+
+## Scale Models based on Outside Measurements
+
+How can outside measurements be used to quantify scale?
+
+\vspace{.1in}
+
+1. These measurements can be used *if* they relate to your scale of interest.
+
+2. Examples include flow cytometry, qPCR, etc.
+
+3. Scale models can incorporate measurement uncertainty.
 
 # Coding Changes to ALDEx2
 
@@ -279,7 +406,19 @@ There are no restrictions on $Q$, although there are some helpful options:
 
 **The new ALDEx2 model removes normalizations in lieu of scale models.**
 
-\vspace{.1in}
+\vspace{.25in}
+
+\textcolor{white}{Major updates:}
+
+\textcolor{white}{1. A new argument `gamma` which makes it easy to incorporate scale uncertainty.}
+
+\textcolor{white}{2. A new function `aldex.senAnalysis` to see how analysis results change as a function of scale uncertainty.}
+
+## Including scale
+
+**The new ALDEx2 model removes normalizations in lieu of scale models.**
+
+\vspace{.25in}
 
 Major updates:
 
@@ -293,7 +432,7 @@ Major updates:
 
 - `gamma` can either be a single numeric or a matrix.
     1. Single numeric: controls the noise on the default scale model.
-    2. Matrix: A $N \times S$ matrix of samples of $W$.
+    2. Matrix: A $N \times S$ matrix of samples of $W^\perp$.
     
 - `gamma = NULL` returns the default behavior of ALDEx2.
 
@@ -318,7 +457,7 @@ $$\Lambda^\perp  \sim \ N(0, \gamma^2).$$
 $$\Lambda^\perp  \sim \ N(0, \gamma^2).$$
 \vspace{.1in}
 
-**Empirical Rule:** 95\% of samples of $\Lambda^\perp$ fall within a factor of $\pm 2 \gamma$.
+**Empirical Rule:** 95\% of the samples of $\Lambda^\perp$ fall within a factor of $\pm 2 \gamma$ from zero.
 
 ## Interpreting the Default Scale Model, cont.
 
@@ -335,7 +474,7 @@ $$\log \hat{W}_{n}^{\perp(s)} = - \mathrm{mean} \left(\log \hat{W}^{\parallel (s
 ## Interpreting the Default Scale Model, cont.
 Recall that with the CLR normalization:
 \begin{align*}
-\log W_n^\perp = \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel) = \text{mean} (\text{GM}( \mathbf{W}_{\cdot n}^\parallel)).
+\log W_n^\perp = -\text{mean}(\log \mathbf{W}_{\cdot n}^\parallel) = - \text{GM}( \mathbf{W}_{\cdot n}^\parallel).
 \end{align*}
 
 Thus, when using the CLR normalization:
@@ -348,9 +487,9 @@ $$\theta^\perp = \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\par
 
 Taken together, the default scale model implies that:
 
-1. The value of $\theta^\perp$ is within $\pm 2 \gamma$ of the value of $\theta^\perp$ implied by the CLR.
+1. The value of $\theta^\perp$ is within $\pm 2 \gamma$ of the value of $\theta^\perp$ implied by the CLR normalization.
 
-2. The true difference in scales falls within the the range $2^{\theta^\perp \pm 2 \gamma}$ with 95% certainty.
+2. With 95% certainty, the true difference in scales falls within the the range $2^{\theta^\perp \pm 2 \gamma}$.
 
 ## Option 2: More Complex Scale Models
 
@@ -382,7 +521,6 @@ Reasons to do this:
 \end{align*}}
 
 \textbf{Step 2: Draw Samples from a Scale Model}
-
 For a given $\gamma$:
 \begin{align*}
 \log W_{n}^{\perp, \gamma} &= - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) + \Lambda^\perp x_{n}\\
@@ -395,10 +533,234 @@ For a given $\gamma$:
 \textbf{Step 4: Repeat for all desired values of $\gamma$.}
 
 
-# Real Data Examples
+# Data Examples
 
 ## Simulation Study
+
+Consider a simple study of the microbiome pre/post antibiotic administration.
+
+  - **Research question:** Which taxa change in absolute abundance after taking an antibiotic?
+  
+  - 100 study participants, 50 in each condition (pre/post antibiotics).
+  
+  - 20 taxa total with 4 taxa truly changing \textcolor{gray}{(decreasing)}
+  
+## Data
+
+\begin{figure}
+  \centering
+  \includegraphics[width=4.5in]{figures/sim-data.pdf}
+\end{figure}
+
+
+```{r, echo = FALSE}
+###R script to analyze the simulated data
+
+library(ALDEx2)
+library(tidyverse)
+library(ggplot2)
+library(ggpattern)
+library(cowplot)
+
+set.seed(12345)
+##Reading in data (see "data_simulation.R" for details.)
+rdat <- read.csv(file.path("Part 2 - Updates to ALDEx2/data/simulation/sim_seq_dat.csv"))
+
+##Reading in the simulated flow data for building a scale model
+flow_data <- read.csv(file.path("Part 2 - Updates to ALDEx2/data/simulation/sim_flow_dat.csv"))
+
+## "Y" represents the OTU table
+Y <- t(rdat[,-1])
+
+##Vector denoting whether samples was in pre- or post- antibiotic condition.
+conds <- as.character(rdat[,1])
+
+
+## Fitting and analyzing the original ALDEx2 model
+mod.base <- aldex(Y, conds, gamma = NULL)
+mod.base %>% filter(we.eBH < 0.05)
+
+
+## Recreating ALDEx2
+mod.clr <- aldex(Y, conds, gamma = 1e-3)
+mod.clr %>% filter(we.eBH < 0.05)
+
+
+## Adding noise via the default scale model
+mod.ss <- aldex(Y, conds, gamma = .25)
+mod.ss %>% filter(we.eBH < 0.05)
+
+
+## Adding more noise via the default scale model
+mod.ss.high <- aldex(Y, conds, gamma = 0.5)
+mod.ss.high %>% filter(we.eBH < 0.05)
+
+
+##Creating an informed model using biological reasoning
+scales <- c(rep(1, 50), rep(0.9, 50))
+scale_samps <- aldex.makeScaleMatrix(.15, scales, conds, log=FALSE)
+
+mod.know <- aldex(Y, conds, gamma = scale_samps)
+mod.know %>% filter(we.eBH < 0.05)
+
+##Now creating an informed model using the flow data
+head(flow_data)
+
+flow_data_collapse <- flow_data %>%
+  group_by(sample) %>%
+  mutate(mean = mean(flow)) %>%
+  mutate(stdev = sd(flow)) %>%
+  dplyr::select(-flow) %>%
+  ungroup() %>%
+  unique()
+
+scale_samps <- matrix(NA, nrow = nrow(flow_data_collapse), ncol = 128)
+for(i in 1:nrow(scale_samps)){
+  scale_samps[i,] <- rnorm(128, flow_data_collapse$mean[i], flow_data_collapse$stdev[i])
+}
+
+mod.flow <- aldex(Y, conds, gamma = scale_samps)
+mod.flow %>% filter(we.eBH < 0.05)
+
+
+####Plotting and bringing it all together
+
+##Reading in the true data
+dat <- read.csv(file.path("Part 2 - Updates to ALDEx2/data/simulation/sim_obs_dat.csv"))
+
+
+## Helper functions
+##Function to label True/false positive/negatives
+sig_code <- function(sig, Taxa, truth){
+  out <- rep("TN", length(Taxa))
+  out[sig &(Taxa %in% truth)] <- "TP" # True Positives
+  out[sig & (out!="TP")] <- "FP" # False Positives
+  out[!sig & (Taxa %in% truth)] <- "FN" # False Negatives
+  return(out)
+}
+
+##Function to summarize aldex2 output
+summary_aldex2 <- function(fit, pval = 0.05){
+  fit %>%
+    as.data.frame() %>%
+    rownames_to_column("category") %>%
+    dplyr::select(category, effect, we.ep, we.eBH) %>%
+    mutate(padj=we.eBH) %>%
+    mutate(mean=effect) %>%
+    mutate(low=NA, high=NA) %>%
+    mutate(sig = ifelse(padj <= pval, TRUE, FALSE))
+}
+
+##Function to create the grid plot
+plot_sig2 <- function(rrs, truth, ...){
+  names(rrs) <- model.names[names(rrs)]
+  bind_rows(rrs, .id="Model") %>%
+    dplyr::select(Model, category, sig) %>%
+    mutate(Taxa = category) %>%
+    mutate(Taxa=as.numeric(sub("Taxa", "", Taxa))) %>%
+    mutate(sigcode = sig_code(sig, Taxa, truth)) %>%
+    mutate(Taxa=factor(Taxa), sigcode=factor(sigcode,
+                                             levels=c("TP", "TN",
+                                                      "FP", "FN"))) %>%
+    mutate(Model=factor(Model, levels=model.name.levels)) %>%
+    ggplot(aes(x=Taxa, y=Model)) +
+    geom_tile_pattern(aes(fill=sigcode, pattern = sigcode), color="darkgrey",pattern_fill = 'grey',pattern_colour  = 'grey', pattern_density = 0.015) +
+    theme_minimal() +
+    theme(panel.grid = element_blank(),
+          legend.title=element_blank(),
+          text = element_text(size=16),
+          axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+    scale_pattern_manual(values = c(TP = "none", TN = "none", FP = "none", FN = "stripe")) +
+    scale_fill_manual(values= c("black", "white", "grey", "white"))
+}
+
+##Plotting the results
+##Pvalue at default of 0.05
+
+p1 <- gather(dat, Taxa, Count, -Condition) %>%
+  mutate(Taxa=as.numeric(sub("Taxa", "", Taxa))) %>%
+  mutate(Taxa=factor(Taxa)) %>%
+  ggplot(aes(x=Taxa, y=Count)) +
+  geom_boxplot(aes(fill = Condition, color = Condition), position=position_dodge(width=1),
+               size=1)+
+  scale_y_log10() +
+  theme_bw() +
+  scale_color_manual(values = c("#E64B35FF", "#4DBBD5FF")) +
+  scale_fill_manual(values = c("#E64B35FF", "#4DBBD5FF"))+
+  labs(color='Antibiotic\nTreatment') +
+  labs(fill='Antibiotic\nTreatment') +
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_blank(),
+        axis.ticks.x=element_blank(),
+        text = element_text(size=16))
+
+truth <- c(3,4,15,20)##Locations of the differences
+
+model.names <- c("mod.base"="ALDEx2 (Original)",
+                 "mod.clr" = "Default Model (gamma = 1e-3)",
+                 "mod.ss"= "Default Model (gamma = 0.25)","mod.ss.high"= "Default Model (gamma = 0.50)",
+                 "mod.know" = "Knowledged-Based Model",
+                 "mod.flow" = "Flow-Based Model")
+model.name.levels <- c("Flow-Based Model", "Knowledged-Based Model", "Default Model (gamma = 0.50)", "Default Model (gamma = 0.25)",  "Default Model (gamma = 1e-3)", "ALDEx2 (Original)")
+
+rrs <- list(mod.base=summary_aldex2(mod.base), 
+            mod.clr = summary_aldex2(mod.clr),
+            mod.ss = summary_aldex2(mod.ss),
+            mod.ss.high = summary_aldex2(mod.ss.high),
+            mod.know = summary_aldex2(mod.know),
+            mod.flow = summary_aldex2(mod.flow))
+
+p2 <- plot_sig2(rrs, truth=truth)
+p <- plot_grid(p1, p2, nrow=2, align="v", rel_heights=c(1.7, 1))
+p
+
+
+##Now running a sensitivity analysis over the default scale model
+
+##First, specifying different values for the noise in the scale
+gamma_to_test <- c(1e-3, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1)
+
+##Run the CLR function
+clr <- aldex.clr(Y, conds)
+
+##Run sensitivity analysis function
+sen_res <- aldex.senAnalysis(clr, gamma = gamma_to_test)
+
+##Inspecting results. Note that it is a list with length equal to the number of gammas tested.
+##Each element of the list gives the ALDEx2 output.
+length(sen_res)
+length(gamma_to_test)
+
+head(sen_res[[1]])
+
+##Plotting the sensitivity results.
+plotGamma(sen_res, thresh = .1, blackWhite = TRUE, taxa_to_label =  3)
+
+```
 
 ## Real Example: SELEX
 
 ## Real Example: Vandputte
+
+## References
+
+## References
+
+**Scale Reliant Inference/Updates to ALDEx2:**
+
+- Nixon, et. al. (2023) "Scale Reliant Inference." *ArXiv Preprint 2201.03616*.
+
+- Gloor, Nixon, and Silverman. (2023) "Scale is Not What You Think; Explicit Scale Simulation in ALDEx2." *BioRXiv Preprint 2023.10.21.563431*.
+
+- Nixon, Gloor, and Silverman. (2024) "Beyond Normalizations: Incorporating Scale Uncertainty in ALDEx2." *BioRXiv Preprint 2024.04.01.587602*.
+
+- Fernandes et. al. (2014). "Unifying the analysis of high-throughput sequencing datasets: characterizing
+RNA-seq, 16S rRNA gene sequencing and selective growth experiments by compositional data analysis." *Microbiome*.
+
+## References
+
+**Data Sources:**
+
+- McMurrough et. al. (2014)."Control of catalytic efficiency by a coevolving network of catalytic and noncatalytic residues." *PNAS*.
+
+- Vandputte et. al. (2017). "Quantitative microbiome profiling links gut community variation to microbial load." *Nature*.
