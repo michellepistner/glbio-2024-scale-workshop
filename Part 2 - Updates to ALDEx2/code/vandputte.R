@@ -1,5 +1,4 @@
-## Vandputte re-analysis
-
+## Analysis of Vandputte et al (2017) "Quantitative Microbiome Profiling..." Nature.
 ## Helper function for computing the LFC----------------------------------------
 aldex.lfc <- function(clr){
   # Use clr conditions slot instead of input
@@ -48,7 +47,6 @@ aldex.lfc <- function(clr){
 
 ## Loading libraries
 library(phyloseq) #
-library(driver)
 library(tidyverse) #
 library(ALDEx2) #
 library(gghighlight)
@@ -63,7 +61,7 @@ library(DESeq2)
 library(edgeR)
 library(latex2exp)
 library(ggrepel)
-set.seed(12345)
+set.seed(2024)
 
 ## Reading in the phyloseq object
 phylo <- readRDS(file.path("Part 2 - Updates to ALDEx2", "data","vandputte", "vandputte_phyloseq.RDS"))
@@ -81,7 +79,7 @@ sample_data(phylo) %>%
   ylab("Flow Cytometry Measurement")
 
 
-## Estimate of \theta^\perp from the original ALDEx2 model
+## Plotting the implied scale model for the original ALDEx2 model
 clr <- aldex.clr(t(otu_table(phylo)), sample_data(phylo)$Health.status, mc.samples = 1000, denom = "all", gamma = 1e-3)
 clr.dat <- data.frame("group" = sample_data(phylo)$Health.status, "scale" = clr@scaleSamps[,1])
 ggplot(clr.dat, aes(x=group, y=scale)) + 
@@ -331,4 +329,5 @@ p1 = ggplot(sig.df, aes(x=Genus, y=Model)) +
   scale_fill_manual(values= c("white", "lightgrey", "white", "grey")) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 
+p1
 #-------------------------------------------------------------------------------
