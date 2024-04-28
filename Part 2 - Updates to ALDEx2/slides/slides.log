@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.7.26)  26 APR 2024 16:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.7.26)  28 APR 2024 14:21
 entering extended mode
 **./slides.tex
 (slides.tex
 LaTeX2e <2021-06-01>
-L3 programming layer <2021-06-01>
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamer.cls
+L3 programming layer <2021-06-01> (C:\Users\map5672\AppData\Local\Programs\MiKT
+eX\tex/latex/beamer\beamer.cls
 Document Class: beamer 2023/05/15 v3.70 A class for typesetting presentations
 
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasemode
@@ -25,8 +25,7 @@ de.sty
 )
 \beamer@commentbox=\box52
 \beamer@modecount=\count187
-)
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 )
 \headdp=\dimen138
@@ -74,8 +73,8 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \beamer@tocsectionnumber=\count273
 
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseopti
-ons.sty
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+ons.sty (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyv
+al.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 ))
@@ -101,8 +100,8 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@dimlist=\toks17
 
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg
-))
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+)) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.s
+ty
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.
 sty
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfut
@@ -183,8 +182,7 @@ ctions.integerarithmetics.code.tex)))
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathflo
 at.code.tex
 \c@pgfmathroundto@lastzeros=\count282
-)))
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
+))) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
 File: size11.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
 )
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcor
@@ -262,8 +260,7 @@ File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
 sysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-))
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+)) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cf
@@ -428,15 +425,13 @@ Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape
 .sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-)
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmac
 ro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-)
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.s
@@ -446,7 +441,6 @@ Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 \@linkdim=\dimen265
 \Hy@linkcounter=\count295
 \Hy@pagecounter=\count296
-
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2021-06-05 v7.00l Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -465,7 +459,6 @@ ty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count297
-
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2021-06-05 v7.00l Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -483,14 +476,12 @@ Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
 Package hyperref Info: Bookmarks ON on input line 4445.
 \c@Hy@tempcnt=\count298
-
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4804.
 \XeTeXLinkMargin=\dimen266
-
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
@@ -513,12 +504,10 @@ LaTeX Info: Redefining \ref on input line 6146.
 LaTeX Info: Redefining \pageref on input line 6150.
 \Hy@abspage=\count300
 
-
 Package hyperref Message: Stopped early.
 
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2021-06-05 v7.00l Hyperref driver for pdfTeX
 
@@ -547,8 +536,8 @@ ires.sty
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasecomp
 atibility.sty)
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasefont
+.sty (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb
 .sty
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
@@ -665,8 +654,8 @@ s.sty
 \beamer@blockheadheight=\dimen279
 ))
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbaseloca
-lstructure.sty
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/tools\enumerate.sty
+lstructure.sty (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/tools\
+enumerate.sty
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks33
 )
@@ -683,25 +672,21 @@ gationsymbols.tex)
 \beamer@section@min@dim=\dimen280
 )
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamerbasetheo
-rems.sty
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+rems.sty (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsm
+ath.sty
 Package: amsmath 2021/04/20 v2.17j AMS math features
 \@mathmargin=\skip58
-
 For additional information on amsmath, use the `?' option.
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks34
 \ex@=\dimen281
-))
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+)) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen282
-)
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count317
@@ -741,8 +726,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \mathdisplay@stack=\toks38
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
-)
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
+) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks39
 \thm@bodyfont=\toks40
@@ -774,7 +758,7 @@ medefault.sty)))
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfpage
 s.sty
 Package: pgfpages 2011/01/05 ver 0.02
- (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count330
 \calc@Bcount=\count331
@@ -798,16 +782,13 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \pgfpages@shipoutbox=\box75
 ) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-)
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks45
 \inpenc@posthook=\toks46
-)
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-)
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
+) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -851,8 +832,8 @@ merounded.sty)
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamercolorthe
 meorchid.sty)
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamercolorthe
-mewhale.sty))
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
+mewhale.sty)) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/upquote
+\upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
@@ -882,8 +863,8 @@ Package microtype Info: Loading configuration file microtype.cfg.
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.c
 fg
 File: microtype.cfg 2021/12/10 v3.0b microtype main configuration file (RS)
-))
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/parskip\parskip.sty
+)) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/parskip\parskip.st
+y
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
 )
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
@@ -901,10 +882,8 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \fb@frh=\dimen298
 \FrameRule=\dimen299
 \FrameSep=\dimen300
-)
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/tools\dcolumn.sty
+) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/tools\dcolumn.sty
 Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
-
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
 \col@sep=\dimen301
@@ -914,8 +893,8 @@ Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
 \extratabsurround=\skip69
 \backup@length=\skip70
 \ar@cellbox=\box79
-))
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+)) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.st
+y
 Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
 \LTleft=\skip71
 \LTright=\skip72
@@ -1015,7 +994,6 @@ Package: xurl 2022/01/09 v 0.10 modify URL breaks
 )
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
 45.
-
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1045,7 +1023,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 145.
 LaTeX Font Info:    ... okay on input line 145.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 145.
 LaTeX Font Info:    ... okay on input line 145.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1107,7 +1084,6 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package hyperref Info: Link coloring OFF on input line 145.
-
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1199,7 +1175,6 @@ Package microtype Info: Applying patch `item' on input line 145.
 Package microtype Info: Applying patch `toc' on input line 145.
 Package microtype Info: Applying patch `eqnum' on input line 145.
 
-
 Package microtype Warning: Unable to apply patch `footnote' on input line 145.
 
 Package microtype Info: Generating PDF output.
@@ -1253,19 +1228,16 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
 67.
-
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
 167.
-
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
 167.
-
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1277,19 +1249,18 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 167.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 167
 .
-
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
+) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cf
+g
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 167
 .
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
+) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cf
+g
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
@@ -1897,7 +1868,6 @@ Overfull \hbox (18.54805pt too wide) detected at line 666
 (slides.vrb
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
 2.
-
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ))
@@ -1959,8 +1929,8 @@ LaTeX Font Info:    Trying to load font information for T1+lmr on input line 69
 5.
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-(C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cf
+g
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
@@ -2155,7 +2125,6 @@ Overfull \hbox (18.54805pt too wide) detected at line 861
 (slides.vrb
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 5.
-
 
 LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10.95> not available
 (Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 5.
@@ -2502,7 +2471,7 @@ Overfull \hbox (18.54805pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
- (slides.aux) ) 
+(slides.aux) ) 
 Here is how much of TeX's memory you used:
  26079 strings out of 478864
  494495 string characters out of 2847712
@@ -2511,32 +2480,32 @@ Here is how much of TeX's memory you used:
  524620 words of font info for 189 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,20n,124p,1005b,785s stack positions out of 5000i,500n,10000p,200000b,80000s
-{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/
-lm/lm-mathit.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvip
-s/lm/lm-ec.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/
-lm/lm-mathsy.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvip
-s/lm/lm-rm.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/
-lm/lm-mathex.enc}<C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/lm/lmex10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/lm/lmmi10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/lm/lmmi6.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/lm/lmmi8.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/lm/lmmib10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/lm/lmr10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/font
-s/type1/public/lm/lmss10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/lm/lmss12.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/lm/lmss8.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/map5672/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/map5672/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/lm/lmsso8.pfb><C:/Users/map5672/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/map5672/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/map5672/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/map5672/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/map5672/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/map5672/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/lm/lmtko10.pfb><C:/Users/map5672/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on slides.pdf (66 pages, 1996620 bytes).
+{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
+m/lm-mathit.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
+/lm/lm-ec.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
+m/lm-mathsy.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
+/lm/lm-rm.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
+m/lm-mathex.enc}<C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmex10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/lm/lmmi10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/lm/lmmi6.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/lm/lmmi8.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/lm/lmmib10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/lm/lmr10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/lm/lmss10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/lm/lmss12.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/lm/lmss8.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/lm/lmssbx10.pfb><C:/Users/map5672/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/map5672/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmsso8.pfb><C:/Users/map5672/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/map5672/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/map5672/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/map5672/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/map5672/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/map5672/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/lm/lmtko10.pfb><C:/Users/map5672/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on slides.pdf (66 pages, 1996626 bytes).
 PDF statistics:
  10382 PDF objects out of 10688 (max. 8388607)
  198 named destinations out of 1000 (max. 500000)

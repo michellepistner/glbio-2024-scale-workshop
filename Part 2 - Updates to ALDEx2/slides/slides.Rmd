@@ -96,7 +96,7 @@ Entity 4 & 43 & 39  & 27 &\textcolor{gray}{Decrease}\\
 
 ## Notation
 
-- $\mathbf{Y}$: a measurement of the underlying system $W$.
+- $\mathbf{Y}$: a measurement of the underlying system $\mathbf{W}$.
 
 
 $$\mathbf{W}_{dn} = \underbrace{\mathbf{W}_{dn}^\parallel}_{\text{composition}} \times  \underbrace{W_n^\perp}_{\text{scale}}$$
@@ -501,9 +501,9 @@ $$\theta^\perp = \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\par
 
 Taken together, the default scale model implies that:
 
-1. The value of $\theta^\perp$ is within $\pm 2 \gamma$ of the value of $\theta^\perp$ implied by the CLR normalization.
+1. The value of $\theta^\perp$ is within $\pm 2 \gamma$ of the value of $\theta^\perp_{\text{CLR}}$ implied by the CLR normalization.
 
-2. With 95% certainty, the true difference in scales falls within the the range $2^{\theta^\perp \pm 2 \gamma}$.
+2. With 95% certainty, the true difference in scales falls within the the range $2^{\theta_{\text{CLR}}^\perp \pm 2 \gamma}$.
 
 ## Option 2: More Complex Scale Models
 
@@ -799,7 +799,6 @@ p[[2]]
 
 ## Loading libraries
 library(phyloseq) #
-library(driver)
 library(tidyverse) #
 library(ALDEx2) #
 library(gghighlight)

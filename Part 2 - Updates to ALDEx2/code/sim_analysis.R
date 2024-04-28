@@ -164,7 +164,7 @@ rrs <- list(mod.base=summary_aldex2(mod.base),
 
 p2 <- plot_sig2(rrs, truth=truth)
 p <- plot_grid(p1, p2, nrow=2, align="v", rel_heights=c(1.7, 1))
-p
+
 
 
 ##Now running a sensitivity analysis over the default scale model
@@ -186,4 +186,4 @@ length(gamma_to_test)
 head(sen_res[[1]])
 
 ##Plotting the sensitivity results.
-plotGamma(sen_res, thresh = .1, blackWhite = TRUE, taxa_to_label =  3)
+p.gamma <- plotGamma(sen_res, thresh = .1, blackWhite = TRUE, taxa_to_label =  3)
