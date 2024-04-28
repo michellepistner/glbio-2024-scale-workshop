@@ -1,4 +1,4 @@
-\documentclass[11pt]{beamer}
+\documentclass[11pt,t]{beamer}
 
 \graphicspath{{Images/}{./}}
 \usepackage{booktabs}
@@ -38,14 +38,14 @@
 \begin{frame}
     \frametitle{Review of Key Concepts}
 
-    Consider an 16S rRNA-seq experiment measuring \(D\) taxa in the colons of \(N\) patients:
+    Consider as an example an 16S rRNA-seq experiment measuring \(D\) taxa in the colons of \(N\) patients:
     \begin{align*}
       \underbrace{W_{dn}}_{\substack{\text{Absolute Abundance} \\ \text{Taxa d, Patient n} \\ \text{\textcolor{red}{(Unmeasured)}}}} = \underbrace{W^\parallel_{dn}}_{\substack{\text{Composition} \\ \text{Taxa d, Patient n} \\ \text{\textcolor{green}{(Measured)}}}} \times \underbrace{W^\perp_n}_{\substack{\text{Scale} \\ \text{(e.g., total \# of microbes in} \\ \text{patient n's colon)} \\ \text{\textcolor{red}{(Unmeasured)}}}}
     \end{align*}
 
     \pause
 
-    Consider estimation of the (Log Fold Change) LFC of taxa \(d\) in patients with and without Ulcerative Colitis:
+    Further consider as an example estimation of the LFC (Log Fold Change) of taxa \(d\) in patients with and without Ulcerative Colitis:
     \begin{align*}
         \underbrace{\theta_d}_{\text{LFC in Absolute Abundance}} &= \underbrace{\theta^{\parallel}_d}_{\text{LFC in Composition}}+\underbrace{\theta^\perp}_{\text{LFC in Scale}}. \nonumber
     \end{align*}
@@ -63,8 +63,7 @@
 
     \pause
 
-    Estimate \(\hat{\theta}^\perp\) comes from normalization.
-    For Example:
+    Estimates \(\hat{\theta}^\perp\) come from normalization, for example:
     \begin{itemize}
       \item Total Sum Scaling (TSS): \(\hat{\theta}^\perp=0\)
       \pause
@@ -75,23 +74,55 @@
 \begin{frame}
   \frametitle{Differential Set Analysis (DSA)}
 
-   This presentation will focus on Differential Set Analysis (DSA) rather than Differential Expression/Abundance (DE/DA)
-   \begin{columns}[c]
-     \begin{column}{0.5\textwidth}
-        \end{column}
-        \hspace{-50pt}
-        \vrule{}
-        \begin{column}{0.50\textwidth}
-        \end{column}
-   \end{columns}
-   
-   \begin{block}{Goals of This Presentation}
-     \begin{enumerate}
-       \item Show that \textbf{\textcolor{red}{incorrect} scale estimates} (i.e., \(\hat{\theta}^\perp\) or \(\hat{W}^\perp\)) inflate false positives in DSA
-      \item Propose methods to address these false positives  
-     \end{enumerate}
-   \end{block}
+  \begin{columns}
+    \begin{column}{0.45\textwidth}
+      \begin{center}
+        Rather than estimating \textbf{LFCs} of \textbf{single} genes/taxa
 
+        \vspace{50px}
+        \includegraphics[scale=0.23]{/home/hh/data/output/one_gene.png}
+      \end{center}
+    \end{column}
+    \vrule{}
+    \begin{column}{0.55\textwidth}  
+      \begin{center}
+        What if we are interested in a \textbf{set} of genes in a pathway?
+       \includegraphics[scale=0.23]{/home/hh/data/output/apop_sub.png}
+     \end{center}
+  \end{column}
+  \end{columns}
+
+  \begin{center}
+    \textbf{Differential Set Analysis (DSA) is used to estimate enrichment or depletion of a gene/taxa set}
+  \end{center}
+\end{frame}
+  
+\begin{frame}
+  \frametitle{Key Points of this Talk}
+
+  \begin{enumerate}
+  \item Errors in scale assumptions (i.e., estimates \(\hat{\theta}^\perp\), \(\hat{W}^\perp\)) inflate false positive rates in DSA
+    \pause
+  \item Errors in DSA estimates are a \textbf{non-linear} function of scale errors
+    \pause
+  \item We have developed three solutions to these errors:
+    \begin{enumerate}
+      \item LFC Sensitivity Analysis
+      \item LFC Sensitivity Testing
+      \item Compositional Weighting Methods
+    \end{enumerate}
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Three Methods for DSA}
+
+  In this presentation 3 common DSA methods will be considered
+  \begin{enumerate}
+    \item \textbf{Gene Set Enrichment Analysis (GSEA) with Gene Label permutations}
+    \item Gene Set Enrichment Analysis (GSEA) with Sample Label permutations
+    \item CAMERA
+  \end{enumerate}
 \end{frame}
 
 \begin{frame}
@@ -99,15 +130,21 @@
 
   The GSEA Algorithm Step-by-Step
   \begin{enumerate}
-    \item Pick a set of genes \(S\) (e.g., the apoptosis signaling pathway)
-    \item Estimate LFCs \(\hat{\theta}=f(Y)\) (i.e., with DESeq2, ALDEx2, limma)
+  \item Pick a set of genes \(S\) (e.g., the apoptosis signaling pathway):
+    \begin{align*}
+      S = \{\text{ASK1, CHOP, TRAF2}\}
+    \end{align*}
+    \pause
+  \item Estimate LFCs \(\hat{\theta}=f(Y)\) (i.e., with DESeq2, ALDEx2, limma)
+    \pause
     \item Order the LFCs from largest to smallest
     \begin{figure}
-      \includegraphics[scale=0.6]{/home/hh/data/output/lfcs_1.png}
+      \includegraphics[scale=0.4]{/home/hh/data/output/lfcs_1.png}
       \centering
     \end{figure}
   \end{enumerate}
 \end{frame}
+
 
 \begin{frame}
    \frametitle{GSEA with Gene Label Permutations}
@@ -132,21 +169,27 @@
   \end{enumerate} 
 \end{frame}
 
-%\begin{frame}
-%  \frametitle{GSEA with Gene Label Permutations}
-%
-%  [PLACEHOLDER Final p-value, 2 examples for intuition]
-%\end{frame}
+\begin{frame}
+   \frametitle{GSEA with Gene Label Permutations}
+
+  The GSEA Algorithm Step-by-Step
+  \begin{enumerate}
+    \setcounter{enumi}{4}
+    \item Calculate a null distribution of Enrichment Scores (ESs)
+      \begin{alignat}{2}
+        S &= \{\pmb{\text{ASK1}}, \pmb{\text{CHOP}}, \pmb{\text{TRAF2}}\} &&\implies \text{ES} \nonumber \\
+        S^*_1 &= \{\pmb{\text{ASK1}}, \pmb{\text{CHOP}}, \text{B2M}\} &&\implies \text{ES}^*_1 \nonumber \\
+         S^*_2 &= \{\text{BRCA1}, \text{EGFR}, \text{XRCC4}\}  &&\implies \text{ES}^*_2 \nonumber
+      \end{alignat}
+    \pause
+    \item Use null distribution to calculate a p-value
+  \end{enumerate} 
+\end{frame}
 
 \begin{frame}
-  \frametitle{GSEA Target of Inference}
-
-  We can think of the GSEA algorithm as a function of the LFCs:
-  \begin{align*}
-    \underbrace{\phi_S}_{\substack{\text{DSA Target} \\ \text{Estimand}}} = u(\underbrace{\theta}_{\substack{\text{True, Unkown} \\ \text{LFCs}}})
-  \end{align*}
-
-  DSA Target Estimand:
+  \frametitle{DSA Target Estimand}
+  
+  The goal of DSA is to estimate a \textbf{target estimand} \(\phi_S\):
   \begin{align*}
     \phi_S = \begin{cases}
       1 & \text{Gene Set } S \text{ is significantly enriched} \\
@@ -155,50 +198,70 @@
     \end{cases}
   \end{align*}
 
-\end{frame}
+  \vspace{10px}
 
-\begin{frame}
-  We want to estimate enrichment with the true LFC \(\theta\):
+  In GSEA the target estimand is a function of the \textbf{true} LFCs:
   \begin{align*}
-    \phi_S = u(\theta)
+    \phi_S = g(\theta)
   \end{align*}
 
-  \pause
-
-  But we don't know the true LFC \(\theta\)! So instead we estimate:
-  \begin{align*}
-    \hat{\phi}_S &= u(\hat{\theta}) \\
-                 &= u(\hat{\theta}^\parallel+\hat{\theta}^\perp).
-  \end{align*}
-
-  \pause
-  
-  The scale \(\theta^\perp\) is \textcolor{red}{unmeasured}, so what if our estimate \(\hat{\theta}^\perp\) is wrong?
 \end{frame}
 
 \begin{frame}
   \frametitle{LFC Sensitivity Analysis}
 
-  Consider error \(\epsilon^\perp\) in our estimate of the unmeasured scale \(\theta^\perp\):
+  In GSEA the target estimand is a function of the \textbf{true} LFCs:
   \begin{align*}
-    \underbrace{\theta^\perp}_{\text{True LFC in Scale}} = \underbrace{\hat{\theta}^\perp}_{\text{Estimate}} + \underbrace{\pmb{1}\epsilon^\perp}_{\text{Estimation Error}}
+    \phi_S = g(\theta)
+  \end{align*}
+
+  \vspace{10px}
+
+  But we don't know the true LFCs, we only have \textbf{estimates}:
+  \begin{align*}
+    \hat{\phi}_S &= g(\hat{\theta}) \\
+                 &= g(\hat{\theta}^\parallel + \underbrace{\hat{\theta}^\perp}_{\substack{\text{Estimated LFC in Scale} \\ \text{(Normalization Assumption)}}}).
+  \end{align*}
+  
+  \pause
+
+  \vspace{10px}
+  
+  Our DSA estimate \(\hat{\phi}_S\) \textbf{depends on our scale estimate} \(\hat{\theta}^\perp\)!
+
+  \pause
+  
+  \begin{block}{LFC Sensitivity Analysis}
+    A sensitivity analysis of how error in \(\hat{\theta}^\perp\) affects \(\phi_S\)
+  \end{block}
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{LFC Sensitivity Analysis}
+
+  Error \(\epsilon^\perp\) in our estimate of the unmeasured scale \(\theta^\perp\):
+  \begin{align*}
+    \underbrace{\theta^\perp}_{\text{True LFC in Scale}} = \underbrace{\hat{\theta}^\perp}_{\text{Estimate}} + \underbrace{\epsilon^\perp}_{\text{Estimation Error}}
   \end{align*}
 
   \pause
   
-    We can use \(\epsilon^\perp\) to learn how sensitive the \textbf{truth} \(\phi_S\) is to error:
+    How does the \textbf{true} \(\phi_S\) change with error \(\epsilon^\perp\)?
     \begin{align*}
-      \phi_s &= u(\hat{\theta}^\parallel+ \hat{\theta}^\perp + \pmb{1}\epsilon^\perp) \\
-           &= u(\hat{\theta}+\pmb{1}\epsilon^\perp)
+      \phi_s &= g(\hat{\theta}^\parallel+ \hat{\theta}^\perp + \epsilon^\perp) \\
+           &= g(\hat{\theta}+\epsilon^\perp)
     \end{align*}
   
   \pause
 
   LFC Sensitivity Analysis Algorithm:
   \begin{enumerate}
-      \item Get estimated LFCs \(\hat{\theta}\) (e.g., from ALDEx2, limma, DESeq2, etc.)
-      \item Estimate set enrichment/depletion for set \(S\): \(\hat{\phi}_S=u(\hat{\theta})\)
-      \item Compare estimate (\(\hat{\phi}_S\)) to truth (\(\phi_S\)) under different amounts of error \(\epsilon^\perp\)
+    \item Get estimated LFCs \(\hat{\theta}\) (e.g., from ALDEx2, limma, DESeq2, etc.)
+    \pause
+    \item Run GSEA with \(\epsilon^\perp=0\) (i.e., \(\hat{\phi}_S=g(\hat{\theta})\))
+    \pause
+    \item Rerun GSEA with \(\epsilon^\perp \neq 0\) and compare to \(\epsilon^\perp=0\) (i.e., \(\phi_S=g(\hat{\theta}+\epsilon^\perp\))
   \end{enumerate}
 
 \end{frame}
@@ -241,7 +304,7 @@
     \includegraphics[scale=0.65]{/home/hh/data/output/journal.pcbi.1011659.g001.PNG}
   \end{center}
 
-  Note: PPV (Positive Predictive Value) is the \% of positives that are true positives
+  \small{PPV (Positive Predictive Value) is the \% of positives that are true positives}
  
 \end{frame}
 
@@ -255,20 +318,20 @@
 \begin{frame}
   \frametitle{Real Data Analysis}
 
-  Real Data Analysis:
+  \underline{RNA-seq: normal-adjacent-to-tumor vs. healthy thyroid tissue*}
   \begin{enumerate}
-    \item RNA-seq: normal-adjacent-to-tumor vs healthy thtroid tissue
-    \item LFCs estimated with Songbird (Morton et al., 2019), GSEA performed with fgsea (Korotkevich et al., 2021)
-  \end{enumerate}
+    \item LFCs estimated with Songbird (Morton et al., 2019)
+    \item GSEA performed with fgsea (Korotkevich et al., 2021)
+  
 
   \pause
 
-  fgsea results for the Inflammatory Response Pathway:
+  \item fgsea results for the Inflammatory Response Pathway:
   \includegraphics[scale=0.30]{/home/hh/data/output/vanilla_fgsea.png}
     \begin{center}
     \begin{tabular}{ |c|c| }
     \hline
-    Enrichment Score & Adjusted p-value \\
+    (Normalized) Enrichment Score & Adjusted p-value \\
     \hline
     \textcolor{blue}{1.53} & \textcolor{red}{0.003}  \\
     \hline
@@ -276,12 +339,12 @@
     \end{center}
  
   \pause
-  LFC Sensitvity Results:
+  \item LFC Sensitvity Analysis results:
   \includegraphics[scale=0.30]{/home/hh/data/output/LFCS_fgsea.png}
     \begin{center}
     \begin{tabular}{ |c|c|c| }
     \hline
-    \(\epsilon^\perp\) & Enrichment Score & Adjusted p-value \\
+    \(\epsilon^\perp\) & (Normalized) Enrichment Score & Adjusted p-value \\
     \hline
     -0.5 & \textcolor{red}{-0.89} & 1  \\
     \hline
@@ -291,7 +354,8 @@
     \hline
     \end{tabular}
     \end{center}
-
+   \end{enumerate} 
+\tiny{*(Aran et al., 2017)}
 \end{frame}
 
 \begin{frame}
@@ -301,22 +365,19 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Two Alternatives to LFC Senstivity Analysis}
-
-  To address false positives in GSEA I present two additional methods:
+  \frametitle{Two Additional Methods to Address False Positives}
   \pause
   \begin{enumerate}
   \item \underline{The LFC Sensitivity Test}
 
     \vspace{5px}
-    Let \(p_{\epsilon^\perp}\) be the GSEA p-value at \(\epsilon^\perp\). The LFC Sensitivity Test's new p-value:
+    Let \(p_{\epsilon^\perp}\) be the GSEA p-value at \(\epsilon^\perp\). Take the maximum GSEA p-value across all possible scale errors \(\epsilon^\perp \in (-\infty, \infty)\):
     \begin{align*}
       p=\sup_{\epsilon^\perp \in (-\infty, \infty)} p_{\epsilon^\perp}
     \end{align*}
 
-    This test has non-zero power in real data analysis:
     \begin{center}
-      \includegraphics[scale=0.12]{/home/hh/data/output/power.png}
+      \includegraphics[scale=0.15]{/home/hh/data/output/power.png}
     \end{center}
 
 
@@ -324,8 +385,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Two Alternatives to LFC Senstivity Analysis}
-  To address false positives in GSEA I present two additional methods:
+  \frametitle{Two Additional Methods to Address False Positives}
   \begin{enumerate}
    \setcounter{enumi}{1}
    \item \underline{GSEA with Compositional Weighting (GSEA-CW)}
@@ -333,21 +393,23 @@
     \vspace{5px}
     The GSEA target estimand (i.e., goal of inference) is
     \begin{align*}
-      \phi_S = u(\theta)
+      \phi_S = g(\theta)
     \end{align*}
 
-    A different target estimand (using the CLR) implies a different inferential goal:
+    \pause
+
+    The GSEA-CW target estimand is different, and implies a different scientific question
     \begin{align*}
-      \psi_S &= u(\theta-\text{mean}(\theta)) \\
-      &= u(\theta^\parallel+\theta^\perp-\text{mean}(\theta^\parallel)-\theta^\perp) \\
-      &= u(\theta^\parallel-\text{mean}(\theta^\parallel))
+      \psi_S &= g(\theta^\parallel)
     \end{align*}
+
+    \pause
     
   \end{enumerate}
 \end{frame}
   
 \begin{frame}
-  \frametitle{DSA Methods that Account for Inter-gene/inter-entity Correlations}
+  \frametitle{DSA Methods that Account for Inter-gene/inter-taxa Correlations}
   Inter-gene/taxa correlations can massively inflate the false positive rate of GSEA with gene label permutations (Gatti et al., 2010)
 
   \begin{center}
@@ -371,7 +433,7 @@
   \item GSEA with \textbf{sample label} permutations
    \vspace{10px}
     
-   Rather than permute gene set \(S\); estimate absolute abundances \(\hat{W}\), permute sample labels, and re-estimate the LFC \(\hat{\theta}\).
+   Permute the sample labels (e.g., whether sample \(n\) came from healthy or tumor tissue), then re-estimate LFCs \(\hat{\theta}\)
 
    \pause
     
@@ -388,8 +450,13 @@
 
 \begin{frame}
   \frametitle{Scale Sensitivity Analyses}
+  \footnotesize{Here I consider two real data studies:}
+  \begin{enumerate}
+    \item \footnotesize{Constant Error \(\delta^\perp\) added to just samples from normal-adjacent-to-tumor}
+    \item \footnotesize{Variable Error simulated from \(\text{Uniform}[-\gamma^\perp,\gamma^\perp]\) added to all samples}
+  \end{enumerate}
    \begin{center}
-    \includegraphics[scale=0.18]{/home/hh/data/output/camera.png}
+    \includegraphics[scale=0.16]{/home/hh/data/output/camera.png}
    \end{center}
 
    \footnotesize{* GSEA-LFC-S is GSEA with sample label permutations, GSEA-CW-S is GSEA with compositional weighting and sample label permutations}
@@ -397,24 +464,65 @@
 
 \begin{frame}
   \frametitle{Future Directions}
-  In the LFC Sensitivity Test we calculate a p-value:
+
+  The LFC Sensitivity Test considers all possible errors \(\epsilon^\perp \in (-\infty, \infty)\):
   \begin{align*}
-    p= \sup_{\epsilon^\perp \in (-\infty, \infty)} p_{\epsilon^\perp}.
+    p = \sup_{\epsilon^\perp \in (-\infty,\infty)} p_{\epsilon^\perp}
   \end{align*}
-  But why consider all possible scale assumptions?
 
   \pause
+
   \vspace{10px}
-  For instance \(\theta^\perp=10\) implies a \(e^{10}=22026\) fold increase in scale!
+  But why consider \textit{all} possible errors? For instance \(\theta^\perp=10\) might imply total transcription is 22,000 times higher in tumor than healthy tissue!
 
   \pause
+  
   \vspace{10px}
-  Consider a reseacher willing to make an \textit{interval assumption} \(\epsilon^\perp \in [-1,1]\):
+  Rather assume \(\epsilon^\perp \in [-1,1]\):
   \begin{align*}
-    p= \sup_{\epsilon^\perp \in [-1, 1]} p_{\epsilon^\perp}.
+    p = \sup_{\epsilon^\perp \in [-1,1]} p_{\epsilon^\perp}
   \end{align*}
-  This could be useful beyond GSEA, but \textbf{differential expression/abundance as well(!)}
- 
+
+  \pause
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Future Directions}
+
+  In the previous presentation, SSRVs were a Bayesian approach to LFC estimation
+  \begin{align*}
+    \theta^\perp &= \hat{\theta}^\perp + \epsilon^\perp \\
+    \epsilon^\perp &\sim P
+  \end{align*}
+  Where \(P\) is a user-defined distribution of scale uncertainty.
+
+  \pause
+
+  \vspace{10px}
+
+  What if we take a \textit{purely Frequentist} approach? Rather than define \(P\) we just assume:
+  \begin{align*}
+    \theta^\perp \in [\hat{\theta}^\perp_L, \hat{\theta}^\perp_U]
+  \end{align*}
+
+  Let \(p_{\hat{\theta}^\perp}\) be the p-value under a single normalization assumption \(\hat{\theta}^\perp\), we can define a new p-value:
+  \begin{align*}
+    p = \sup_{\hat{\theta}^\perp \in [\hat{\theta}^\perp_L,\hat{\theta}^\perp_U]} p_{\hat{\theta}^\perp}
+  \end{align*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{References}
+
+  \begin{enumerate}   
+  \item \footnotesize{Gatti, et al. Heading down the wrong pathway: on the influence of correlation within gene sets. BMC Genomics. 2010 Oct 18;11:574. doi: 10.1186/1471-2164-11-574.}
+  \item \footnotesize{McGovern, et al. Addressing erroneous scale assumptions in microbe and gene set enrichment analysis. PLoS Comput Biol. 2023 Nov 20;19(11):e1011659. doi: 10.1371/journal.pcbi.1011659.}
+   \item \footnotesize{Subramanian, et al. Gene set enrichment analysis: a knowledge-based approach for interpreting genome-wide expression profiles. Proc Natl Acad Sci U S A. 2005 Oct 25;102(43):15545-50. doi: 10.1073/pnas.0506580102. Epub 2005 Sep 30.}
+   \item \footnotesize{Wu, et al. Camera: a competitive gene set test accounting for inter-gene correlation. Nucleic Acids Res. 2012 Sep 1;40(17):e133. doi: 10.1093/nar/gks461. Epub 2012 May 25.}
+     \item \footnotesize{Aran, et al. Comprehensive analysis of normal adjacent to tumor transcriptomes. Nat Commun. 2017 Oct 20;8(1):1077. doi: 10.1038/s41467-017-01027-z. PMID: 29057876; PMCID: PMC5651823.}
+  \end{enumerate}
+  
 \end{frame}
 
 \end{document} 
