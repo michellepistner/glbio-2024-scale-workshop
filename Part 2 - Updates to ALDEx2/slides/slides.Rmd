@@ -45,7 +45,7 @@ Entity 2 & 10 & 25 & 3 & \textcolor{gray}{Decrease}\\
 Entity 3 & 0 & 1 & 8 & \textcolor{gray}{Increase}\\
 Entity 4 & 0 & 0 & 19 &\textcolor{gray}{Increase}\\
 \hline
-\textcolor{gray}{Sampling Depth} & \textcolor{gray}{15} & \textcolor{gray}{36} & \textcolor{gray}{130} &\\
+\textcolor{gray}{Sequencing Depth} & \textcolor{gray}{15} & \textcolor{gray}{36} & \textcolor{gray}{130} &\\
 \hline
 \end{tabular}
 \end{table}
@@ -448,7 +448,7 @@ Major updates:
     1. Single numeric: controls the noise on the default scale model.
     2. Matrix: A $N \times S$ matrix of samples of $W^\perp$.
     
-- `gamma = NULL` returns the default behavior of ALDEx2.
+- `gamma = NULL` returns the original behavior of ALDEx2.
 
 ## Option 1: Default Scale Model
 
