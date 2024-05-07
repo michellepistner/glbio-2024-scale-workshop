@@ -1,5 +1,5 @@
 ---
-title: "Scale Uncertainty in ALDEx2"
+title: "Beyond Normalization: Incorporating Scale Uncertainty in ALDEx2"
 author: "Michelle Nixon"
 date: "May 13, 2024"
 always_allow_html: true
@@ -105,11 +105,10 @@ $$\mathbf{W}_{dn} = \underbrace{\mathbf{W}_{dn}^\parallel}_{\text{composition}} 
 
 \textcolor{white}{- **Scale:** $W_n^\perp = \sum_{d=1}^D \mathbf{W}_{dn}$}
 
-\textcolor{white}{- $\boldsymbol{\theta}$: what we want to estimate.}
 
 ## Notation
 
-- $\mathbf{Y}$: a measurement of the underlying system $W$.
+- $\mathbf{Y}$: a measurement of the underlying system $\mathbf{W}$.
 
 
 $$\mathbf{W}_{dn} = \underbrace{\mathbf{W}_{dn}^\parallel}_{\text{composition}} \times  \underbrace{W_n^\perp}_{\text{scale}}$$
@@ -118,22 +117,12 @@ $$\mathbf{W}_{dn} = \underbrace{\mathbf{W}_{dn}^\parallel}_{\text{composition}} 
 
 - **Scale:** $W_n^\perp = \sum_{d=1}^D \mathbf{W}_{dn}$
 
-\textcolor{white}{- $\boldsymbol{\theta}$: what we want to estimate.}
-
-## Notation
-
-- $\mathbf{Y}$: a measurement of the underlying system $W$.
-
-
-$$\mathbf{W}_{dn} = \underbrace{\mathbf{W}_{dn}^\parallel}_{\text{composition}} \times  \underbrace{W_n^\perp}_{\text{scale}}$$
-
-- **Compostion:** $\mathbf{W}_{dn}^\parallel = \frac{\mathbf{W}_{dn}}{\sum_{d=1}^D \mathbf{W}_{dn}}$
-
-- **Scale:** $W_n^\perp = \sum_{d=1}^D \mathbf{W}_{dn}$
-
-- $\boldsymbol{\theta}$: what we want to estimate. 
 
 ## Example: Notation
+
+- Consider a simple study of the microbiome pre/post antibiotic administration.
+
+\vspace{0.05in}
 
 \begin{table}[h!]
 \centering
@@ -141,7 +130,7 @@ $$\mathbf{W}_{dn} = \underbrace{\mathbf{W}_{dn}^\parallel}_{\text{composition}} 
 \hline
 \textcolor{gray}{System data ($W^\parallel$)} & Sample 1 & Sample 2 & Sample 3\\
 \hline
-Condition & Health & Health & Disease\\
+Condition & Pre & Pre & Post\\
 \hline
 Entity 1 & 0.27 & 0.27 & 0.77 \\
 Entity 2 & 0.68 & 0.68 & 0.02 \\
@@ -157,13 +146,28 @@ Entity 4 & 0.04 & 0.03  & 0.13 \\
 
 - **Question:** How do entities (e.g., taxa or genes) change between conditions?
 
+- $\boldsymbol{\theta}$: what we want to estimate. \textcolor{white}{(Log Fold Change)}
+
+\vspace{.125in}
+
+
+\begin{equation*}
+\textcolor{white}{\theta_d = \text{mean}_{\text{case}}(\log \mathbf{W}_{dn}) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn})}
+\end{equation*}
+
+## Differential Abundance/Expression Analysis
+
+- **Question:** How do entities (e.g., taxa or genes) change between conditions?
+
+- $\boldsymbol{\theta}$: what we want to estimate. \textcolor{gray}{(Log Fold Change)}
+
 \vspace{.25in}
 
-- In this case, $\theta$ is the log-fold change (LFC):
 
 \begin{equation*}
 \theta_d = \text{mean}_{\text{case}}(\log \mathbf{W}_{dn}) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn})
 \end{equation*}
+
 
 ## The Original ALDEx2 Model
 
@@ -204,10 +208,11 @@ Entity 4 & 0.04 & 0.03  & 0.13 \\
 
   
 ## Implied Assumptions about Scale, cont.
-Using the relationship $\mathbf{W}_{dn} = \mathbf{W}_{dn}^\parallel W_n^\perp$ and some math, the CLR normalization implies:
+Since $\log \mathbf{W}_{dn} = \log \mathbf{W}_{dn}^\parallel + \log W_n^\perp$, the CLR normalization implies:
 
 \begin{align*}
-\log W_n^\perp = -\text{mean}(\log \mathbf{W}_{\cdot n}^\parallel).
+\color{gray}{\log W_{dn}} &= \color{gray}{\log \mathbf{W}_{dn}^\parallel - \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel)}\\
+\log W_n^\perp &= -\text{mean}(\log \mathbf{W}_{\cdot n}^\parallel).
 \end{align*}
 
 \vspace{.25in}
@@ -265,7 +270,7 @@ Using the relationship $\mathbf{W}_{dn} = \mathbf{W}_{dn}^\parallel W_n^\perp$ a
 \theta_d &= \text{mean}_{\text{case}}(\log \mathbf{W}_{dn}) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn})\\
 &= ... \\
 &= \underbrace{\text{mean}_{\text{case}}(\log \mathbf{W}_{dn}^\parallel) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn}^\parallel)}_{\theta^\parallel}\\
-& \, \, \, \, \, \, - \underbrace{\text{mean}_{\text{case}}(\log W_{n}^\perp) - \text{mean}_{\text{control}}(\log W_{n}^\perp)}_{\theta^\perp}\\
+& \, \, \, \, \, \, + \underbrace{\text{mean}_{\text{case}}(\log W_{n}^\perp) - \text{mean}_{\text{control}}(\log W_{n}^\perp)}_{\theta^\perp}\\
 \end{align*}
 
 
@@ -314,7 +319,62 @@ Recall for LFCs:
 3. Estimate samples of $\theta = f(\mathbf{W}^\parallel, W^\perp)$.
 
 
-# The Updated ALDEx2 Software
+# Updated ALDEx2 Model
+
+## Rewind: $\theta^\perp$
+
+\textcolor{gray}{\begin{equation*}
+\theta^\perp = \text{mean}_{\text{case}}(\log W_{n}^\perp) - \text{mean}_{\text{control}}(\log W_{n}^\perp)
+\end{equation*}}
+
+\vspace{.1in}
+
+\textcolor{white}{- The change in scales between conditions matters for estimating LFCs.}
+
+\textcolor{white}{- The scale only needs to be known up to a constant (see Nixon et. al (2023)).}
+
+\textcolor{white}{- Each normalization implies a value of $\theta^\perp$ \textcolor{white}{(e.g., CLR):}}
+
+\textcolor{white}{\begin{equation*}
+\theta^\perp_{\text{CLR}} = \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) 
+\end{equation*}}
+
+## Rewind: $\theta^\perp$
+
+\textcolor{gray}{\begin{equation*}
+\theta^\perp = \text{mean}_{\text{case}}(\log W_{n}^\perp) - \text{mean}_{\text{control}}(\log W_{n}^\perp)
+\end{equation*}}
+
+\vspace{.1in}
+
+- The change in scales between conditions matters for estimating LFCs.
+
+- The scale only needs to be known up to a constant (see Nixon et. al (2023)).
+
+\textcolor{white}{- Each normalization implies a value of $\theta^\perp$ \textcolor{white}{(e.g., CLR):}}
+
+\textcolor{white}{\begin{equation*}
+\theta^\perp_{\text{CLR}} = \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) 
+\end{equation*}}
+
+## Rewind: $\theta^\perp$
+
+\textcolor{gray}{\begin{equation*}
+\theta^\perp = \text{mean}_{\text{case}}(\log W_{n}^\perp) - \text{mean}_{\text{control}}(\log W_{n}^\perp)
+\end{equation*}}
+
+\vspace{.1in}
+
+- The change in scales between conditions matters for estimating LFCs.
+
+- The scale only needs to be known up to a constant (see Nixon et. al (2023)).
+
+- Each normalization implies a value of $\theta^\perp$ \textcolor{gray}{(e.g., CLR):}
+
+\textcolor{gray}{\begin{equation*}
+\theta^\perp_{\text{CLR}} = \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) 
+\end{equation*}}
+
 
 ## ALDEx2 as an SSRV
 
@@ -342,21 +402,12 @@ Recall for LFCs:
   \includegraphics[width=3.25in]{figures/sim-res-samples.pdf}
 \end{figure}
 
+
 ## Intro to Scale Models
 
-Normalizations are replaced by a scale model:
-
-\begin{align*}
-  \log W_n^\perp &= - \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel) + \epsilon\\
-  \epsilon &\sim N(0,\gamma^2)
-\end{align*}
-
-\vspace{.25in}
-\textcolor{gray}{What about other options?}
-
-## Intro to Scale Models, cont.
-
 There are no restrictions on what scale models can be, although there are some helpful options:
+
+\vspace{.125in}
 
 1. Based on normalizations. \textcolor{gray}{(Stochastic normalizations)}
 2. Based on biological knowledge.
@@ -471,35 +522,45 @@ $$\Lambda^\perp  \sim \ N(0, \gamma^2).$$
 $$\Lambda^\perp  \sim \ N(0, \gamma^2).$$
 \vspace{.1in}
 
-**Empirical Rule:** 95\% of the samples of $\Lambda^\perp$ fall within a factor of $\pm 2 \gamma$ from zero.
+**Empirical Rule:** 95\% of the samples of $\Lambda^\perp$ fall within $[-2 \gamma, 2 \gamma]$.
 
 ## Interpreting the Default Scale Model, cont.
 
-$$\log \hat{W}_{n}^{\perp(s)} = - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) + \Lambda^\perp x_{n}$$
+$$\textcolor{gray}{\log \hat{W}_{n}^{\perp(s)} = - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) +} \Lambda^\perp x_{n}$$
 \textcolor{gray}{$$\Lambda^\perp  \sim \ N(0, \gamma^2).$$}
 
 \vspace{.1in}
 **For case/control experiments:** 
 
-  1. If $x_n = 1$: 95\% of samples of $\log \hat{W}_{n}^{\perp(s)}$ fall within a factor of $\pm 2 \gamma$ of the negative geometric mean.
+  1. If $x_n = 1$: add $\Lambda^\perp$ \textcolor{gray}{(95\% of samples of $\log \hat{W}_{n}^{\perp(s)}$ fall within $[- \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) - 2 \gamma, - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) + 2 \gamma]$.)}
   
-  2. If $x_n = 0$: $\log \hat{W}_{n}^{\perp(s)}$ is equal to the negative geometric mean.
-  
+  2. If $x_n = 0$: no noise added \textcolor{gray}{($\log \hat{W}_{n}^{\perp(s)} = - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right)$)}.
+
 ## Interpreting the Default Scale Model, cont.
-Recall that with the CLR normalization:
+
 \begin{align*}
-\log W_n^\perp = -\text{mean}(\log \mathbf{W}_{\cdot n}^\parallel) = - \text{GM}( \mathbf{W}_{\cdot n}^\parallel).
+\textcolor{gray}{\theta^\perp_{\text{Default Scale}}} &\textcolor{gray}{= \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) + \Lambda^\perp}\\
+&= \textcolor{gray}{\theta^\perp_{\text{CLR}} + \Lambda^\perp}
 \end{align*}
 
-Thus, when using the CLR normalization:
+Taken together, the default scale model implies that:
 
-$$\theta^\perp = \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) $$
+\vspace{.1in}
 
-\textcolor{gray}{This is same mean that the default scale model is centered on.}
+\textcolor{white}{1. The value of $\theta^\perp$ is within $\pm 2 \gamma$ of the value of $\theta^\perp_{\text{CLR}}$ implied by the CLR normalization.}
+
+\textcolor{white}{2. With 95 certainty, the true difference in scales falls within the the range $2^{\theta_{\text{CLR}}^\perp \pm 2 \gamma}$.} 
 
 ## Interpreting the Default Scale Model, cont.
 
+\begin{align*}
+\textcolor{gray}{\theta^\perp_{\text{Default Scale}}} &\textcolor{gray}{= \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) + \Lambda^\perp}\\
+&= \textcolor{gray}{\theta^\perp_{\text{CLR}} + \Lambda^\perp}
+\end{align*}
+
 Taken together, the default scale model implies that:
+
+\vspace{.1in}
 
 1. The value of $\theta^\perp$ is within $\pm 2 \gamma$ of the value of $\theta^\perp_{\text{CLR}}$ implied by the CLR normalization.
 
@@ -520,11 +581,8 @@ Reasons to do this:
 
 ## Sensitivity Analyses
 
-- Recall that the default scale model has a parameter $\gamma$ controlling the amount of noise added.
-
 - Instead of picking $\gamma$, why not test over a range instead?
 
-- Enter sensitivity analyses.
 
 ## Sensitivity Analyses
 
@@ -767,21 +825,10 @@ plotGamma(sen_res, thresh = .1,
 
 ## Sensitivity Analyses, cont.
 
-```{r, warning = FALSE, message = FALSE, echo = FALSE, f, out.width="95%"}
-##Now running a sensitivity analysis over the default scale model
-
-##First, specifying different values for the noise in the scale
-gamma_to_test <- c(1e-3, seq(0.1,1,by=.1))
-
-##Run the CLR function
-clr <- aldex.clr(Y, conds)
-
-##Run sensitivity analysis function
-sen_res <- aldex.senAnalysis(clr, gamma = gamma_to_test)
-p <- plotGamma(sen_res, thresh = .1, 
-               blackWhite = TRUE, taxa_to_label =  3)
-p[[2]]
-```
+\begin{figure}
+  \centering
+  \includegraphics[width=4in]{figures/sim_gamma.pdf}
+\end{figure}
 
 
 ## Real Example: Vandputte
@@ -1115,7 +1162,7 @@ q=length(sig.values)
 sig.df = data.frame("Sequence" = rep(sig.values,6))
 sig.df = sig.df %>%
   mutate(true.pos = ifelse(Sequence %in% truth.pos, 1, 0)) %>%
-  mutate(Model = c( rep("ALDEx2 (Gold Standard)", q), rep("ALDEx2 (Informed)", q), rep("ALDEx2 (Default)", q), rep("QMP", q),rep("DESeq2", q), rep("edgeR", q))) %>%
+  mutate(Model = c( rep("ALDEx2 (Gold Standard)", q), rep("ALDEx2 (Informed)", q), rep("ALDEx2 (Default Scale)", q), rep("QMP", q),rep("DESeq2", q), rep("edgeR", q))) %>%
   mutate(sigcode = c( ifelse(sig.values %in% tax_scale$category, 1, 0),ifelse( sig.values %in% tax_informed$category, 1, 0),ifelse( sig.values %in% tax_default$category, 1, 0), ifelse( sig.values %in% tax_QMP$category, 1, 0),ifelse( sig.values %in% tax_deseq$category, 1, 0), ifelse( sig.values %in% tax_edgeR$category, 1, 0))) %>%
   mutate(res = ifelse(true.pos == 1 & sigcode == 1, "TP", NA)) %>%
   mutate(res = ifelse(true.pos == 0 & sigcode == 0, "TN", res)) %>%
@@ -1124,7 +1171,7 @@ sig.df = sig.df %>%
   mutate(sigcode = factor(sigcode, levels = list("Non. Sig."="0", "Sig."="1")))
 
 
-sig.df$Model = factor(sig.df$Model, levels=c( "edgeR", "DESeq2","QMP","ALDEx2 (Default)", "ALDEx2 (Informed)", "ALDEx2 (Gold Standard)"))
+sig.df$Model = factor(sig.df$Model, levels=c( "edgeR", "DESeq2","QMP","ALDEx2 (Default Scale)", "ALDEx2 (Informed)", "ALDEx2 (Gold Standard)"))
 
 tax_merge <- as.data.frame(tax_table(phylo)) %>%
   rownames_to_column("Sequence") %>%

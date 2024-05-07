@@ -133,12 +133,12 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={Scale Uncertainty in ALDEx2},
+  pdftitle={Beyond Normalization: Incorporating Scale Uncertainty in ALDEx2},
   pdfauthor={Michelle Nixon},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-\title{Scale Uncertainty in ALDEx2}
+\title{Beyond Normalization: Incorporating Scale Uncertainty in ALDEx2}
 \author{Michelle Nixon}
 \date{May 13, 2024}
 
@@ -227,8 +227,6 @@ Entity 4 & 43 & 39  & 27 &\textcolor{gray}{Decrease}\\
 \textcolor{white}{- **Compostion:** $\mathbf{W}_{dn}^\parallel = \frac{\mathbf{W}_{dn}}{\sum_{d=1}^D \mathbf{W}_{dn}}$}
 
 \textcolor{white}{- **Scale:** $W_n^\perp = \sum_{d=1}^D \mathbf{W}_{dn}$}
-
-\textcolor{white}{- $\boldsymbol{\theta}$: what we want to estimate.}
 \end{frame}
 
 \begin{frame}{Notation}
@@ -236,7 +234,7 @@ Entity 4 & 43 & 39  & 27 &\textcolor{gray}{Decrease}\\
 \begin{itemize}
 \tightlist
 \item
-  \(\mathbf{Y}\): a measurement of the underlying system \(W\).
+  \(\mathbf{Y}\): a measurement of the underlying system \(\mathbf{W}\).
 \end{itemize}
 
 \[\mathbf{W}_{dn} = \underbrace{\mathbf{W}_{dn}^\parallel}_{\text{composition}} \times  \underbrace{W_n^\perp}_{\text{scale}}\]
@@ -247,41 +245,27 @@ Entity 4 & 43 & 39  & 27 &\textcolor{gray}{Decrease}\\
   \(\mathbf{W}_{dn}^\parallel = \frac{\mathbf{W}_{dn}}{\sum_{d=1}^D \mathbf{W}_{dn}}\)
 \item
   \textbf{Scale:} \(W_n^\perp = \sum_{d=1}^D \mathbf{W}_{dn}\)
-\end{itemize}
-
-\textcolor{white}{- $\boldsymbol{\theta}$: what we want to estimate.}
-\end{frame}
-
-\begin{frame}{Notation}
-\protect\hypertarget{notation-2}{}
-\begin{itemize}
-\tightlist
-\item
-  \(\mathbf{Y}\): a measurement of the underlying system \(W\).
-\end{itemize}
-
-\[\mathbf{W}_{dn} = \underbrace{\mathbf{W}_{dn}^\parallel}_{\text{composition}} \times  \underbrace{W_n^\perp}_{\text{scale}}\]
-
-\begin{itemize}
-\item
-  \textbf{Compostion:}
-  \(\mathbf{W}_{dn}^\parallel = \frac{\mathbf{W}_{dn}}{\sum_{d=1}^D \mathbf{W}_{dn}}\)
-\item
-  \textbf{Scale:} \(W_n^\perp = \sum_{d=1}^D \mathbf{W}_{dn}\)
-\item
-  \(\boldsymbol{\theta}\): what we want to estimate.
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Example: Notation}
 \protect\hypertarget{example-notation}{}
+\begin{itemize}
+\tightlist
+\item
+  Consider a simple study of the microbiome pre/post antibiotic
+  administration.
+\end{itemize}
+
+\vspace{0.05in}
+
 \begin{table}[h!]
 \centering
 \begin{tabular}{|r|c c c| }
 \hline
 \textcolor{gray}{System data ($W^\parallel$)} & Sample 1 & Sample 2 & Sample 3\\
 \hline
-Condition & Health & Health & Disease\\
+Condition & Pre & Pre & Post\\
 \hline
 Entity 1 & 0.27 & 0.27 & 0.77 \\
 Entity 2 & 0.68 & 0.68 & 0.02 \\
@@ -297,19 +281,33 @@ Entity 4 & 0.04 & 0.03  & 0.13 \\
 \begin{frame}{Differential Abundance/Expression Analysis}
 \protect\hypertarget{differential-abundanceexpression-analysis}{}
 \begin{itemize}
-\tightlist
 \item
   \textbf{Question:} How do entities (e.g., taxa or genes) change
   between conditions?
+\item
+  \(\boldsymbol{\theta}\): what we want to estimate.
+  \textcolor{white}{(Log Fold Change)}
+\end{itemize}
+
+\vspace{.125in}
+
+\begin{equation*}
+\textcolor{white}{\theta_d = \text{mean}_{\text{case}}(\log \mathbf{W}_{dn}) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn})}
+\end{equation*}
+\end{frame}
+
+\begin{frame}{Differential Abundance/Expression Analysis}
+\protect\hypertarget{differential-abundanceexpression-analysis-1}{}
+\begin{itemize}
+\item
+  \textbf{Question:} How do entities (e.g., taxa or genes) change
+  between conditions?
+\item
+  \(\boldsymbol{\theta}\): what we want to estimate.
+  \textcolor{gray}{(Log Fold Change)}
 \end{itemize}
 
 \vspace{.25in}
-
-\begin{itemize}
-\tightlist
-\item
-  In this case, \(\theta\) is the log-fold change (LFC):
-\end{itemize}
 
 \begin{equation*}
 \theta_d = \text{mean}_{\text{case}}(\log \mathbf{W}_{dn}) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn})
@@ -353,12 +351,13 @@ Entity 4 & 0.04 & 0.03  & 0.13 \\
 
 \begin{frame}{Implied Assumptions about Scale, cont.}
 \protect\hypertarget{implied-assumptions-about-scale-cont.}{}
-Using the relationship
-\(\mathbf{W}_{dn} = \mathbf{W}_{dn}^\parallel W_n^\perp\) and some math,
+Since
+\(\log \mathbf{W}_{dn} = \log \mathbf{W}_{dn}^\parallel + \log W_n^\perp\),
 the CLR normalization implies:
 
 \begin{align*}
-\log W_n^\perp = -\text{mean}(\log \mathbf{W}_{\cdot n}^\parallel).
+\color{gray}{\log W_{dn}} &= \color{gray}{\log \mathbf{W}_{dn}^\parallel - \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel)}\\
+\log W_n^\perp &= -\text{mean}(\log \mathbf{W}_{\cdot n}^\parallel).
 \end{align*}
 
 \vspace{.25in}
@@ -435,7 +434,7 @@ the CLR normalization implies:
 \theta_d &= \text{mean}_{\text{case}}(\log \mathbf{W}_{dn}) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn})\\
 &= ... \\
 &= \underbrace{\text{mean}_{\text{case}}(\log \mathbf{W}_{dn}^\parallel) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn}^\parallel)}_{\theta^\parallel}\\
-& \, \, \, \, \, \, - \underbrace{\text{mean}_{\text{case}}(\log W_{n}^\perp) - \text{mean}_{\text{control}}(\log W_{n}^\perp)}_{\theta^\perp}\\
+& \, \, \, \, \, \, + \underbrace{\text{mean}_{\text{case}}(\log W_{n}^\perp) - \text{mean}_{\text{control}}(\log W_{n}^\perp)}_{\theta^\perp}\\
 \end{align*}
 
 \textcolor{gray}{Don't we need $\theta^\perp$?}
@@ -500,9 +499,74 @@ Recall for LFCs: \begin{align*}
 \end{enumerate}
 \end{frame}
 
-\hypertarget{the-updated-aldex2-software}{%
-\section{The Updated ALDEx2
-Software}\label{the-updated-aldex2-software}}
+\hypertarget{updated-aldex2-model}{%
+\section{Updated ALDEx2 Model}\label{updated-aldex2-model}}
+
+\begin{frame}{Rewind: \(\theta^\perp\)}
+\protect\hypertarget{rewind-thetaperp}{}
+\textcolor{gray}{\begin{equation*}
+\theta^\perp = \text{mean}_{\text{case}}(\log W_{n}^\perp) - \text{mean}_{\text{control}}(\log W_{n}^\perp)
+\end{equation*}}
+
+\vspace{.1in}
+
+\textcolor{white}{- The change in scales between conditions matters for estimating LFCs.}
+
+\textcolor{white}{- The scale only needs to be known up to a constant (see Nixon et. al (2023)).}
+
+\textcolor{white}{- Each normalization implies a value of $\theta^\perp$ \textcolor{white}{(e.g., CLR):}}
+
+\textcolor{white}{\begin{equation*}
+\theta^\perp_{\text{CLR}} = \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) 
+\end{equation*}}
+\end{frame}
+
+\begin{frame}{Rewind: \(\theta^\perp\)}
+\protect\hypertarget{rewind-thetaperp-1}{}
+\textcolor{gray}{\begin{equation*}
+\theta^\perp = \text{mean}_{\text{case}}(\log W_{n}^\perp) - \text{mean}_{\text{control}}(\log W_{n}^\perp)
+\end{equation*}}
+
+\vspace{.1in}
+
+\begin{itemize}
+\item
+  The change in scales between conditions matters for estimating LFCs.
+\item
+  The scale only needs to be known up to a constant (see Nixon et. al
+  (2023)).
+\end{itemize}
+
+\textcolor{white}{- Each normalization implies a value of $\theta^\perp$ \textcolor{white}{(e.g., CLR):}}
+
+\textcolor{white}{\begin{equation*}
+\theta^\perp_{\text{CLR}} = \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) 
+\end{equation*}}
+\end{frame}
+
+\begin{frame}{Rewind: \(\theta^\perp\)}
+\protect\hypertarget{rewind-thetaperp-2}{}
+\textcolor{gray}{\begin{equation*}
+\theta^\perp = \text{mean}_{\text{case}}(\log W_{n}^\perp) - \text{mean}_{\text{control}}(\log W_{n}^\perp)
+\end{equation*}}
+
+\vspace{.1in}
+
+\begin{itemize}
+\item
+  The change in scales between conditions matters for estimating LFCs.
+\item
+  The scale only needs to be known up to a constant (see Nixon et. al
+  (2023)).
+\item
+  Each normalization implies a value of \(\theta^\perp\)
+  \textcolor{gray}{(e.g., CLR):}
+\end{itemize}
+
+\textcolor{gray}{\begin{equation*}
+\theta^\perp_{\text{CLR}} = \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) 
+\end{equation*}}
+\end{frame}
 
 \begin{frame}{ALDEx2 as an SSRV}
 \protect\hypertarget{aldex2-as-an-ssrv}{}
@@ -533,22 +597,10 @@ Software}\label{the-updated-aldex2-software}}
 
 \begin{frame}{Intro to Scale Models}
 \protect\hypertarget{intro-to-scale-models}{}
-Normalizations are replaced by a scale model:
-
-\begin{align*}
-  \log W_n^\perp &= - \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel) + \epsilon\\
-  \epsilon &\sim N(0,\gamma^2)
-\end{align*}
-
-\vspace{.25in}
-
-\textcolor{gray}{What about other options?}
-\end{frame}
-
-\begin{frame}{Intro to Scale Models, cont.}
-\protect\hypertarget{intro-to-scale-models-cont.}{}
 There are no restrictions on what scale models can be, although there
 are some helpful options:
+
+\vspace{.125in}
 
 \begin{enumerate}
 \tightlist
@@ -713,12 +765,12 @@ The default scale model is based on errors in the CLR normalization.
 \[\Lambda^\perp  \sim \ N(0, \gamma^2).\] \vspace{.1in}
 
 \textbf{Empirical Rule:} 95\% of the samples of \(\Lambda^\perp\) fall
-within a factor of \(\pm 2 \gamma\) from zero.
+within \([-2 \gamma, 2 \gamma]\).
 \end{frame}
 
 \begin{frame}{Interpreting the Default Scale Model, cont.}
 \protect\hypertarget{interpreting-the-default-scale-model-cont.}{}
-\[\log \hat{W}_{n}^{\perp(s)} = - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) + \Lambda^\perp x_{n}\]
+\[\textcolor{gray}{\log \hat{W}_{n}^{\perp(s)} = - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) +} \Lambda^\perp x_{n}\]
 \textcolor{gray}{$$\Lambda^\perp  \sim \ N(0, \gamma^2).$$}
 
 \vspace{.1in}
@@ -727,31 +779,40 @@ within a factor of \(\pm 2 \gamma\) from zero.
 
 \begin{enumerate}
 \item
-  If \(x_n = 1\): 95\% of samples of \(\log \hat{W}_{n}^{\perp(s)}\)
-  fall within a factor of \(\pm 2 \gamma\) of the negative geometric
-  mean.
+  If \(x_n = 1\): add \(\Lambda^\perp\)
+  \textcolor{gray}{(95\% of samples of $\log \hat{W}_{n}^{\perp(s)}$ fall within $[- \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) - 2 \gamma, - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) + 2 \gamma]$.)}
 \item
-  If \(x_n = 0\): \(\log \hat{W}_{n}^{\perp(s)}\) is equal to the
-  negative geometric mean.
+  If \(x_n = 0\): no noise added
+  \textcolor{gray}{($\log \hat{W}_{n}^{\perp(s)} = - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right)$)}.
 \end{enumerate}
 \end{frame}
 
 \begin{frame}{Interpreting the Default Scale Model, cont.}
 \protect\hypertarget{interpreting-the-default-scale-model-cont.-1}{}
-Recall that with the CLR normalization: \begin{align*}
-\log W_n^\perp = -\text{mean}(\log \mathbf{W}_{\cdot n}^\parallel) = - \text{GM}( \mathbf{W}_{\cdot n}^\parallel).
+\begin{align*}
+\textcolor{gray}{\theta^\perp_{\text{Default Scale}}} &\textcolor{gray}{= \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) + \Lambda^\perp}\\
+&= \textcolor{gray}{\theta^\perp_{\text{CLR}} + \Lambda^\perp}
 \end{align*}
 
-Thus, when using the CLR normalization:
+Taken together, the default scale model implies that:
 
-\[\theta^\perp = \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) \]
+\vspace{.1in}
 
-\textcolor{gray}{This is same mean that the default scale model is centered on.}
+\textcolor{white}{1. The value of $\theta^\perp$ is within $\pm 2 \gamma$ of the value of $\theta^\perp_{\text{CLR}}$ implied by the CLR normalization.}
+
+\textcolor{white}{2. With 95 certainty, the true difference in scales falls within the the range $2^{\theta_{\text{CLR}}^\perp \pm 2 \gamma}$.}
 \end{frame}
 
 \begin{frame}{Interpreting the Default Scale Model, cont.}
 \protect\hypertarget{interpreting-the-default-scale-model-cont.-2}{}
+\begin{align*}
+\textcolor{gray}{\theta^\perp_{\text{Default Scale}}} &\textcolor{gray}{= \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) + \Lambda^\perp}\\
+&= \textcolor{gray}{\theta^\perp_{\text{CLR}} + \Lambda^\perp}
+\end{align*}
+
 Taken together, the default scale model implies that:
+
+\vspace{.1in}
 
 \begin{enumerate}
 \item
@@ -792,13 +853,9 @@ Reasons to do this:
 \begin{frame}{Sensitivity Analyses}
 \protect\hypertarget{sensitivity-analyses}{}
 \begin{itemize}
-\item
-  Recall that the default scale model has a parameter \(\gamma\)
-  controlling the amount of noise added.
+\tightlist
 \item
   Instead of picking \(\gamma\), why not test over a range instead?
-\item
-  Enter sensitivity analyses.
 \end{itemize}
 \end{frame}
 
@@ -946,7 +1003,10 @@ administration.
 
 \begin{frame}{Sensitivity Analyses, cont.}
 \protect\hypertarget{sensitivity-analyses-cont.}{}
-\begin{center}\includegraphics[width=0.95\linewidth]{slides_files/figure-beamer/f-1} \end{center}
+\begin{figure}
+  \centering
+  \includegraphics[width=4in]{figures/sim_gamma.pdf}
+\end{figure}
 \end{frame}
 
 \begin{frame}{Real Example: Vandputte}
