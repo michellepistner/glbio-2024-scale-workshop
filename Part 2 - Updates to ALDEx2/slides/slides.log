@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.7.26)  7 MAY 2024 11:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.7.26)  10 MAY 2024 10:59
 entering extended mode
 **./slides.tex
 (slides.tex
@@ -993,7 +993,7 @@ File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
 )
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
-45.
+48.
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1005,24 +1005,24 @@ File: l3backend-pdftex.def 2021-05-07 L3 backend support: PDF output (pdfTeX)
 ) (slides.aux)
 \openout1 = `slides.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1083,7 +1083,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 .cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 145.
+Package hyperref Info: Link coloring OFF on input line 148.
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1096,55 +1096,55 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count385
 )
-LaTeX Info: Redefining \ref on input line 145.
-LaTeX Info: Redefining \pageref on input line 145.
-LaTeX Info: Redefining \nameref on input line 145.
+LaTeX Info: Redefining \ref on input line 148.
+LaTeX Info: Redefining \pageref on input line 148.
+LaTeX Info: Redefining \nameref on input line 148.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 145.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 148.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 145.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 148.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 145.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 148.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 145.
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 148.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 145.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 145.
+(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 148.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 148.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 145.
+(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 148.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 145.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 145.
+(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 148.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 148.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 145.
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 148.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 145.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 145.
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 148.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 148.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 145.
+(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 148.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 145.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 145.
+(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 148.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 148.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 145.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 148.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 145.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 148.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 145.
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 148.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 145.
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 148.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 145.
+(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 148.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 145.
+(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 148.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 145.
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 148.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 145.
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 148.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 145.
+(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 148.
 
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator
 -basic-dictionary-English.dict
@@ -1170,12 +1170,12 @@ Dictionary: translator-numbers-dictionary, Language: English
 -theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \microtypecontext on input line 145.
-Package microtype Info: Applying patch `item' on input line 145.
-Package microtype Info: Applying patch `toc' on input line 145.
-Package microtype Info: Applying patch `eqnum' on input line 145.
+LaTeX Info: Redefining \microtypecontext on input line 148.
+Package microtype Info: Applying patch `item' on input line 148.
+Package microtype Info: Applying patch `toc' on input line 148.
+Package microtype Info: Applying patch `eqnum' on input line 148.
 
-Package microtype Warning: Unable to apply patch `footnote' on input line 145.
+Package microtype Warning: Unable to apply patch `footnote' on input line 148.
 
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
@@ -1183,7 +1183,7 @@ Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 145.
+LaTeX Info: Redefining \showhyphens on input line 148.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1191,11 +1191,34 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-(slides.nav) [1{C:/Users/map5672/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
+(slides.nav)
+Overfull \hbox (8.4576pt too wide) detected at line 148
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) detected at line 149
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[1{C:/Users/map5672/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
 ]
+Overfull \hbox (8.4576pt too wide) detected at line 170
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-167.
+170.
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1204,27 +1227,27 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-67.
+70.
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-167.
+170.
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-167.
+170.
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 167.
+(Font)              <10.95> on input line 170.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 167.
+(Font)              <8> on input line 170.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 167.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 167
+(Font)              <6> on input line 170.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 170
 .
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1232,7 +1255,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 g
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 167
+LaTeX Font Info:    Trying to load font information for U+msb on input line 170
 .
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1241,298 +1264,950 @@ g
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 167.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 170.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 167.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 170.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 167.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 170.
 
-Overfull \hbox (15.80298pt too wide) in paragraph at lines 167--167
+Overfull \hbox (15.80298pt too wide) in paragraph at lines 170--170
  [] 
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
 
 [2
 
 ]
-Overfull \hbox (9.59705pt too wide) in paragraph at lines 188--188
+Overfull \hbox (8.4576pt too wide) detected at line 191
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (9.59705pt too wide) in paragraph at lines 191--191
  [] 
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
 
 [3
 
 ]
-<figures/unacknowledged_bias.pdf, id=673, 433.62pt x 216.81pt>
+Overfull \hbox (8.4576pt too wide) detected at line 199
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+<figures/unacknowledged_bias.pdf, id=610, 433.62pt x 216.81pt>
 File: figures/unacknowledged_bias.pdf Graphic file (type pdf)
 <use figures/unacknowledged_bias.pdf>
 Package pdftex.def Info: figures/unacknowledged_bias.pdf  used on input line 19
-6.
+9.
 (pdftex.def)             Requested size: 325.215pt x 162.61371pt.
 
-Overfull \hbox (17.92513pt too wide) in paragraph at lines 196--196
+Overfull \hbox (17.92513pt too wide) in paragraph at lines 199--199
  [] 
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
 
 [4
 
- <./figures/unacknowledged_bias.pdf>] [5
+ <./figures/unacknowledged_bias.pdf>]
+Overfull \hbox (8.4576pt too wide) detected at line 202
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[5
 
 ]
-<figures/intro-fig-first.png, id=979, 511.9125pt x 227.4096pt>
+Overfull \hbox (8.4576pt too wide) detected at line 210
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+<figures/intro-fig-first.png, id=888, 511.9125pt x 227.4096pt>
 File: figures/intro-fig-first.png Graphic file (type png)
 <use figures/intro-fig-first.png>
-Package pdftex.def Info: figures/intro-fig-first.png  used on input line 207.
+Package pdftex.def Info: figures/intro-fig-first.png  used on input line 210.
 (pdftex.def)             Requested size: 325.215pt x 144.47289pt.
 
-Overfull \hbox (17.92513pt too wide) in paragraph at lines 207--207
+Overfull \hbox (17.92513pt too wide) in paragraph at lines 210--210
  [] 
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
 
 [6
 
  <./figures/intro-fig-first.png>]
-<figures/intro-fig-full.png, id=1125, 511.9125pt x 227.4096pt>
+Overfull \hbox (8.4576pt too wide) detected at line 218
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+<figures/intro-fig-full.png, id=1020, 511.9125pt x 227.4096pt>
 File: figures/intro-fig-full.png Graphic file (type png)
 <use figures/intro-fig-full.png>
-Package pdftex.def Info: figures/intro-fig-full.png  used on input line 215.
+Package pdftex.def Info: figures/intro-fig-full.png  used on input line 218.
 (pdftex.def)             Requested size: 325.215pt x 144.47289pt.
 
-Overfull \hbox (17.92513pt too wide) in paragraph at lines 215--215
+Overfull \hbox (17.92513pt too wide) in paragraph at lines 218--218
  [] 
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
 
 [7
 
  <./figures/intro-fig-full.png>]
+Overfull \hbox (8.4576pt too wide) detected at line 238
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 230.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 238.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <8> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 230.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 238.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <6> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 230.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 238.
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
 [8
 
-] [9
+]pdfTeX warning (ext4): destination with the same identifier (name{notation}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.238 \end{frame}
+                 
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-] [10
+[9
 
 ]
+Overfull \hbox (8.4576pt too wide) detected at line 270
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[10
+
+]
+Overfull \hbox (8.4576pt too wide) detected at line 295
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 297.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 295.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 297.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 295.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 297.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 295.
 
 LaTeX Font Info:    Font shape `T1/lmss/b/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 297.
+(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 295.
 
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 297.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 295.
 
 LaTeX Font Info:    Font shape `T1/lmss/b/it' in size <8> not available
-(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 297.
+(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 295.
 
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <8> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 297.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 295.
 
 LaTeX Font Info:    Font shape `T1/lmss/b/it' in size <6> not available
-(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 297.
+(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 295.
 
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <6> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 297.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 295.
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
 [11
 
-] [12
+]
+Overfull \hbox (8.4576pt too wide) detected at line 312
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (5.35088pt too wide) detected at line 312
+[] \T1/lmss/bx/n/10.95 W[] \OT1/lmss/m/n/10.95 = []
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[12
 
 ]
-Overfull \hbox (5.35088pt too wide) detected at line 332
+Overfull \hbox (8.4576pt too wide) detected at line 330
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (5.35088pt too wide) detected at line 330
 [] \T1/lmss/bx/n/10.95 W[] \OT1/lmss/m/n/10.95 = []
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
 
 [13
 
 ]
-Overfull \hbox (5.35088pt too wide) detected at line 350
-[] \T1/lmss/bx/n/10.95 W[] \OT1/lmss/m/n/10.95 = []
+Overfull \hbox (8.4576pt too wide) detected at line 346
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
 
 [14
 
-] [15
-
 ]
+Overfull \hbox (8.4576pt too wide) detected at line 354
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
 File: figures/unacknowledged_bias.pdf Graphic file (type pdf)
 <use figures/unacknowledged_bias.pdf>
-Package pdftex.def Info: figures/unacknowledged_bias.pdf  used on input line 37
+Package pdftex.def Info: figures/unacknowledged_bias.pdf  used on input line 35
 4.
 (pdftex.def)             Requested size: 325.215pt x 162.61371pt.
 
-Overfull \hbox (17.92513pt too wide) in paragraph at lines 374--374
+Overfull \hbox (17.92513pt too wide) in paragraph at lines 354--354
  [] 
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[15
+
+]
+Overfull \hbox (8.4576pt too wide) detected at line 362
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+<figures/sim-res.pdf, id=2133, 545.092pt x 532.30724pt>
+File: figures/sim-res.pdf Graphic file (type pdf)
+<use figures/sim-res.pdf>
+Package pdftex.def Info: figures/sim-res.pdf  used on input line 362.
+(pdftex.def)             Requested size: 234.87749pt x 229.36685pt.
+
+Overfull \vbox (4.01053pt too high) detected at line 362
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
 
 [16
 
-]
-<figures/sim-res.pdf, id=2569, 545.092pt x 532.30724pt>
-File: figures/sim-res.pdf Graphic file (type pdf)
-<use figures/sim-res.pdf>
-Package pdftex.def Info: figures/sim-res.pdf  used on input line 382.
-(pdftex.def)             Requested size: 234.87749pt x 229.36685pt.
+ <./figures/sim-res.pdf>]
+Overfull \hbox (8.4576pt too wide) detected at line 365
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-Overfull \vbox (4.01053pt too high) detected at line 382
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
 
 [17
 
- <./figures/sim-res.pdf>] [18
+]
+Overfull \hbox (8.4576pt too wide) detected at line 389
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-] [19
 
-] [20
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-] [21
+[18
 
-] [22
+]pdfTeX warning (ext4): destination with the same identifier (name{scale-relian
+t-inference-the-basics}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.389 \end{frame}
+                 
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-] [23
-
-] [24
-
-] [25
+[19
 
 ]
+Overfull \hbox (8.4576pt too wide) detected at line 405
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[20
+
+]
+Overfull \hbox (8.4576pt too wide) detected at line 432
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[21
+
+]pdfTeX warning (ext4): destination with the same identifier (name{scale-relian
+t-inference-theory-intro}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.432 \end{frame}
+                 
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[22
+
+]
+Overfull \hbox (8.4576pt too wide) detected at line 463
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 522.
+(Font)              <14.4> on input line 463.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 522.
+(Font)              <10> on input line 463.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 522.
+(Font)              <7> on input line 463.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <14.4> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 522.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 463.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <10> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 522.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 463.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <7> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 522.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 463.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 522.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 463.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 522.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 463.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 522.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 463.
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[23
+
+]pdfTeX warning (ext4): destination with the same identifier (name{thetaperp-th
+e-missing-piece}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.463 \end{frame}
+                 
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[24
+
+]pdfTeX warning (ext4): destination with the same identifier (name{thetaperp-th
+e-missing-piece}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.463 \end{frame}
+                 
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[25
+
+]
+Overfull \hbox (8.4576pt too wide) detected at line 481
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
 [26
 
-] [27
+]
+Overfull \hbox (8.4576pt too wide) detected at line 501
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-] [28
 
-] [29
+Overfull \hbox (5.35088pt too wide) detected at line 501
+[] \T1/lmss/bx/n/10.95 W[] \OT1/lmss/m/n/10.95 = []
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[27
 
 ]
-<figures/sim-res-samples.pdf, id=4497, 535.22408pt x 522.87196pt>
-File: figures/sim-res-samples.pdf Graphic file (type pdf)
-<use figures/sim-res-samples.pdf>
-Package pdftex.def Info: figures/sim-res-samples.pdf  used on input line 596.
-(pdftex.def)             Requested size: 234.87749pt x 229.45801pt.
+Overfull \hbox (8.4576pt too wide) detected at line 509
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-Overfull \vbox (4.10168pt too high) detected at line 596
+<figures/scale-model-figure-1.pdf, id=3506, 230.61621pt x 213.49724pt>
+File: figures/scale-model-figure-1.pdf Graphic file (type pdf)
+<use figures/scale-model-figure-1.pdf>
+Package pdftex.def Info: figures/scale-model-figure-1.pdf  used on input line 5
+09.
+(pdftex.def)             Requested size: 216.81pt x 200.71999pt.
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[28
+
+ <./figures/scale-model-figure-1.pdf>]
+Overfull \hbox (8.4576pt too wide) detected at line 517
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+<figures/scale-model-figure-2.pdf, id=3641, 230.61621pt x 213.49724pt>
+File: figures/scale-model-figure-2.pdf Graphic file (type pdf)
+<use figures/scale-model-figure-2.pdf>
+Package pdftex.def Info: figures/scale-model-figure-2.pdf  used on input line 5
+17.
+(pdftex.def)             Requested size: 216.81pt x 200.71999pt.
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[29
+
+ <./figures/scale-model-figure-2.pdf>]
+Overfull \hbox (8.4576pt too wide) detected at line 536
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
 
 [30
 
- <./figures/sim-res-samples.pdf>] [31
+]
+Overfull \hbox (8.4576pt too wide) detected at line 544
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-] [32
+<figures/sim-res-samples.pdf, id=3908, 535.22408pt x 522.87196pt>
+File: figures/sim-res-samples.pdf Graphic file (type pdf)
+<use figures/sim-res-samples.pdf>
+Package pdftex.def Info: figures/sim-res-samples.pdf  used on input line 544.
+(pdftex.def)             Requested size: 234.87749pt x 229.45801pt.
 
-] [33
+Overfull \vbox (4.10168pt too high) detected at line 544
+ []
 
-] [34
 
-] [35
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-] [36
+[31
 
-] [37
+ <./figures/sim-res-samples.pdf>]
+Overfull \hbox (8.4576pt too wide) detected at line 547
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[32
 
 ]
+Overfull \hbox (8.4576pt too wide) detected at line 566
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[33
+
+]
+Overfull \hbox (8.4576pt too wide) detected at line 584
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[34
+
+]
+Overfull \hbox (8.4576pt too wide) detected at line 608
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[35
+
+]pdfTeX warning (ext4): destination with the same identifier (name{scale-models
+-based-on-biological-knowledge}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.608 \end{frame}
+                 
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[36
+
+]pdfTeX warning (ext4): destination with the same identifier (name{scale-models
+-based-on-biological-knowledge}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.608 \end{frame}
+                 
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[37
+
+]
+Overfull \hbox (8.4576pt too wide) detected at line 633
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[38
+
+]pdfTeX warning (ext4): destination with the same identifier (name{scale-models
+-based-on-outside-measurements}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.633 \end{frame}
+                 
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[39
+
+]pdfTeX warning (ext4): destination with the same identifier (name{scale-models
+-based-on-outside-measurements}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.633 \end{frame}
+                 
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[40
+
+]
+Overfull \hbox (8.4576pt too wide) detected at line 637
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[41
+
+]
+Overfull \hbox (8.4576pt too wide) detected at line 639
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
 \openout4 = `slides.vrb'.
+
+
+Overfull \hbox (8.4576pt too wide) detected at line 678
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
 (slides.vrb
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-2.
+5.
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)) [38
-
-]
-\openout4 = `slides.vrb'.
-
-(slides.vrb
+)
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 15.
+(Font)              <5> on input line 29.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <5> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 15.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 29.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 15.
-) [39
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 29.
+)
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[42
+
+] (slides.vrbpdfTeX warning (ext4): destination with the same identifier (name{
+including-scale}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2 \protect\hypertarget{including-scale}{}
+                                           )
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[43
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 74
-7.
+Overfull \hbox (8.4576pt too wide) detected at line 712
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 71
+2.
 (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (C:\Users\map5672\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cf
 g
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
-) [40
-
-] [41
-
-] [42
-
-] [43
-
-]
-Overfull \hbox (9.64355pt too wide) detected at line 804
-[]
+)
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
 
 [44
 
-]
-Overfull \hbox (9.64355pt too wide) detected at line 825
-[]
+]pdfTeX warning (ext4): destination with the same identifier (name{option-1-def
+ault-scale-model}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.712 \end{frame}
+                 
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
 
 [45
 
+]pdfTeX warning (ext4): destination with the same identifier (name{option-1-def
+ault-scale-model}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.712 \end{frame}
+                 
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[46
+
+]pdfTeX warning (ext4): destination with the same identifier (name{option-1-def
+ault-scale-model}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.712 \end{frame}
+                 
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[47
+
 ]
-\openout4 = `slides.vrb'.
+Overfull \hbox (8.4576pt too wide) detected at line 743
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-(slides.vrb) [46
 
-] [47
+Overfull \hbox (3.32707pt too wide) detected at line 743
+[]
+ []
 
-] [48
 
-] [49
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-] [50
+[48
 
-]
-<figures/sim-data.pdf, id=7766, 433.62pt x 289.08pt>
-File: figures/sim-data.pdf Graphic file (type pdf)
-<use figures/sim-data.pdf>
-Package pdftex.def Info: figures/sim-data.pdf  used on input line 908.
-(pdftex.def)             Requested size: 289.07999pt x 192.72981pt.
+]pdfTeX warning (ext4): destination with the same identifier (name{interpreting
+-the-default-scale-model}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.743 \end{frame}
+                 
+Overfull \hbox (3.32707pt too wide) detected at line 743
+[]
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[49
+
+]pdfTeX warning (ext4): destination with the same identifier (name{interpreting
+-the-default-scale-model}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.743 \end{frame}
+                 
+Overfull \hbox (3.32707pt too wide) detected at line 743
+[]
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[50
+
+]pdfTeX warning (ext4): destination with the same identifier (name{interpreting
+-the-default-scale-model}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.743 \end{frame}
+                 
+Overfull \hbox (3.32707pt too wide) detected at line 743
+[]
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
 [51
 
- <./figures/sim-data.pdf>]
+]
+Overfull \hbox (8.4576pt too wide) detected at line 778
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[52
+
+]pdfTeX warning (ext4): destination with the same identifier (name{example-inte
+rpreting-the-default-scale-model}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.778 \end{frame}
+                 
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[53
+
+]pdfTeX warning (ext4): destination with the same identifier (name{example-inte
+rpreting-the-default-scale-model}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.778 \end{frame}
+                 
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[54
+
+]pdfTeX warning (ext4): destination with the same identifier (name{example-inte
+rpreting-the-default-scale-model}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.778 \end{frame}
+                 
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[55
+
+]
+Overfull \hbox (8.4576pt too wide) detected at line 780
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
 \openout4 = `slides.vrb'.
+
+
+Overfull \hbox (8.4576pt too wide) detected at line 788
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
 (slides.vrb
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
@@ -1541,115 +2216,487 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
 LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10.95> not available
 (Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 5.
 
-) [52
+)
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[56
 
 ]
+Overfull \hbox (8.4576pt too wide) detected at line 790
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
 \openout4 = `slides.vrb'.
 
-(slides.vrb) [53
 
-]
-<slides_files/figure-beamer/unnamed-chunk-5-1.pdf, id=8341, 216.81pt x 144.54pt
->
-File: slides_files/figure-beamer/unnamed-chunk-5-1.pdf Graphic file (type pdf)
-<use slides_files/figure-beamer/unnamed-chunk-5-1.pdf>
-Package pdftex.def Info: slides_files/figure-beamer/unnamed-chunk-5-1.pdf  used
- on input line 944.
-(pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
-[54
+Overfull \hbox (8.4576pt too wide) detected at line 816
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
- <./slides_files/figure-beamer/unnamed-chunk-5-1.pdf>]
-\openout4 = `slides.vrb'.
+(slides.vrb)
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-(slides.vrb) [55
-
-]
-\openout4 = `slides.vrb'.
-
-(slides.vrb) [56
-
-]
-<slides_files/figure-beamer/unnamed-chunk-8-1.pdf, id=8916, 722.7pt x 505.89pt>
-
-File: slides_files/figure-beamer/unnamed-chunk-8-1.pdf Graphic file (type pdf)
-<use slides_files/figure-beamer/unnamed-chunk-8-1.pdf>
-Package pdftex.def Info: slides_files/figure-beamer/unnamed-chunk-8-1.pdf  used
- on input line 984.
-(pdftex.def)             Requested size: 291.92444pt x 204.34396pt.
 [57
 
- <./slides_files/figure-beamer/unnamed-chunk-8-1.pdf>]
-\openout4 = `slides.vrb'.
+] (slides.vrbpdfTeX warning (ext4): destination with the same identifier (name{
+option-2-more-complex-scale-models}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2 ...arget{option-2-more-complex-scale-models}{}
+                                                  )
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-(slides.vrb) [58
+[58
 
 ]
-<figures/sim_gamma.pdf, id=9277, 433.62pt x 289.08pt>
-File: figures/sim_gamma.pdf Graphic file (type pdf)
-<use figures/sim_gamma.pdf>
-Package pdftex.def Info: figures/sim_gamma.pdf  used on input line 1010.
-(pdftex.def)             Requested size: 289.07999pt x 192.72981pt.
+Overfull \hbox (8.4576pt too wide) detected at line 825
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
 [59
 
- <./figures/sim_gamma.pdf>] [60
+]
+Overfull \hbox (8.4576pt too wide) detected at line 845
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[60
 
 ]
-<slides_files/figure-beamer/unnamed-chunk-11-1.pdf, id=9569, 722.7pt x 505.89pt
->
-File: slides_files/figure-beamer/unnamed-chunk-11-1.pdf Graphic file (type pdf)
+Overfull \hbox (8.4576pt too wide) detected at line 853
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-<use slides_files/figure-beamer/unnamed-chunk-11-1.pdf>
-Package pdftex.def Info: slides_files/figure-beamer/unnamed-chunk-11-1.pdf  use
-d on input line 1030.
-(pdftex.def)             Requested size: 291.92444pt x 204.34396pt.
+<figures/sim_gamma.pdf, id=7096, 433.62pt x 289.08pt>
+File: figures/sim_gamma.pdf Graphic file (type pdf)
+<use figures/sim_gamma.pdf>
+Package pdftex.def Info: figures/sim_gamma.pdf  used on input line 853.
+(pdftex.def)             Requested size: 289.07999pt x 192.72981pt.
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
 [61
 
- <./slides_files/figure-beamer/unnamed-chunk-11-1.pdf>]
-<slides_files/figure-beamer/unnamed-chunk-12-1.pdf, id=9719, 722.7pt x 505.89pt
->
-File: slides_files/figure-beamer/unnamed-chunk-12-1.pdf Graphic file (type pdf)
+ <./figures/sim_gamma.pdf>]
+Overfull \hbox (8.4576pt too wide) detected at line 856
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-<use slides_files/figure-beamer/unnamed-chunk-12-1.pdf>
-Package pdftex.def Info: slides_files/figure-beamer/unnamed-chunk-12-1.pdf  use
-d on input line 1035.
-(pdftex.def)             Requested size: 291.92444pt x 204.34396pt.
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
 [62
 
- <./slides_files/figure-beamer/unnamed-chunk-12-1.pdf>]
-\openout4 = `slides.vrb'.
+]
+Overfull \hbox (8.4576pt too wide) detected at line 873
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-(slides.vrb) [63
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[63
 
 ]
+Overfull \hbox (8.4576pt too wide) detected at line 881
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+<figures/sim-data.pdf, id=7500, 433.62pt x 289.08pt>
+File: figures/sim-data.pdf Graphic file (type pdf)
+<use figures/sim-data.pdf>
+Package pdftex.def Info: figures/sim-data.pdf  used on input line 881.
+(pdftex.def)             Requested size: 289.07999pt x 192.72981pt.
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[64
+
+ <./figures/sim-data.pdf>]
+Overfull \hbox (8.4576pt too wide) detected at line 883
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
 \openout4 = `slides.vrb'.
 
-(slides.vrb) [64
 
-]
-<slides_files/figure-beamer/unnamed-chunk-17-1.pdf, id=10292, 722.7pt x 505.89p
-t>
-File: slides_files/figure-beamer/unnamed-chunk-17-1.pdf Graphic file (type pdf)
+Overfull \hbox (8.4576pt too wide) detected at line 891
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-<use slides_files/figure-beamer/unnamed-chunk-17-1.pdf>
-Package pdftex.def Info: slides_files/figure-beamer/unnamed-chunk-17-1.pdf  use
-d on input line 1070.
-(pdftex.def)             Requested size: 291.92444pt x 204.34396pt.
+(slides.vrb)
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
 [65
 
- <./slides_files/figure-beamer/unnamed-chunk-17-1.pdf>]
-<slides_files/figure-beamer/unnamed-chunk-18-1.pdf, id=10441, 722.7pt x 505.89p
-t>
-File: slides_files/figure-beamer/unnamed-chunk-18-1.pdf Graphic file (type pdf)
+]
+Overfull \hbox (8.4576pt too wide) detected at line 893
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-<use slides_files/figure-beamer/unnamed-chunk-18-1.pdf>
-Package pdftex.def Info: slides_files/figure-beamer/unnamed-chunk-18-1.pdf  use
-d on input line 1075.
-(pdftex.def)             Requested size: 291.92444pt x 204.34396pt.
+\openout4 = `slides.vrb'.
+
+
+Overfull \hbox (8.4576pt too wide) detected at line 912
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+(slides.vrb)
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
 [66
 
- <./slides_files/figure-beamer/unnamed-chunk-18-1.pdf>] [67
+]
+Overfull \hbox (8.4576pt too wide) detected at line 917
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-] [68
+<slides_files/figure-beamer/unnamed-chunk-6-1.pdf, id=8017, 216.81pt x 144.54pt
+>
+File: slides_files/figure-beamer/unnamed-chunk-6-1.pdf Graphic file (type pdf)
+<use slides_files/figure-beamer/unnamed-chunk-6-1.pdf>
+Package pdftex.def Info: slides_files/figure-beamer/unnamed-chunk-6-1.pdf  used
+ on input line 917.
+(pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[67
+
+ <./slides_files/figure-beamer/unnamed-chunk-6-1.pdf>]
+Overfull \hbox (8.4576pt too wide) detected at line 919
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+\openout4 = `slides.vrb'.
+
+
+Overfull \hbox (8.4576pt too wide) detected at line 935
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+(slides.vrb)
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[68
+
+]
+Overfull \hbox (8.4576pt too wide) detected at line 937
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+\openout4 = `slides.vrb'.
+
+
+Overfull \hbox (8.4576pt too wide) detected at line 956
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+(slides.vrb)
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[69
+
+]
+Overfull \hbox (8.4576pt too wide) detected at line 961
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+<slides_files/figure-beamer/unnamed-chunk-10-1.pdf, id=8535, 722.7pt x 505.89pt
+>
+File: slides_files/figure-beamer/unnamed-chunk-10-1.pdf Graphic file (type pdf)
+
+<use slides_files/figure-beamer/unnamed-chunk-10-1.pdf>
+Package pdftex.def Info: slides_files/figure-beamer/unnamed-chunk-10-1.pdf  use
+d on input line 961.
+(pdftex.def)             Requested size: 291.92444pt x 204.34396pt.
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[70
+
+ <./slides_files/figure-beamer/unnamed-chunk-10-1.pdf>]
+Overfull \hbox (8.4576pt too wide) detected at line 963
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+\openout4 = `slides.vrb'.
+
+
+Overfull \hbox (8.4576pt too wide) detected at line 983
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+(slides.vrb)
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[71
+
+]
+Overfull \hbox (8.4576pt too wide) detected at line 991
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+File: figures/sim_gamma.pdf Graphic file (type pdf)
+<use figures/sim_gamma.pdf>
+Package pdftex.def Info: figures/sim_gamma.pdf  used on input line 991.
+(pdftex.def)             Requested size: 289.07999pt x 192.72981pt.
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[72
+
+]
+Overfull \hbox (8.4576pt too wide) detected at line 1006
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[73
+
+]
+Overfull \hbox (8.4576pt too wide) detected at line 1011
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+<slides_files/figure-beamer/unnamed-chunk-13-1.pdf, id=9120, 722.7pt x 505.89pt
+>
+File: slides_files/figure-beamer/unnamed-chunk-13-1.pdf Graphic file (type pdf)
+
+<use slides_files/figure-beamer/unnamed-chunk-13-1.pdf>
+Package pdftex.def Info: slides_files/figure-beamer/unnamed-chunk-13-1.pdf  use
+d on input line 1011.
+(pdftex.def)             Requested size: 291.92444pt x 204.34396pt.
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[74
+
+ <./slides_files/figure-beamer/unnamed-chunk-13-1.pdf>]
+Overfull \hbox (8.4576pt too wide) detected at line 1016
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+<slides_files/figure-beamer/unnamed-chunk-14-1.pdf, id=9255, 722.7pt x 505.89pt
+>
+File: slides_files/figure-beamer/unnamed-chunk-14-1.pdf Graphic file (type pdf)
+
+<use slides_files/figure-beamer/unnamed-chunk-14-1.pdf>
+Package pdftex.def Info: slides_files/figure-beamer/unnamed-chunk-14-1.pdf  use
+d on input line 1016.
+(pdftex.def)             Requested size: 291.92444pt x 204.34396pt.
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[75
+
+ <./slides_files/figure-beamer/unnamed-chunk-14-1.pdf>]
+Overfull \hbox (8.4576pt too wide) detected at line 1018
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+\openout4 = `slides.vrb'.
+
+
+Overfull \hbox (8.4576pt too wide) detected at line 1035
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+(slides.vrb)
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[76
+
+]
+Overfull \hbox (8.4576pt too wide) detected at line 1037
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+\openout4 = `slides.vrb'.
+
+
+Overfull \hbox (8.4576pt too wide) detected at line 1055
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+(slides.vrb)
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[77
+
+]
+Overfull \hbox (8.4576pt too wide) detected at line 1060
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+<slides_files/figure-beamer/unnamed-chunk-19-1.pdf, id=9772, 722.7pt x 505.89pt
+>
+File: slides_files/figure-beamer/unnamed-chunk-19-1.pdf Graphic file (type pdf)
+
+<use slides_files/figure-beamer/unnamed-chunk-19-1.pdf>
+Package pdftex.def Info: slides_files/figure-beamer/unnamed-chunk-19-1.pdf  use
+d on input line 1060.
+(pdftex.def)             Requested size: 291.92444pt x 204.34396pt.
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[78
+
+ <./slides_files/figure-beamer/unnamed-chunk-19-1.pdf>]
+Overfull \hbox (8.4576pt too wide) detected at line 1065
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+<slides_files/figure-beamer/unnamed-chunk-20-1.pdf, id=9907, 722.7pt x 505.89pt
+>
+File: slides_files/figure-beamer/unnamed-chunk-20-1.pdf Graphic file (type pdf)
+
+<use slides_files/figure-beamer/unnamed-chunk-20-1.pdf>
+Package pdftex.def Info: slides_files/figure-beamer/unnamed-chunk-20-1.pdf  use
+d on input line 1065.
+(pdftex.def)             Requested size: 291.92444pt x 204.34396pt.
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[79
+
+ <./slides_files/figure-beamer/unnamed-chunk-20-1.pdf>]
+Overfull \hbox (8.4576pt too wide) detected at line 1089
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[80
+
+]
+Overfull \hbox (8.4576pt too wide) detected at line 1104
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (8.4576pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
+][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[81
 
 ]
 \tf@nav=\write6
@@ -1663,42 +2710,41 @@ d on input line 1075.
 
 (slides.aux) ) 
 Here is how much of TeX's memory you used:
- 26132 strings out of 478864
- 495176 string characters out of 2847712
- 885981 words of memory out of 3000000
- 43019 multiletter control sequences out of 15000+600000
- 535357 words of font info for 208 fonts, out of 8000000 for 9000
+ 26173 strings out of 478864
+ 496696 string characters out of 2847712
+ 877279 words of memory out of 3000000
+ 43041 multiletter control sequences out of 15000+600000
+ 531913 words of font info for 204 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,20n,124p,1005b,785s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 128i,20n,124p,1005b,791s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
+m/lm-ec.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/
+lm-mathsy.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
 m/lm-mathit.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
-/lm/lm-ec.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
-m/lm-mathsy.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
 /lm/lm-rm.enc}{C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
 m/lm-mathex.enc}<C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/lm/lmex10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/lm/lmmi10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/type1
 /public/lm/lmmi12.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/lm/lmmi6.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/lm/lmmi8.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmmib10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/font
-s/type1/public/lm/lmr10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/lm/lmss10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/lm/lmss12.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/lm/lmss8.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/map5672/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/map5672/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/lm/lmsso8.pfb><C:/Users/map5672/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/map5672/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/map5672/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/map5672/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/map5672/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/map5672/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/lm/lmtko10.pfb><C:/Users/map5672/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on slides.pdf (68 pages, 2063314 bytes).
+e1/public/lm/lmmi8.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/lm/lmmib10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/lm/lmr10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/font
+s/type1/public/lm/lmss10.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/lm/lmss12.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/lm/lmss8.pfb><C:/Users/map5672/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/map5672/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/map5672/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/lm/lmsso8.pfb><C:/Users/map5672/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/map5672/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/map5672/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/map5672/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/map5672/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/map5672/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmtko10.pfb><C:/Users/map5672/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on slides.pdf (81 pages, 2149935 bytes).
 PDF statistics:
- 10963 PDF objects out of 12825 (max. 8388607)
- 204 named destinations out of 1000 (max. 500000)
- 80254 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 10398 PDF objects out of 10688 (max. 8388607)
+ 223 named destinations out of 1000 (max. 500000)
+ 78258 words of extra memory for PDF output out of 89155 (max. 10000000)
 

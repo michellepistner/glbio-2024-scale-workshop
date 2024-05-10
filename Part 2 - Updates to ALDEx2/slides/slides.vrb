@@ -2,12 +2,17 @@
 \protect\hypertarget{creating-an-informed-model}{}
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{scale.cd }\OtherTok{\textless{}{-}} \DecValTok{2}\SpecialCharTok{\^{}}\FunctionTok{matrix}\NormalTok{(}\FunctionTok{rnorm}\NormalTok{(}\DecValTok{1000} \SpecialCharTok{*} \DecValTok{29}\NormalTok{, }\AttributeTok{mean =} \FunctionTok{log2}\NormalTok{(}\FloatTok{0.7}\NormalTok{), }\AttributeTok{sd =} \FloatTok{0.125}\NormalTok{),}
-    \AttributeTok{nrow =} \DecValTok{29}\NormalTok{)}
-\NormalTok{scale.control }\OtherTok{\textless{}{-}} \DecValTok{2}\SpecialCharTok{\^{}}\FunctionTok{matrix}\NormalTok{(}\FunctionTok{rnorm}\NormalTok{(}\DecValTok{1000} \SpecialCharTok{*} \DecValTok{66}\NormalTok{, }\AttributeTok{mean =} \FunctionTok{log2}\NormalTok{(}\DecValTok{1}\NormalTok{), }\AttributeTok{sd =} \FloatTok{0.125}\NormalTok{),}
-    \AttributeTok{nrow =} \DecValTok{66}\NormalTok{)}
+\NormalTok{scale.cd }\OtherTok{\textless{}{-}} \DecValTok{2}\SpecialCharTok{\^{}}\FunctionTok{matrix}\NormalTok{(}\FunctionTok{rnorm}\NormalTok{(}\DecValTok{1000} \SpecialCharTok{*} \DecValTok{29}\NormalTok{,}
+  \AttributeTok{mean =} \FunctionTok{log2}\NormalTok{(.}\DecValTok{7}\NormalTok{), }\AttributeTok{sd =}\NormalTok{ .}\DecValTok{125}
+\NormalTok{), }\AttributeTok{nrow =} \DecValTok{29}\NormalTok{)}
+\NormalTok{scale.control }\OtherTok{\textless{}{-}} \DecValTok{2}\SpecialCharTok{\^{}}\FunctionTok{matrix}\NormalTok{(}\FunctionTok{rnorm}\NormalTok{(}\DecValTok{1000} \SpecialCharTok{*} \DecValTok{66}\NormalTok{,}
+  \AttributeTok{mean =} \FunctionTok{log2}\NormalTok{(}\DecValTok{1}\NormalTok{), }\AttributeTok{sd =}\NormalTok{ .}\DecValTok{125}
+\NormalTok{), }\AttributeTok{nrow =} \DecValTok{66}\NormalTok{)}
 
-\NormalTok{scale.inf }\OtherTok{\textless{}{-}} \FunctionTok{rbind}\NormalTok{(scale.cd, scale.control)}
-\NormalTok{aldex\_informed }\OtherTok{\textless{}{-}} \FunctionTok{aldex}\NormalTok{(Y, X, }\AttributeTok{mc.samples =} \DecValTok{1000}\NormalTok{, }\AttributeTok{gamma =}\NormalTok{ scale.inf)}
+\NormalTok{scale.informed }\OtherTok{\textless{}{-}} \FunctionTok{rbind}\NormalTok{(scale.cd, scale.control)}
+\NormalTok{aldex\_informed }\OtherTok{\textless{}{-}} \FunctionTok{aldex}\NormalTok{(Y, X,}
+  \AttributeTok{mc.samples =} \DecValTok{1000}\NormalTok{,}
+  \AttributeTok{gamma =}\NormalTok{ scale.informed}
+\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}

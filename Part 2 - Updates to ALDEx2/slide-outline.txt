@@ -1,0 +1,34 @@
+##GLBIO Slide Outline
+
+# Proposed examples: Vandputte + simulation.
+  - Simulation used in Parts 1-4. Vandputte used in Part 5.
+  - Vandputte data in a phyloseq object.
+  - Simulated data in a phyloseq object but have the code for the simulations available.
+
+# Part 1: Recap of Greg's talk
+
+# Slide 1: Sequencing Depth is Not Reflective of Total
+  - Toy example from SRI paper
+
+# Slide 2: Practical Implication is that Inferences May be Wrong.
+  - Highlight which taxa are actually changing.
+  - Highlight which taxa are changing in TSS terms.
+
+
+# Slide 3: This leads to Unacknowledged Bias.
+  - Plot of FDR versus sample size for ALDEx2 and Deseq2
+
+# Part 2: High-Level SRI
+  - 
+
+# Part 3: More-Detailed SRI
+
+# Part 4: Changes to ALDEx2 to Make it an SRI
+
+# Part 5: Real Data Example (Vandputte)
+  - Slides to establish:
+
+## Updates to Greg's Slides
+  - Needs to be more of what he typically presents. Some people call the data as compositional. Data/normalizations
+  - He needs to step away from notation.
+  - Show that CoDA tools can be massively wrong.

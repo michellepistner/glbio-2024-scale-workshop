@@ -125,7 +125,7 @@
 \usepackage{longtable,booktabs}
 \makeatletter\def\fnum@table{\usebeamercolor{caption name}\usebeamerfont*{caption name}\tablename~\thetable}\makeatother
 \usepackage{fvextra}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{ breaksymbolleft={}, showspaces = false, showtabs = false, breaklines, commandchars=\\\{\} }
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -141,6 +141,9 @@
 \title{Beyond Normalization: Incorporating Scale Uncertainty in ALDEx2}
 \author{Michelle Nixon}
 \date{May 13, 2024}
+\institute{The Silverman Lab\\
+College of Information Sciences and Technology\\
+Penn State University}
 
 \begin{document}
 \frame{\titlepage}
@@ -153,7 +156,7 @@
 \hline
 \textcolor{gray}{Observed data (Y)} & Sample 1 & Sample 2 & Sample 3  &\\
 \hline
-Condition & Health & Health & Disease & \textcolor{gray}{Conclusion}\\
+Condition & Pre & Pre & Post & \textcolor{gray}{Conclusion}\\
 \hline
 Entity 1 & 5 & 10 & 100 & \textcolor{gray}{Increase}\\
 Entity 2 & 10 & 25 & 3 & \textcolor{gray}{Decrease}\\
@@ -174,7 +177,7 @@ Entity 4 & 0 & 0 & 19 &\textcolor{gray}{Increase}\\
 \hline
 \textcolor{gray}{System data (W)} & Sample 1 & Sample 2 & Sample 3  & \\
 \hline
-Condition & Health & Health & Disease & \textcolor{gray}{Conclusion}\\
+Condition & Pre & Pre & Post & \textcolor{gray}{Conclusion}\\
 \hline
 Entity 1 & 227 & 351 & 154 & \textcolor{gray}{Decrease}\\
 Entity 2 & 684 & 891 & 3 & \textcolor{gray}{Decrease}\\
@@ -223,25 +226,11 @@ Entity 4 & 43 & 39  & 27 &\textcolor{gray}{Decrease}\\
 \end{itemize}
 
 \[\mathbf{W}_{dn} = \underbrace{\mathbf{W}_{dn}^\parallel}_{\text{composition}} \times  \underbrace{W_n^\perp}_{\text{scale}}\]
-
-\textcolor{white}{- **Compostion:** $\mathbf{W}_{dn}^\parallel = \frac{\mathbf{W}_{dn}}{\sum_{d=1}^D \mathbf{W}_{dn}}$}
-
-\textcolor{white}{- **Scale:** $W_n^\perp = \sum_{d=1}^D \mathbf{W}_{dn}$}
-\end{frame}
-
-\begin{frame}{Notation}
-\protect\hypertarget{notation-1}{}
-\begin{itemize}
-\tightlist
-\item
-  \(\mathbf{Y}\): a measurement of the underlying system \(\mathbf{W}\).
-\end{itemize}
-
-\[\mathbf{W}_{dn} = \underbrace{\mathbf{W}_{dn}^\parallel}_{\text{composition}} \times  \underbrace{W_n^\perp}_{\text{scale}}\]
+\pause
 
 \begin{itemize}
 \item
-  \textbf{Compostion:}
+  \textbf{Composition:}
   \(\mathbf{W}_{dn}^\parallel = \frac{\mathbf{W}_{dn}}{\sum_{d=1}^D \mathbf{W}_{dn}}\)
 \item
   \textbf{Scale:} \(W_n^\perp = \sum_{d=1}^D \mathbf{W}_{dn}\)
@@ -250,15 +239,6 @@ Entity 4 & 43 & 39  & 27 &\textcolor{gray}{Decrease}\\
 
 \begin{frame}{Example: Notation}
 \protect\hypertarget{example-notation}{}
-\begin{itemize}
-\tightlist
-\item
-  Consider a simple study of the microbiome pre/post antibiotic
-  administration.
-\end{itemize}
-
-\vspace{0.05in}
-
 \begin{table}[h!]
 \centering
 \begin{tabular}{|r|c c c| }
@@ -272,6 +252,17 @@ Entity 2 & 0.68 & 0.68 & 0.02 \\
 Entity 3 & 0.05 & 0.02 & 0.08 \\
 Entity 4 & 0.04 & 0.03  & 0.13 \\
 \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|r|c c c| }
+\hline
+ & Sample 1 & Sample 2 & Sample 3\\
+\hline
+Condition & Pre & Pre & Post\\
+\hline
 \textcolor{gray}{Scale ($W^\perp$)} & \textcolor{gray}{1,002} & \textcolor{gray}{1,313} & \textcolor{gray}{200}\\
 \hline
 \end{tabular}
@@ -281,33 +272,22 @@ Entity 4 & 0.04 & 0.03  & 0.13 \\
 \begin{frame}{Differential Abundance/Expression Analysis}
 \protect\hypertarget{differential-abundanceexpression-analysis}{}
 \begin{itemize}
+\tightlist
 \item
-  \textbf{Question:} How do entities (e.g., taxa or genes) change
-  between conditions?
+  \textbf{Research Question:} How do entities (e.g., taxa or genes)
+  change between conditions?
+\end{itemize}
+
+\vspace{.075in}
+
+\begin{itemize}
+\tightlist
 \item
   \(\boldsymbol{\theta}\): what we want to estimate.
   \textcolor{white}{(Log Fold Change)}
 \end{itemize}
 
-\vspace{.125in}
-
-\begin{equation*}
-\textcolor{white}{\theta_d = \text{mean}_{\text{case}}(\log \mathbf{W}_{dn}) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn})}
-\end{equation*}
-\end{frame}
-
-\begin{frame}{Differential Abundance/Expression Analysis}
-\protect\hypertarget{differential-abundanceexpression-analysis-1}{}
-\begin{itemize}
-\item
-  \textbf{Question:} How do entities (e.g., taxa or genes) change
-  between conditions?
-\item
-  \(\boldsymbol{\theta}\): what we want to estimate.
-  \textcolor{gray}{(Log Fold Change)}
-\end{itemize}
-
-\vspace{.25in}
+\vspace{.075in}
 
 \begin{equation*}
 \theta_d = \text{mean}_{\text{case}}(\log \mathbf{W}_{dn}) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn})
@@ -362,7 +342,7 @@ the CLR normalization implies:
 
 \vspace{.25in}
 
-\textcolor{gray}{What does this mean?}
+\textcolor{gray}{What happens when this is wrong?}
 \end{frame}
 
 \begin{frame}{Unacknowledged bias!}
@@ -389,7 +369,7 @@ the CLR normalization implies:
 \begin{itemize}
 \item
   \textbf{The CoDA perspective:} Research questions that depend on
-  \(W^\perp\) (scale) are not possible.
+  \(W^\perp\) (scale) cannot be answered rigorously.
 \item
   \textbf{The Normalization perspective:} Research questions that depend
   on \(W^\perp\) (scale) can be answered after normalization.
@@ -397,37 +377,23 @@ the CLR normalization implies:
   Who is right?
 \end{itemize}
 
-\textcolor{white}{- **The CoDA perspective:** Yes, but this is limiting in practice.}
+\pause
 
-\textcolor{white}{- **The Normalization perspective:** Not correct, but attempting to answer relevant questions.}
+\begin{itemize}
+\item
+  \textbf{The CoDA perspective:} Rigourous, but scientifically limiting.
+\item
+  \textbf{The Normalization perspective:} Practical, but unacknowledged
+  bias.
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Scale Reliant Inference: The Basics}
 \protect\hypertarget{scale-reliant-inference-the-basics-1}{}
 \begin{itemize}
+\tightlist
 \item
-  \textbf{The CoDA perspective:} Research questions that depend on
-  \(W^\perp\) (scale) are not possible.
-\item
-  \textbf{The Normalization perspective:} Research questions that depend
-  on \(W^\perp\) (scale) can be answered after normalization.
-\item
-  Who is right?
-\item
-  \textbf{The CoDA perspective:} Yes, but this is limiting in practice.
-\item
-  \textbf{The Normalization perspective:} Not correct, but attempting to
-  answer relevant questions.
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Scale Reliant Inference: The Basics}
-\protect\hypertarget{scale-reliant-inference-the-basics-2}{}
-\begin{itemize}
-\item
-  What happens if \(\theta\) depends on \(W^\perp\)?
-\item
-  Consider LFCs: how are taxa changing between two conditions?
+  For LFCs, \(\theta\) depends on \(W^\perp\):
 \end{itemize}
 
 \begin{align*}
@@ -436,8 +402,6 @@ the CLR normalization implies:
 &= \underbrace{\text{mean}_{\text{case}}(\log \mathbf{W}_{dn}^\parallel) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn}^\parallel)}_{\theta^\parallel}\\
 & \, \, \, \, \, \, + \underbrace{\text{mean}_{\text{case}}(\log W_{n}^\perp) - \text{mean}_{\text{control}}(\log W_{n}^\perp)}_{\theta^\perp}\\
 \end{align*}
-
-\textcolor{gray}{Don't we need $\theta^\perp$?}
 \end{frame}
 
 \begin{frame}{Scale Reliant Inference: Theory Intro}
@@ -453,23 +417,9 @@ Recall for LFCs: \begin{align*}
   What can we say about \(\theta\) from \(\theta^\parallel\) alone?
 \end{itemize}
 
-\textcolor{white}{Statistical perspective: $\theta$ is not identifiable without $\theta^\perp$.}
-
-\textcolor{white}{Practical issues: unbiased estimators, calibrated confidence sets, and type-I error control **NOT** possible!}
-
-\textcolor{white}{See Nixon et al. (2023) for details.}
-\end{frame}
-
-\begin{frame}{Scale Reliant Inference: Theory Intro}
-\protect\hypertarget{scale-reliant-inference-theory-intro-1}{}
-Recall for LFCs: \begin{align*}
-\theta_d &= \text{mean}_{\text{case}}(\log \mathbf{W}_{dn} ) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn} )\\
-&= \theta^\parallel + \theta^\perp
-\end{align*}
+\pause
 
 \begin{itemize}
-\item
-  What can we say about \(\theta\) from \(\theta^\parallel\) alone?
 \item
   Statistical perspective: \(\theta\) is not identifiable without
   \(\theta^\perp\).
@@ -481,53 +431,14 @@ Recall for LFCs: \begin{align*}
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Scale Simulation Random Variables}
-\protect\hypertarget{scale-simulation-random-variables}{}
-\textbf{Goal:} Estimate \(\theta = f(\mathbf{W}^\parallel, W^\perp)\).
-
-\vspace{.25in}
-
-\begin{enumerate}
-\item
-  Draw samples of \(\mathbf{W}^{\parallel}\) from a measurement model
-  (can depend on \(\mathbf{Y}\)).
-\item
-  Draw samples of \(W^{\perp}\) from a scale model (can depend on
-  \(\mathbf{W}^{\parallel}\)).
-\item
-  Estimate samples of \(\theta = f(\mathbf{W}^\parallel, W^\perp)\).
-\end{enumerate}
-\end{frame}
-
-\hypertarget{updated-aldex2-model}{%
-\section{Updated ALDEx2 Model}\label{updated-aldex2-model}}
-
-\begin{frame}{Rewind: \(\theta^\perp\)}
-\protect\hypertarget{rewind-thetaperp}{}
+\begin{frame}{\(\theta^\perp\): The Missing Piece}
+\protect\hypertarget{thetaperp-the-missing-piece}{}
 \textcolor{gray}{\begin{equation*}
 \theta^\perp = \text{mean}_{\text{case}}(\log W_{n}^\perp) - \text{mean}_{\text{control}}(\log W_{n}^\perp)
 \end{equation*}}
 
 \vspace{.1in}
-
-\textcolor{white}{- The change in scales between conditions matters for estimating LFCs.}
-
-\textcolor{white}{- The scale only needs to be known up to a constant (see Nixon et. al (2023)).}
-
-\textcolor{white}{- Each normalization implies a value of $\theta^\perp$ \textcolor{white}{(e.g., CLR):}}
-
-\textcolor{white}{\begin{equation*}
-\theta^\perp_{\text{CLR}} = \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) 
-\end{equation*}}
-\end{frame}
-
-\begin{frame}{Rewind: \(\theta^\perp\)}
-\protect\hypertarget{rewind-thetaperp-1}{}
-\textcolor{gray}{\begin{equation*}
-\theta^\perp = \text{mean}_{\text{case}}(\log W_{n}^\perp) - \text{mean}_{\text{control}}(\log W_{n}^\perp)
-\end{equation*}}
-
-\vspace{.1in}
+\pause
 
 \begin{itemize}
 \item
@@ -537,35 +448,72 @@ Recall for LFCs: \begin{align*}
   (2023)).
 \end{itemize}
 
-\textcolor{white}{- Each normalization implies a value of $\theta^\perp$ \textcolor{white}{(e.g., CLR):}}
-
-\textcolor{white}{\begin{equation*}
-\theta^\perp_{\text{CLR}} = \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) 
-\end{equation*}}
-\end{frame}
-
-\begin{frame}{Rewind: \(\theta^\perp\)}
-\protect\hypertarget{rewind-thetaperp-2}{}
-\textcolor{gray}{\begin{equation*}
-\theta^\perp = \text{mean}_{\text{case}}(\log W_{n}^\perp) - \text{mean}_{\text{control}}(\log W_{n}^\perp)
-\end{equation*}}
-
-\vspace{.1in}
+\pause
 
 \begin{itemize}
-\item
-  The change in scales between conditions matters for estimating LFCs.
-\item
-  The scale only needs to be known up to a constant (see Nixon et. al
-  (2023)).
+\tightlist
 \item
   Each normalization implies a value of \(\theta^\perp\)
   \textcolor{gray}{(e.g., CLR):}
 \end{itemize}
 
 \textcolor{gray}{\begin{equation*}
-\theta^\perp_{\text{CLR}} = \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) 
+\theta^\perp_{\text{CLR}} = \text{mean}_{\text{case}}(- \log \text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(- \log \text{GM}( \mathbf{W}_{\cdot n}^\parallel)) 
 \end{equation*}}
+\end{frame}
+
+\begin{frame}{Scale Simulation Random Variables}
+\protect\hypertarget{scale-simulation-random-variables}{}
+\textbf{Goal:} Estimate \(\theta = f(\mathbf{W}^\parallel, W^\perp)\).
+
+\vspace{.1in}
+
+\begin{enumerate}
+\item
+  Draw samples of \(\mathbf{W}^{\parallel}\) from a measurement model
+  \textcolor{gray}{(can depend on $Y$)}.
+\item
+  Draw samples of \(W^{\perp}\) from a scale model
+  \textcolor{gray}{(can depend on $\mathbf{W}^\parallel$)}.
+\item
+  Estimate samples of \(\theta = f(\mathbf{W}^\parallel, W^\perp)\).
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Comparison to ALDEx2}
+\protect\hypertarget{comparison-to-aldex2}{}
+\begin{block}{The ALDEx2 Model}
+
+\textbf{Step 1: Model Sampling Uncertainty}
+\begin{align*}
+\mathbf{Y}_{\cdot n} &\sim \text{Multinomial}(\mathbf{W}_{\cdot n}^\parallel)\\
+\mathbf{W}_{\cdot n}^\parallel &\sim \text{Dirichlet}(\alpha)
+\end{align*}
+
+\textbf{Step 2: Centered Log-Ratio Transformation}
+\begin{equation*}
+\log \mathbf{W}_{\cdot n} = \left[\log \mathbf{W}_{1n}^\parallel - \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel), ..., \log \mathbf{W}_{Dn}^\parallel - \text{mean}(\log \mathbf{W}_{\cdot n}^\parallel) \right]
+\end{equation*}
+
+\textbf{Step 3: Calculate LFCs and Test if Different from Zero.}
+
+\end{block}
+\end{frame}
+
+\begin{frame}{The Original Scale Model}
+\protect\hypertarget{the-original-scale-model}{}
+\begin{figure}
+  \centering
+  \includegraphics[width=3in]{figures/scale-model-figure-1.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Extending the Original Scale Model}
+\protect\hypertarget{extending-the-original-scale-model}{}
+\begin{figure}
+  \centering
+  \includegraphics[width=3in]{figures/scale-model-figure-2.pdf}
+\end{figure}
 \end{frame}
 
 \begin{frame}{ALDEx2 as an SSRV}
@@ -595,6 +543,28 @@ Recall for LFCs: \begin{align*}
 \end{figure}
 \end{frame}
 
+\hypertarget{updated-aldex2-model}{%
+\section{Updated ALDEx2 Model}\label{updated-aldex2-model}}
+
+\begin{frame}{ALDEx2 as an SSRV}
+\protect\hypertarget{aldex2-as-an-ssrv-1}{}
+\textcolor{gray}{\textbf{Step 1: Model Sampling Uncertainty}}
+\textcolor{gray}{\begin{align*}
+\mathbf{Y}_{\cdot n} &\sim \text{Multinomial}(\mathbf{W}_{\cdot n}^\parallel)\\
+\mathbf{W}_{\cdot n}^\parallel &\sim \text{Dirichlet}(\alpha)
+\end{align*}}
+
+\textbf{Step 2: Draw Samples from a Scale Model} \begin{align*}
+\log W_{n}^\perp &\sim Q\\
+\log \mathbf{W}_{\cdot n} &= \log \mathbf{W}_{\cdot n}^\parallel + \log W_{n}^\perp
+\end{align*}
+
+\textcolor{gray}{\textbf{Step 3: Calculate LFCs and Test if Different from Zero.}}
+\textcolor{gray}{\begin{equation*}
+\theta_d = \text{mean}_{\text{case}}(\log \mathbf{W}_{dn}) - \text{mean}_{\text{control}}(\log \mathbf{W}_{dn})
+  \end{equation*}}
+\end{frame}
+
 \begin{frame}{Intro to Scale Models}
 \protect\hypertarget{intro-to-scale-models}{}
 There are no restrictions on what scale models can be, although there
@@ -620,35 +590,21 @@ the system?
 
 \vspace{.1in}
 
-\textcolor{white}{1. You are confident that taking an antibiotic will kill at least some microbes in the gut.}
+\pause
 
-\textcolor{white}{2. A past study showed that a certain disease (e.g., Crohn's disease) leads to lower microbial load in the gut.}
-
-\textcolor{white}{3. You believe the total microbial load in the mouth changes after brushing your teeth.}
-
-\textcolor{white}{This type of information can be used in scale model building.}
-\end{frame}
-
-\begin{frame}{Scale Models based on Biological Knowledge}
-\protect\hypertarget{scale-models-based-on-biological-knowledge-1}{}
-What do past studies or biological mechanisms tell about the scale of
-the system?
-
-\vspace{.1in}
-
-\begin{enumerate}
-\item
-  You are confident that taking an antibiotic will kill at least some
-  microbes in the gut.
+\begin{itemize}
+\tightlist
 \item
   A past study showed that a certain disease (e.g., Crohn's disease)
   leads to lower microbial load in the gut.
-\item
-  You believe the total microbial load in the mouth changes after
-  brushing your teeth.
-\end{enumerate}
+\end{itemize}
 
-\textcolor{gray}{This type of information can be used in scale model building.}
+\pause
+
+\begin{align*}
+\log W^\perp_{\text{Healthy}} &\sim N(1, \gamma^2)\\
+\log W^\perp_{\text{Crohn's}} &\sim N(0.7, \gamma^2)
+\end{align*}
 \end{frame}
 
 \begin{frame}{Scale Models based on Outside Measurements}
@@ -657,18 +613,7 @@ How can outside measurements be used to quantify scale?
 
 \vspace{.1in}
 
-\textcolor{white}{1. These measurements can be used *if* they relate to your scale of interest.}
-
-\textcolor{white}{2. Examples include flow cytometry, qPCR, etc.}
-
-\textcolor{white}{3. Scale models can incorporate measurement uncertainty.}
-\end{frame}
-
-\begin{frame}{Scale Models based on Outside Measurements}
-\protect\hypertarget{scale-models-based-on-outside-measurements-1}{}
-How can outside measurements be used to quantify scale?
-
-\vspace{.1in}
+\pause
 
 \begin{enumerate}
 \item
@@ -679,50 +624,38 @@ How can outside measurements be used to quantify scale?
 \item
   Scale models can incorporate measurement uncertainty.
 \end{enumerate}
+
+\pause
+
+\begin{equation*}
+\log W^\perp_{n} \sim N(\log \mu_{FC,n}, \sigma^{2}_{FC,n})
+\end{equation*}
 \end{frame}
 
-\hypertarget{coding-changes-to-aldex2}{%
-\section{Coding Changes to ALDEx2}\label{coding-changes-to-aldex2}}
+\hypertarget{changes-to-the-aldex2-interface}{%
+\section{Changes to the ALDEx2
+Interface}\label{changes-to-the-aldex2-interface}}
 
-\begin{frame}{Including scale}
+\begin{frame}[fragile]{Including scale}
 \protect\hypertarget{including-scale}{}
 \textbf{The new ALDEx2 model removes normalizations in lieu of scale
 models.}
 
 \vspace{.25in}
 
-\textcolor{white}{Major updates:}
-
-\textcolor{white}{1. A new argument `gamma` which makes it easy to incorporate scale uncertainty.}
-
-\textcolor{white}{2. A new function `aldex.senAnalysis` to see how analysis results change as a function of scale uncertainty.}
-\end{frame}
-
-\begin{frame}[fragile]{Including scale}
-\protect\hypertarget{including-scale-1}{}
-\textbf{The new ALDEx2 model removes normalizations in lieu of scale
-models.}
-
-\vspace{.25in}
+\pause
 
 Major updates:
 
 \begin{enumerate}
+\tightlist
 \item
   A new argument \texttt{gamma} which makes it easy to incorporate scale
-  uncertainty.
-\item
-  A new function \texttt{aldex.senAnalysis} to see how analysis results
-  change as a function of scale uncertainty.
+  uncertainty (\texttt{aldex} and \texttt{aldex.clr} functions).
 \end{enumerate}
-\end{frame}
 
-\begin{frame}[fragile]{The gamma argument}
-\protect\hypertarget{the-gamma-argument}{}
 \begin{itemize}
-\item
-  Added as argument to the \texttt{aldex} and \texttt{aldex.clr}
-  function.
+\tightlist
 \item
   \texttt{gamma} can either be a single numeric or a matrix.
 
@@ -733,9 +666,15 @@ Major updates:
   \item
     Matrix: A \(N \times S\) matrix of samples of \(W^\perp\).
   \end{enumerate}
-\item
-  \texttt{gamma\ =\ NULL} returns the original behavior of ALDEx2.
 \end{itemize}
+
+\begin{enumerate}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  A new function \texttt{aldex.senAnalysis} to see how analysis results
+  change as a function of scale uncertainty.
+\end{enumerate}
 \end{frame}
 
 \begin{frame}{Option 1: Default Scale Model}
@@ -743,17 +682,30 @@ Major updates:
 The default scale model is based on errors in the CLR normalization.
 
 \[\log \hat{W}_{n}^{\perp(s)} = - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) + \Lambda^\perp x_{n}\]
-\[\Lambda^\perp  \sim \ N(0, \gamma^2).\]
-\end{frame}
+\[\Lambda^\perp  \sim \ N(0, \gamma^2).\] \pause 
 
-\begin{frame}{Advantages of the Default Scale Model}
-\protect\hypertarget{advantages-of-the-default-scale-model}{}
 \begin{enumerate}
+\tightlist
 \item
-  It is built off the status quo for ALDEx2.
+  When \(\gamma = 0\), behavior matches the original ALDEx2 model.
+\end{enumerate}
+
+\pause
+
+\begin{enumerate}
+\setcounter{enumi}{1}
+\tightlist
 \item
-  Any value of \(\gamma > 0\) will reduce false positives compared to
-  the CLR normalization.
+  For any value of \(\gamma > 0\), it models potential error in the CLR
+  assumption
+  \textcolor{gray}{(false positives will decrease compared to the CLR normalization.)}
+\end{enumerate}
+
+\pause
+
+\begin{enumerate}
+\setcounter{enumi}{2}
+\tightlist
 \item
   It has a concrete interpretation to contextualize scale assumptions.
 \end{enumerate}
@@ -761,67 +713,78 @@ The default scale model is based on errors in the CLR normalization.
 
 \begin{frame}{Interpreting the Default Scale Model}
 \protect\hypertarget{interpreting-the-default-scale-model}{}
-\textcolor{gray}{$$\log \hat{W}_{n}^{\perp(s)} = - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) + \Lambda^\perp x_{n}$$}
-\[\Lambda^\perp  \sim \ N(0, \gamma^2).\] \vspace{.1in}
-
-\textbf{Empirical Rule:} 95\% of the samples of \(\Lambda^\perp\) fall
-within \([-2 \gamma, 2 \gamma]\).
-\end{frame}
-
-\begin{frame}{Interpreting the Default Scale Model, cont.}
-\protect\hypertarget{interpreting-the-default-scale-model-cont.}{}
-\[\textcolor{gray}{\log \hat{W}_{n}^{\perp(s)} = - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) +} \Lambda^\perp x_{n}\]
-\textcolor{gray}{$$\Lambda^\perp  \sim \ N(0, \gamma^2).$$}
-
-\vspace{.1in}
-
-\textbf{For case/control experiments:}
-
-\begin{enumerate}
-\item
-  If \(x_n = 1\): add \(\Lambda^\perp\)
-  \textcolor{gray}{(95\% of samples of $\log \hat{W}_{n}^{\perp(s)}$ fall within $[- \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) - 2 \gamma, - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right) + 2 \gamma]$.)}
-\item
-  If \(x_n = 0\): no noise added
-  \textcolor{gray}{($\log \hat{W}_{n}^{\perp(s)} = - \mathrm{mean} \left(\log \hat{W}^{\parallel (s)}_{\cdot n}\right)$)}.
-\end{enumerate}
-\end{frame}
-
-\begin{frame}{Interpreting the Default Scale Model, cont.}
-\protect\hypertarget{interpreting-the-default-scale-model-cont.-1}{}
 \begin{align*}
-\textcolor{gray}{\theta^\perp_{\text{Default Scale}}} &\textcolor{gray}{= \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) + \Lambda^\perp}\\
-&= \textcolor{gray}{\theta^\perp_{\text{CLR}} + \Lambda^\perp}
+\theta^\perp_{\text{Default Scale}} &= \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) + \epsilon\\
+&= \theta^\perp_{\text{CLR}} + \epsilon\\
+\epsilon &\sim N(0, \gamma^2)
 \end{align*}
 
-Taken together, the default scale model implies that:
+\pause
 
-\vspace{.1in}
+The default scale model implies that:
 
-\textcolor{white}{1. The value of $\theta^\perp$ is within $\pm 2 \gamma$ of the value of $\theta^\perp_{\text{CLR}}$ implied by the CLR normalization.}
+\pause
 
-\textcolor{white}{2. With 95 certainty, the true difference in scales falls within the the range $2^{\theta_{\text{CLR}}^\perp \pm 2 \gamma}$.}
-\end{frame}
-
-\begin{frame}{Interpreting the Default Scale Model, cont.}
-\protect\hypertarget{interpreting-the-default-scale-model-cont.-2}{}
-\begin{align*}
-\textcolor{gray}{\theta^\perp_{\text{Default Scale}}} &\textcolor{gray}{= \text{mean}_{\text{case}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) - \text{mean}_{\text{control}}(-\text{GM}( \mathbf{W}_{\cdot n}^\parallel)) + \Lambda^\perp}\\
-&= \textcolor{gray}{\theta^\perp_{\text{CLR}} + \Lambda^\perp}
-\end{align*}
-
-Taken together, the default scale model implies that:
-
-\vspace{.1in}
-
-\begin{enumerate}
+\begin{itemize}
+\tightlist
 \item
-  The value of \(\theta^\perp\) is within \(\pm 2 \gamma\) of the value
-  of \(\theta^\perp_{\text{CLR}}\) implied by the CLR normalization.
+  With 95\% certainty, the value of \(\theta^\perp\) is within
+  \(\pm 2 \gamma\) of the value of \(\theta^\perp_{\text{CLR}}\).
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
 \item
   With 95\% certainty, the true difference in scales falls within the
   the range \(2^{\theta_{\text{CLR}}^\perp \pm 2 \gamma}\).
-\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Example: Interpreting the Default Scale Model}
+\protect\hypertarget{example-interpreting-the-default-scale-model}{}
+\textbackslash textcolor\{gray\}\{With 95\% certainty, the true
+difference in scales falls within the the range
+\(2^{\theta_{\text{CLR}}^\perp \pm 2 \gamma}\).\}
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  Suppose that we are performing differential abundance in a
+  case/control study where \(\theta_{\text{CLR}} = 0.04\).
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  Suppose we set \(\gamma = 0.5\).
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  Then, this implies that, with 95\% certainty, we believe that the
+  scale of the case condition is within a factor of
+  \([2^{\theta_{\text{CLR}}^\perp - 2 \gamma}, 2^{\theta_{\text{CLR}}^\perp + 2 \gamma}] = [0.51,2.05]\)
+  of the control condition.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Using the Default Scale Model}
+\protect\hypertarget{using-the-default-scale-model}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\# Adding noise via the default scale model}
+\NormalTok{mod.defaultScale }\OtherTok{\textless{}{-}} \FunctionTok{aldex}\NormalTok{(Y, conds, }\AttributeTok{gamma =} \FloatTok{0.5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 \end{frame}
 
 \begin{frame}[fragile]{Option 2: More Complex Scale Models}
@@ -836,6 +799,8 @@ long as:
 \item
   They are samples of \(W^\perp\) not \(\log W^\perp\).
 \end{enumerate}
+
+\pause
 
 Reasons to do this:
 
@@ -877,6 +842,14 @@ Reasons to do this:
 \textcolor{gray}{\textbf{Step 3: Calculate LFCs and Test if Different from Zero.}}
 
 \textbf{Step 4: Repeat for all desired values of $\gamma$.}
+\end{frame}
+
+\begin{frame}{Example: Sensitivity Analyses}
+\protect\hypertarget{example-sensitivity-analyses}{}
+\begin{figure}
+  \centering
+  \includegraphics[width=4in]{figures/sim_gamma.pdf}
+\end{figure}
 \end{frame}
 
 \hypertarget{data-examples}{%
@@ -922,7 +895,7 @@ administration.
 \begin{Shaded}
 \begin{Highlighting}[]
 \DocumentationTok{\#\# Looking at the implied scale}
-\NormalTok{clr }\OtherTok{\textless{}{-}} \FunctionTok{aldex.clr}\NormalTok{(Y, conds, }\AttributeTok{gamma =} \FloatTok{0.001}\NormalTok{)}
+\NormalTok{clr }\OtherTok{\textless{}{-}} \FunctionTok{aldex.clr}\NormalTok{(Y, conds, }\AttributeTok{gamma =} \FloatTok{1e{-}3}\NormalTok{)}
 \NormalTok{clr}\SpecialCharTok{@}\NormalTok{scaleSamps[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{6}\NormalTok{, }\DecValTok{1}\SpecialCharTok{:}\DecValTok{4}\NormalTok{]}
 \end{Highlighting}
 \end{Shaded}
@@ -940,7 +913,7 @@ administration.
 
 \begin{frame}{Investigating Assumptions about Scale, cont.}
 \protect\hypertarget{investigating-assumptions-about-scale-cont.}{}
-\begin{center}\includegraphics{slides_files/figure-beamer/unnamed-chunk-5-1} \end{center}
+\begin{center}\includegraphics{slides_files/figure-beamer/unnamed-chunk-6-1} \end{center}
 \end{frame}
 
 \begin{frame}[fragile]{Scale Model based on Biology}
@@ -949,8 +922,12 @@ administration.
 \begin{Highlighting}[]
 \DocumentationTok{\#\# Creating an informed model using biological reasoning}
 \NormalTok{scales }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\FunctionTok{rep}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{50}\NormalTok{), }\FunctionTok{rep}\NormalTok{(}\FloatTok{0.9}\NormalTok{, }\DecValTok{50}\NormalTok{))}
-\NormalTok{scale\_samps }\OtherTok{\textless{}{-}} \FunctionTok{aldex.makeScaleMatrix}\NormalTok{(}\AttributeTok{gamma =} \FloatTok{0.15}\NormalTok{, }\AttributeTok{mu =}\NormalTok{ scales,}
-    \AttributeTok{conditions =}\NormalTok{ conds, }\AttributeTok{log =} \ConstantTok{FALSE}\NormalTok{)}
+\NormalTok{scale\_samps }\OtherTok{\textless{}{-}} \FunctionTok{aldex.makeScaleMatrix}\NormalTok{(}
+  \AttributeTok{gamma =}\NormalTok{ .}\DecValTok{15}\NormalTok{,}
+  \AttributeTok{mu =}\NormalTok{ scales,}
+  \AttributeTok{conditions =}\NormalTok{ conds,}
+  \AttributeTok{log =} \ConstantTok{FALSE}
+\NormalTok{)}
 
 \NormalTok{mod.know }\OtherTok{\textless{}{-}} \FunctionTok{aldex}\NormalTok{(Y, conds, }\AttributeTok{gamma =}\NormalTok{ scale\_samps)}
 \end{Highlighting}
@@ -961,17 +938,17 @@ administration.
 \protect\hypertarget{scale-model-based-on-outside-measurements}{}
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{flow\_data\_collapse }\OtherTok{\textless{}{-}}\NormalTok{ flow\_data }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{group\_by}\NormalTok{(sample) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{mean =} \FunctionTok{mean}\NormalTok{(flow)) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{stdev =} \FunctionTok{sd}\NormalTok{(flow)) }\SpecialCharTok{\%\textgreater{}\%}
-\NormalTok{    dplyr}\SpecialCharTok{::}\FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{flow) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{ungroup}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{unique}\NormalTok{()}
-\NormalTok{scale\_samps }\OtherTok{\textless{}{-}} \FunctionTok{matrix}\NormalTok{(}\ConstantTok{NA}\NormalTok{, }\AttributeTok{nrow =} \FunctionTok{nrow}\NormalTok{(flow\_data\_collapse), }\AttributeTok{ncol =} \DecValTok{128}\NormalTok{)}
+\NormalTok{scale\_samps }\OtherTok{\textless{}{-}} \FunctionTok{matrix}\NormalTok{(}\ConstantTok{NA}\NormalTok{,}
+  \AttributeTok{nrow =} \FunctionTok{nrow}\NormalTok{(flow\_data\_collapse),}
+  \AttributeTok{ncol =} \DecValTok{128}
+\NormalTok{)}
+
 \ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \DecValTok{1}\SpecialCharTok{:}\FunctionTok{nrow}\NormalTok{(scale\_samps)) \{}
-\NormalTok{    scale\_samps[i, ] }\OtherTok{\textless{}{-}} \FunctionTok{rnorm}\NormalTok{(}\AttributeTok{n =} \DecValTok{128}\NormalTok{, }\AttributeTok{mean =}\NormalTok{ flow\_data\_collapse}\SpecialCharTok{$}\NormalTok{mean[i],}
-        \AttributeTok{sd =}\NormalTok{ flow\_data\_collapse}\SpecialCharTok{$}\NormalTok{stdev[i])}
+\NormalTok{  scale\_samps[i, ] }\OtherTok{\textless{}{-}} \FunctionTok{rnorm}\NormalTok{(}
+    \AttributeTok{n =} \DecValTok{128}\NormalTok{,}
+    \AttributeTok{mean =}\NormalTok{ flow\_data\_collapse}\SpecialCharTok{$}\NormalTok{mean[i],}
+    \AttributeTok{sd =}\NormalTok{ flow\_data\_collapse}\SpecialCharTok{$}\NormalTok{stdev[i]}
+\NormalTok{  )}
 \NormalTok{\}}
 \NormalTok{mod.flow }\OtherTok{\textless{}{-}} \FunctionTok{aldex}\NormalTok{(Y, conds, }\AttributeTok{gamma =}\NormalTok{ scale\_samps)}
 \end{Highlighting}
@@ -980,23 +957,27 @@ administration.
 
 \begin{frame}{Plotting Results}
 \protect\hypertarget{plotting-results}{}
-\begin{center}\includegraphics[width=0.95\linewidth]{slides_files/figure-beamer/unnamed-chunk-8-1} \end{center}
+\begin{center}\includegraphics[width=0.95\linewidth]{slides_files/figure-beamer/unnamed-chunk-10-1} \end{center}
 \end{frame}
 
 \begin{frame}[fragile]{Sensitivity Analyses}
 \protect\hypertarget{sensitivity-analyses-2}{}
 \begin{Shaded}
 \begin{Highlighting}[]
-\DocumentationTok{\#\# First, specifying different values for the noise in the}
-\DocumentationTok{\#\# scale}
-\NormalTok{gamma\_to\_test }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\FloatTok{0.001}\NormalTok{, }\FunctionTok{seq}\NormalTok{(}\FloatTok{0.1}\NormalTok{, }\DecValTok{1}\NormalTok{, }\AttributeTok{by =} \FloatTok{0.1}\NormalTok{))}
+\DocumentationTok{\#\# First, specifying different values for the noise in the scale}
+\NormalTok{gamma\_to\_test }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\FloatTok{1e{-}3}\NormalTok{, }\FunctionTok{seq}\NormalTok{(}\FloatTok{0.1}\NormalTok{, }\DecValTok{1}\NormalTok{, }\AttributeTok{by =}\NormalTok{ .}\DecValTok{1}\NormalTok{))}
 
 \DocumentationTok{\#\# Run the CLR function}
 \NormalTok{clr }\OtherTok{\textless{}{-}} \FunctionTok{aldex.clr}\NormalTok{(Y, conds)}
 
 \DocumentationTok{\#\# Run sensitivity analysis function}
-\NormalTok{sen\_res }\OtherTok{\textless{}{-}} \FunctionTok{aldex.senAnalysis}\NormalTok{(clr, }\AttributeTok{gamma =}\NormalTok{ gamma\_to\_test)}
-\FunctionTok{plotGamma}\NormalTok{(sen\_res, }\AttributeTok{thresh =} \FloatTok{0.1}\NormalTok{, }\AttributeTok{blackWhite =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{taxa\_to\_label =} \DecValTok{3}\NormalTok{)}
+\NormalTok{sen\_res }\OtherTok{\textless{}{-}} \FunctionTok{aldex.senAnalysis}\NormalTok{(clr,}
+  \AttributeTok{gamma =}\NormalTok{ gamma\_to\_test}
+\NormalTok{)}
+\FunctionTok{plotGamma}\NormalTok{(sen\_res,}
+  \AttributeTok{thresh =}\NormalTok{ .}\DecValTok{1}\NormalTok{,}
+  \AttributeTok{blackWhite =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{taxa\_to\_label =} \DecValTok{3}
+\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 \end{frame}
@@ -1026,12 +1007,12 @@ administration.
 
 \begin{frame}{Difference in Scale Implied by Flow Cytometry}
 \protect\hypertarget{difference-in-scale-implied-by-flow-cytometry}{}
-\begin{center}\includegraphics[width=0.95\linewidth]{slides_files/figure-beamer/unnamed-chunk-11-1} \end{center}
+\begin{center}\includegraphics[width=0.95\linewidth]{slides_files/figure-beamer/unnamed-chunk-13-1} \end{center}
 \end{frame}
 
 \begin{frame}{Difference in Scale Implied by CLR}
 \protect\hypertarget{difference-in-scale-implied-by-clr}{}
-\begin{center}\includegraphics[width=0.95\linewidth]{slides_files/figure-beamer/unnamed-chunk-12-1} \end{center}
+\begin{center}\includegraphics[width=0.95\linewidth]{slides_files/figure-beamer/unnamed-chunk-14-1} \end{center}
 \end{frame}
 
 \begin{frame}[fragile]{Creating a Gold Standard Model}
@@ -1043,7 +1024,11 @@ administration.
 
 \NormalTok{scale\_samples }\OtherTok{\textless{}{-}} \FunctionTok{matrix}\NormalTok{(}\ConstantTok{NA}\NormalTok{, }\AttributeTok{nrow =} \DecValTok{95}\NormalTok{, }\AttributeTok{ncol =} \DecValTok{1000}\NormalTok{)}
 \ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \DecValTok{1}\SpecialCharTok{:}\DecValTok{95}\NormalTok{) \{}
-\NormalTok{    scale\_samples[i, ] }\OtherTok{\textless{}{-}} \DecValTok{2}\SpecialCharTok{\^{}}\FunctionTok{rnorm}\NormalTok{(}\DecValTok{1000}\NormalTok{, scale\_mean[i], scale\_var[i])}
+\NormalTok{  scale\_samples[i, ] }\OtherTok{\textless{}{-}} \DecValTok{2}\SpecialCharTok{\^{}}\FunctionTok{rnorm}\NormalTok{(}
+    \DecValTok{1000}\NormalTok{,}
+\NormalTok{    scale\_mean[i],}
+\NormalTok{    scale\_var[i]}
+\NormalTok{  )}
 \NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
@@ -1053,25 +1038,30 @@ administration.
 \protect\hypertarget{creating-an-informed-model}{}
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{scale.cd }\OtherTok{\textless{}{-}} \DecValTok{2}\SpecialCharTok{\^{}}\FunctionTok{matrix}\NormalTok{(}\FunctionTok{rnorm}\NormalTok{(}\DecValTok{1000} \SpecialCharTok{*} \DecValTok{29}\NormalTok{, }\AttributeTok{mean =} \FunctionTok{log2}\NormalTok{(}\FloatTok{0.7}\NormalTok{), }\AttributeTok{sd =} \FloatTok{0.125}\NormalTok{),}
-    \AttributeTok{nrow =} \DecValTok{29}\NormalTok{)}
-\NormalTok{scale.control }\OtherTok{\textless{}{-}} \DecValTok{2}\SpecialCharTok{\^{}}\FunctionTok{matrix}\NormalTok{(}\FunctionTok{rnorm}\NormalTok{(}\DecValTok{1000} \SpecialCharTok{*} \DecValTok{66}\NormalTok{, }\AttributeTok{mean =} \FunctionTok{log2}\NormalTok{(}\DecValTok{1}\NormalTok{), }\AttributeTok{sd =} \FloatTok{0.125}\NormalTok{),}
-    \AttributeTok{nrow =} \DecValTok{66}\NormalTok{)}
+\NormalTok{scale.cd }\OtherTok{\textless{}{-}} \DecValTok{2}\SpecialCharTok{\^{}}\FunctionTok{matrix}\NormalTok{(}\FunctionTok{rnorm}\NormalTok{(}\DecValTok{1000} \SpecialCharTok{*} \DecValTok{29}\NormalTok{,}
+  \AttributeTok{mean =} \FunctionTok{log2}\NormalTok{(.}\DecValTok{7}\NormalTok{), }\AttributeTok{sd =}\NormalTok{ .}\DecValTok{125}
+\NormalTok{), }\AttributeTok{nrow =} \DecValTok{29}\NormalTok{)}
+\NormalTok{scale.control }\OtherTok{\textless{}{-}} \DecValTok{2}\SpecialCharTok{\^{}}\FunctionTok{matrix}\NormalTok{(}\FunctionTok{rnorm}\NormalTok{(}\DecValTok{1000} \SpecialCharTok{*} \DecValTok{66}\NormalTok{,}
+  \AttributeTok{mean =} \FunctionTok{log2}\NormalTok{(}\DecValTok{1}\NormalTok{), }\AttributeTok{sd =}\NormalTok{ .}\DecValTok{125}
+\NormalTok{), }\AttributeTok{nrow =} \DecValTok{66}\NormalTok{)}
 
-\NormalTok{scale.inf }\OtherTok{\textless{}{-}} \FunctionTok{rbind}\NormalTok{(scale.cd, scale.control)}
-\NormalTok{aldex\_informed }\OtherTok{\textless{}{-}} \FunctionTok{aldex}\NormalTok{(Y, X, }\AttributeTok{mc.samples =} \DecValTok{1000}\NormalTok{, }\AttributeTok{gamma =}\NormalTok{ scale.inf)}
+\NormalTok{scale.informed }\OtherTok{\textless{}{-}} \FunctionTok{rbind}\NormalTok{(scale.cd, scale.control)}
+\NormalTok{aldex\_informed }\OtherTok{\textless{}{-}} \FunctionTok{aldex}\NormalTok{(Y, X,}
+  \AttributeTok{mc.samples =} \DecValTok{1000}\NormalTok{,}
+  \AttributeTok{gamma =}\NormalTok{ scale.informed}
+\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 \end{frame}
 
 \begin{frame}{Comparing to Other Methods}
 \protect\hypertarget{comparing-to-other-methods}{}
-\begin{center}\includegraphics[width=0.95\linewidth]{slides_files/figure-beamer/unnamed-chunk-17-1} \end{center}
+\begin{center}\includegraphics[width=0.95\linewidth]{slides_files/figure-beamer/unnamed-chunk-19-1} \end{center}
 \end{frame}
 
 \begin{frame}{Sensitivity Analyses}
 \protect\hypertarget{sensitivity-analyses-3}{}
-\begin{center}\includegraphics[width=0.95\linewidth]{slides_files/figure-beamer/unnamed-chunk-18-1} \end{center}
+\begin{center}\includegraphics[width=0.95\linewidth]{slides_files/figure-beamer/unnamed-chunk-20-1} \end{center}
 \end{frame}
 
 \begin{frame}{References}
@@ -1105,7 +1095,7 @@ administration.
 \begin{itemize}
 \item
   McMurrough et. al.~(2014).''Control of catalytic efficiency by a
-  coevolving network of catalytic and noncatalytic residues.''
+  co-evolving network of catalytic and non-catalytic residues.''
   \emph{PNAS}.
 \item
   Vandputte et. al.~(2017). ``Quantitative microbiome profiling links
