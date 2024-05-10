@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.7.26)  10 MAY 2024 10:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.7.26)  10 MAY 2024 11:47
 entering extended mode
 **./slides.tex
 (slides.tex
@@ -2143,7 +2143,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [51
 
 ]
-Overfull \hbox (8.4576pt too wide) detected at line 778
+Overfull \hbox (8.4576pt too wide) detected at line 777
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2160,7 +2160,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 rpreting-the-default-scale-model}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.778 \end{frame}
+l.777 \end{frame}
                  
 Overfull \hbox (8.4576pt too wide) has occurred while \output is active
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
@@ -2173,7 +2173,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 rpreting-the-default-scale-model}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.778 \end{frame}
+l.777 \end{frame}
                  
 Overfull \hbox (8.4576pt too wide) has occurred while \output is active
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
@@ -2186,7 +2186,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 rpreting-the-default-scale-model}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.778 \end{frame}
+l.777 \end{frame}
                  
 Overfull \hbox (8.4576pt too wide) has occurred while \output is active
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
@@ -2196,7 +2196,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [55
 
 ]
-Overfull \hbox (8.4576pt too wide) detected at line 780
+Overfull \hbox (8.4576pt too wide) detected at line 779
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2204,7 +2204,7 @@ Overfull \hbox (8.4576pt too wide) detected at line 780
 \openout4 = `slides.vrb'.
 
 
-Overfull \hbox (8.4576pt too wide) detected at line 788
+Overfull \hbox (8.4576pt too wide) detected at line 787
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2225,7 +2225,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [56
 
 ]
-Overfull \hbox (8.4576pt too wide) detected at line 790
+Overfull \hbox (8.4576pt too wide) detected at line 789
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2233,7 +2233,7 @@ Overfull \hbox (8.4576pt too wide) detected at line 790
 \openout4 = `slides.vrb'.
 
 
-Overfull \hbox (8.4576pt too wide) detected at line 816
+Overfull \hbox (8.4576pt too wide) detected at line 815
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2260,7 +2260,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [58
 
 ]
-Overfull \hbox (8.4576pt too wide) detected at line 825
+Overfull \hbox (8.4576pt too wide) detected at line 824
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2274,7 +2274,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [59
 
 ]
-Overfull \hbox (8.4576pt too wide) detected at line 845
+Overfull \hbox (8.4576pt too wide) detected at line 844
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2288,7 +2288,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [60
 
 ]
-Overfull \hbox (8.4576pt too wide) detected at line 853
+Overfull \hbox (8.4576pt too wide) detected at line 852
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2296,7 +2296,7 @@ Overfull \hbox (8.4576pt too wide) detected at line 853
 <figures/sim_gamma.pdf, id=7096, 433.62pt x 289.08pt>
 File: figures/sim_gamma.pdf Graphic file (type pdf)
 <use figures/sim_gamma.pdf>
-Package pdftex.def Info: figures/sim_gamma.pdf  used on input line 853.
+Package pdftex.def Info: figures/sim_gamma.pdf  used on input line 852.
 (pdftex.def)             Requested size: 289.07999pt x 192.72981pt.
 
 Overfull \hbox (8.4576pt too wide) has occurred while \output is active
@@ -2307,7 +2307,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [61
 
  <./figures/sim_gamma.pdf>]
-Overfull \hbox (8.4576pt too wide) detected at line 856
+Overfull \hbox (8.4576pt too wide) detected at line 855
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2321,7 +2321,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [62
 
 ]
-Overfull \hbox (8.4576pt too wide) detected at line 873
+Overfull \hbox (8.4576pt too wide) detected at line 872
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2335,7 +2335,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [63
 
 ]
-Overfull \hbox (8.4576pt too wide) detected at line 881
+Overfull \hbox (8.4576pt too wide) detected at line 880
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2343,7 +2343,7 @@ Overfull \hbox (8.4576pt too wide) detected at line 881
 <figures/sim-data.pdf, id=7500, 433.62pt x 289.08pt>
 File: figures/sim-data.pdf Graphic file (type pdf)
 <use figures/sim-data.pdf>
-Package pdftex.def Info: figures/sim-data.pdf  used on input line 881.
+Package pdftex.def Info: figures/sim-data.pdf  used on input line 880.
 (pdftex.def)             Requested size: 289.07999pt x 192.72981pt.
 
 Overfull \hbox (8.4576pt too wide) has occurred while \output is active
@@ -2354,7 +2354,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [64
 
  <./figures/sim-data.pdf>]
-Overfull \hbox (8.4576pt too wide) detected at line 883
+Overfull \hbox (8.4576pt too wide) detected at line 882
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2362,7 +2362,7 @@ Overfull \hbox (8.4576pt too wide) detected at line 883
 \openout4 = `slides.vrb'.
 
 
-Overfull \hbox (8.4576pt too wide) detected at line 891
+Overfull \hbox (8.4576pt too wide) detected at line 890
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2376,7 +2376,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [65
 
 ]
-Overfull \hbox (8.4576pt too wide) detected at line 893
+Overfull \hbox (8.4576pt too wide) detected at line 892
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2384,7 +2384,7 @@ Overfull \hbox (8.4576pt too wide) detected at line 893
 \openout4 = `slides.vrb'.
 
 
-Overfull \hbox (8.4576pt too wide) detected at line 912
+Overfull \hbox (8.4576pt too wide) detected at line 911
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2398,7 +2398,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [66
 
 ]
-Overfull \hbox (8.4576pt too wide) detected at line 917
+Overfull \hbox (8.4576pt too wide) detected at line 916
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2408,7 +2408,7 @@ Overfull \hbox (8.4576pt too wide) detected at line 917
 File: slides_files/figure-beamer/unnamed-chunk-6-1.pdf Graphic file (type pdf)
 <use slides_files/figure-beamer/unnamed-chunk-6-1.pdf>
 Package pdftex.def Info: slides_files/figure-beamer/unnamed-chunk-6-1.pdf  used
- on input line 917.
+ on input line 916.
 (pdftex.def)             Requested size: 216.80946pt x 144.53963pt.
 
 Overfull \hbox (8.4576pt too wide) has occurred while \output is active
@@ -2419,7 +2419,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [67
 
  <./slides_files/figure-beamer/unnamed-chunk-6-1.pdf>]
-Overfull \hbox (8.4576pt too wide) detected at line 919
+Overfull \hbox (8.4576pt too wide) detected at line 918
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2427,7 +2427,7 @@ Overfull \hbox (8.4576pt too wide) detected at line 919
 \openout4 = `slides.vrb'.
 
 
-Overfull \hbox (8.4576pt too wide) detected at line 935
+Overfull \hbox (8.4576pt too wide) detected at line 934
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2441,7 +2441,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [68
 
 ]
-Overfull \hbox (8.4576pt too wide) detected at line 937
+Overfull \hbox (8.4576pt too wide) detected at line 936
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2449,7 +2449,7 @@ Overfull \hbox (8.4576pt too wide) detected at line 937
 \openout4 = `slides.vrb'.
 
 
-Overfull \hbox (8.4576pt too wide) detected at line 956
+Overfull \hbox (8.4576pt too wide) detected at line 955
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2463,7 +2463,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [69
 
 ]
-Overfull \hbox (8.4576pt too wide) detected at line 961
+Overfull \hbox (8.4576pt too wide) detected at line 960
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2474,7 +2474,7 @@ File: slides_files/figure-beamer/unnamed-chunk-10-1.pdf Graphic file (type pdf)
 
 <use slides_files/figure-beamer/unnamed-chunk-10-1.pdf>
 Package pdftex.def Info: slides_files/figure-beamer/unnamed-chunk-10-1.pdf  use
-d on input line 961.
+d on input line 960.
 (pdftex.def)             Requested size: 291.92444pt x 204.34396pt.
 
 Overfull \hbox (8.4576pt too wide) has occurred while \output is active
@@ -2485,7 +2485,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [70
 
  <./slides_files/figure-beamer/unnamed-chunk-10-1.pdf>]
-Overfull \hbox (8.4576pt too wide) detected at line 963
+Overfull \hbox (8.4576pt too wide) detected at line 962
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2493,7 +2493,7 @@ Overfull \hbox (8.4576pt too wide) detected at line 963
 \openout4 = `slides.vrb'.
 
 
-Overfull \hbox (8.4576pt too wide) detected at line 983
+Overfull \hbox (8.4576pt too wide) detected at line 982
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2507,14 +2507,14 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [71
 
 ]
-Overfull \hbox (8.4576pt too wide) detected at line 991
+Overfull \hbox (8.4576pt too wide) detected at line 990
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
 
 File: figures/sim_gamma.pdf Graphic file (type pdf)
 <use figures/sim_gamma.pdf>
-Package pdftex.def Info: figures/sim_gamma.pdf  used on input line 991.
+Package pdftex.def Info: figures/sim_gamma.pdf  used on input line 990.
 (pdftex.def)             Requested size: 289.07999pt x 192.72981pt.
 
 Overfull \hbox (8.4576pt too wide) has occurred while \output is active
@@ -2525,7 +2525,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [72
 
 ]
-Overfull \hbox (8.4576pt too wide) detected at line 1006
+Overfull \hbox (8.4576pt too wide) detected at line 1005
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2539,7 +2539,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [73
 
 ]
-Overfull \hbox (8.4576pt too wide) detected at line 1011
+Overfull \hbox (8.4576pt too wide) detected at line 1010
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2550,7 +2550,7 @@ File: slides_files/figure-beamer/unnamed-chunk-13-1.pdf Graphic file (type pdf)
 
 <use slides_files/figure-beamer/unnamed-chunk-13-1.pdf>
 Package pdftex.def Info: slides_files/figure-beamer/unnamed-chunk-13-1.pdf  use
-d on input line 1011.
+d on input line 1010.
 (pdftex.def)             Requested size: 291.92444pt x 204.34396pt.
 
 Overfull \hbox (8.4576pt too wide) has occurred while \output is active
@@ -2561,7 +2561,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [74
 
  <./slides_files/figure-beamer/unnamed-chunk-13-1.pdf>]
-Overfull \hbox (8.4576pt too wide) detected at line 1016
+Overfull \hbox (8.4576pt too wide) detected at line 1015
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2572,7 +2572,7 @@ File: slides_files/figure-beamer/unnamed-chunk-14-1.pdf Graphic file (type pdf)
 
 <use slides_files/figure-beamer/unnamed-chunk-14-1.pdf>
 Package pdftex.def Info: slides_files/figure-beamer/unnamed-chunk-14-1.pdf  use
-d on input line 1016.
+d on input line 1015.
 (pdftex.def)             Requested size: 291.92444pt x 204.34396pt.
 
 Overfull \hbox (8.4576pt too wide) has occurred while \output is active
@@ -2583,7 +2583,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [75
 
  <./slides_files/figure-beamer/unnamed-chunk-14-1.pdf>]
-Overfull \hbox (8.4576pt too wide) detected at line 1018
+Overfull \hbox (8.4576pt too wide) detected at line 1017
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2591,7 +2591,7 @@ Overfull \hbox (8.4576pt too wide) detected at line 1018
 \openout4 = `slides.vrb'.
 
 
-Overfull \hbox (8.4576pt too wide) detected at line 1035
+Overfull \hbox (8.4576pt too wide) detected at line 1034
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2605,7 +2605,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [76
 
 ]
-Overfull \hbox (8.4576pt too wide) detected at line 1037
+Overfull \hbox (8.4576pt too wide) detected at line 1036
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2613,7 +2613,7 @@ Overfull \hbox (8.4576pt too wide) detected at line 1037
 \openout4 = `slides.vrb'.
 
 
-Overfull \hbox (8.4576pt too wide) detected at line 1055
+Overfull \hbox (8.4576pt too wide) detected at line 1054
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2627,7 +2627,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [77
 
 ]
-Overfull \hbox (8.4576pt too wide) detected at line 1060
+Overfull \hbox (8.4576pt too wide) detected at line 1059
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2638,7 +2638,7 @@ File: slides_files/figure-beamer/unnamed-chunk-19-1.pdf Graphic file (type pdf)
 
 <use slides_files/figure-beamer/unnamed-chunk-19-1.pdf>
 Package pdftex.def Info: slides_files/figure-beamer/unnamed-chunk-19-1.pdf  use
-d on input line 1060.
+d on input line 1059.
 (pdftex.def)             Requested size: 291.92444pt x 204.34396pt.
 
 Overfull \hbox (8.4576pt too wide) has occurred while \output is active
@@ -2649,7 +2649,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [78
 
  <./slides_files/figure-beamer/unnamed-chunk-19-1.pdf>]
-Overfull \hbox (8.4576pt too wide) detected at line 1065
+Overfull \hbox (8.4576pt too wide) detected at line 1064
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2660,7 +2660,7 @@ File: slides_files/figure-beamer/unnamed-chunk-20-1.pdf Graphic file (type pdf)
 
 <use slides_files/figure-beamer/unnamed-chunk-20-1.pdf>
 Package pdftex.def Info: slides_files/figure-beamer/unnamed-chunk-20-1.pdf  use
-d on input line 1065.
+d on input line 1064.
 (pdftex.def)             Requested size: 291.92444pt x 204.34396pt.
 
 Overfull \hbox (8.4576pt too wide) has occurred while \output is active
@@ -2671,7 +2671,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [79
 
  <./slides_files/figure-beamer/unnamed-chunk-20-1.pdf>]
-Overfull \hbox (8.4576pt too wide) detected at line 1089
+Overfull \hbox (8.4576pt too wide) detected at line 1088
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2685,7 +2685,7 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 [80
 
 ]
-Overfull \hbox (8.4576pt too wide) detected at line 1104
+Overfull \hbox (8.4576pt too wide) detected at line 1103
   [] [][][][][][][][][][][][] [][][][][][][][][][][][] [][][][][][] [][][][][][
 ][][][][][] [][][][][][][][][][][][][][][][][][][][][]  
  []
@@ -2710,11 +2710,11 @@ Overfull \hbox (8.4576pt too wide) has occurred while \output is active
 
 (slides.aux) ) 
 Here is how much of TeX's memory you used:
- 26173 strings out of 478864
- 496696 string characters out of 2847712
- 877279 words of memory out of 3000000
+ 26177 strings out of 478864
+ 496744 string characters out of 2847712
+ 877278 words of memory out of 3000000
  43041 multiletter control sequences out of 15000+600000
- 531913 words of font info for 204 fonts, out of 8000000 for 9000
+ 532112 words of font info for 206 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,20n,124p,1005b,791s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/map5672/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
@@ -2742,7 +2742,7 @@ ograms/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/map5672/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/map5672/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/lm/lmtko10.pfb><C:/Users/map5672/AppData/Lo
 cal/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on slides.pdf (81 pages, 2149935 bytes).
+Output written on slides.pdf (81 pages, 2150384 bytes).
 PDF statistics:
  10398 PDF objects out of 10688 (max. 8388607)
  223 named destinations out of 1000 (max. 500000)

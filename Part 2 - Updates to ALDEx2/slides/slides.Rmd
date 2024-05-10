@@ -500,7 +500,7 @@ The default scale model implies that:
 
 ## Example: Interpreting the Default Scale Model
 
-\textcolor{gray}{With 95% certainty, the true difference in scales falls within the the range $2^{\theta_{\text{CLR}}^\perp \pm 2 \gamma}$.}
+With 95% certainty, the true difference in scales falls within the the range $2^{\theta_{\text{CLR}}^\perp \pm 2 \gamma}$.
 
 \pause
 
@@ -512,7 +512,7 @@ The default scale model implies that:
 
 \pause
 
-- Then, this implies that, with 95% certainty, we believe that the scale of the case condition is within a factor of $[2^{\theta_{\text{CLR}}^\perp - 2 \gamma}, 2^{\theta_{\text{CLR}}^\perp + 2 \gamma}] = [0.51,2.05]$ of the control condition.
+- Then, this implies that, with 95% certainty, we believe that the scale of the case condition is within a factor of $[2^{0.04 - 2 \times 0.5}, 2^{0.04+ 2 \times 0.5}] = [0.51,2.05]$ of the control condition.
 
 ## Using the Default Scale Model
 
