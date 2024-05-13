@@ -1,0 +1,119 @@
+---
+title: "GSEA_Example_Analyses"
+output: html_document
+date: "2024-05-09"
+---
+
+```{r}
+library(fgsea)
+
+fgsea.error <- function(lfcs, pathways, minSize=15, maxSize=500,
+                        epsilons=c(-0.5,0,0.5)) {
+    all_fgsea_res <- NULL
+    for(epsilon in epsilons) {
+        fgsea_res <- fgsea(stats=lfcs+epsilon, pathways=pathways,
+                           minSize=minSize, maxSize=maxSize,
+                           nPermSimple=5000)
+        row.names(fgsea_res) <- NULL
+        fgsea_res <- cbind(epsilon, fgsea_res)
+        all_fgsea_res <- rbind(all_fgsea_res, fgsea_res)
+    }
+    return(all_fgsea_res)
+}
+```
+
+#############################
+#  Label Permutations #
+#############################
+
+Load LFCs and Pathways
+
+```{r}
+raw_reg <- read.csv("thyroid_est_lfcs_songbird.tsv", sep="\t")
+lfcs <- raw_reg[,3]
+names(lfcs) <- raw_reg[,1]
+pathways <- gmtPathways("h.all.v7.4.symbols.gmt")
+```
+
+```{r}
+head(lfcs, 3)
+# 1/2-SBSRNA4        A1BG    A1BG-AS1       A2LD1         A2M 
+#   1.4861493  -0.2447069  -0.6440828   0.6078045  -0.6778247 
+```
+
+```{r}
+head(pathways, 1)
+# $HALLMARK_TNFA_SIGNALING_VIA_NFKB
+#  [1] "JUNB"     "CXCL2"    "ATF3"
+```
+
+Run regular fgsea
+
+```{r, message=F, warning=F}
+simple_fgsea_res <- fgsea(stats=lfcs, pathways=pathways, nPermSimple=5000)
+simple_fgsea_res[(pathway=="HALLMARK_MYOGENESIS")|(pathway=="HALLMARK_INTERFERON_GAMMA_RESPONSE")]
+```
+
+```{r, warning=F}
+lfc_fgsea_res    <- fgsea.error(lfcs, pathways, epsilon=c(-0.4, 0, 0.4))
+lfc_fgsea_res[(pathway=="HALLMARK_INFLAMMATORY_RESPONSE")]
+```
+
+
+#############################
+# Sample Label Permutations #
+#############################
+
+# Requires extra packages
+
+```{r}
+library(fgsea)
+source("gsea.R")
+
+pathways <- gmtPathways("c2.all.v7.4.symbols.gmt")
+Y <- as.matrix(read.table("breast_tumor_counts.txt", row.names=1))
+metadata <- read.table("breast_tumor_metadata.txt", header=T)
+metadata[,2] <- factor(metadata[,2], level=c("Healthy", "Tumor"))
+head(metadata)
+row.names(metadata) <- NULL
+X <- model.matrix(~condition, metadata)
+path_inds <- list()
+path_names <- list()
+for (p in names(pathways)) {
+	if(!grepl("KEGG_", p)) {
+		next
+	}
+	inds <- match(pathways[[p]], row.names(Y))
+        inds <- inds[!is.na(inds)]
+        if((length(inds)<15)|(length(inds)>500)) {
+                next
+        }
+        path_inds[p] <- list(inds)
+        path_names[[p]] <- pathways[[p]][pathways[[p]]%in%row.names(Y)]
+}
+
+gsea_s.error <- function(W, X, pathways, iterations=500, epsilon=c(0, 0.5)) {
+    all_gsea_res <- c()
+    for(epsilon_perp in epsilon) {
+            noise <-c(rep(0, 92), rep(epsilon_perp, 92))
+            noise_adj_W <- sweep(W, 2, noise, "+")
+            gsea_res <- gsea_s(noise_adj_W, X, pathways, iterations=iterations)
+            gsea_res <- cbind(epsilon_perp, gsea_res)
+            all_gsea_res <- rbind(all_gsea_res, gsea_res)
+    }
+    return(all_gsea_res)
+}
+```
+
+Should use more than 250 iterations
+
+```{r}
+W <- calculate_W(Y, X, 2, 0)
+
+gsea_res <-                 gsea_s(W, X, path_inds, iterations=1000)
+gsea_lfcs_sens_res <- gsea_s.error(W, X, path_inds, iterations=1000, epsilon=c(0, -0.25))
+```
+
+```{r}
+gsea_lfcs_sens_res[row.names(gsea_lfcs_sens_res)=="KEGG_PROTEIN_EXPORT",]
+```
