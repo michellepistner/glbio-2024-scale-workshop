@@ -504,7 +504,7 @@ With 95% certainty, the true difference in scales falls within the the range $2^
 
 \pause
 
-- Suppose that we are performing differential abundance in a case/control study where $\theta_{\text{CLR}} = 0.04$.
+- Suppose that we are performing differential abundance in a case/control study where $\theta^\perp_{\text{CLR}} = 0.04$.
 
 \pause
 
