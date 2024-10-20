@@ -1,0 +1,22 @@
+\begin{frame}
+  \frametitle{LFC Sensitivity Testing}
+
+  \begin{itemize}
+  \item Question: Are certain gene/microbe sets enriched at all \(\epsilon^\perp \in (-\infty, \infty)\)?
+  \item Answer: Yes!
+  \end{itemize}
+
+  \vspace{15px}
+  
+  Consider a test based on the p-value
+  \begin{align*}
+    p = \sup_{\epsilon^\perp \in (-\infty, \infty)} p_{\epsilon^\perp}
+  \end{align*}
+
+  This test:
+  \begin{enumerate}
+    \item Controls Type-I error even when \(\epsilon^\perp\) is unknown
+    \item Has demonstrated power in real dataset between 10-15\% 
+    \end{enumerate}
+    \end{frame}
+

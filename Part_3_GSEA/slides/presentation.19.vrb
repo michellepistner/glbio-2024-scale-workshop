@@ -1,0 +1,26 @@
+\frametitle{Software: Just 1 Exrtra Argument}
+
+\begin{columns}
+\begin{column}{0.5\columnwidth}
+\begin{center}
+\includegraphics[width=0.85\linewidth]{./images/lfcs.png}
+\end{center}
+\end{column}
+\begin{column}{0.5\columnwidth}
+\begin{center}
+\includegraphics[width=0.85\linewidth]{./images/pathways.png}
+\end{center}
+\end{column}
+\end{columns}
+
+\begin{center}
+\includegraphics[width=1\linewidth]{./images/fgsea_example.png}
+\end{center}
+
+\pause
+\begin{center}
+\includegraphics[width=1\linewidth]{./images/lfc_sens_output_small.png}
+\end{center}
+
+
+\note{Mention where software can be found. }

@@ -1,0 +1,37 @@
+\begin{frame}
+  \frametitle{LFC Sensitivity Testing}
+
+  \begin{itemize}
+  \item Question: Are certain gene/microbe sets enriched at all \(\epsilon^\perp \in (-\infty, \infty)\)?
+  \item Answer: Yes!
+  \end{itemize}
+
+  \vspace{15px}
+  
+  Consider a test based on the p-value
+  \begin{align*}
+    p = \sup_{\epsilon^\perp \in (-\infty, \infty)} p_{\epsilon^\perp}
+  \end{align*}
+
+  This test:
+  \begin{enumerate}
+    \item Controls Type-I error even when \(\epsilon^\perp\) is unknown
+    \item Has demonstrated power in real dataset between 10-15\% 
+  \end{enumerate}
+\end{frame}
+
+    \begin{tabular}{| c | c | c | c | c | c | c | c | c | c |}
+      \hline
+      \makecell{Gene \\Name} & RB1 & IL2 & APP & AR & HTT & IL6 & B2M & RGN & CAT \\
+      \hline
+      LFC & 2.8 & 2 & 1.5 & 0.7 & 0 & -0.6 & -1.1 & -2.1 & -3 \\
+      \hline
+      Set \(S\) & X & & X & X & X & & & & \\
+      \hline
+      Weights & .56 & -.2 & .3 & 0.14 & 0 & -.2 & -.2 & -.2 & -.2 \\
+      \hline
+      \makecell{Running \\ Sum} & .56 & .36 & .66 & .8 & .8 & .6 & .4 & .2 & 0 \\
+      \hline
+      \makecell{Enr. \\ Score} & & & & .8 & & & & & \\
+      \hline
+    \end{tabular}
